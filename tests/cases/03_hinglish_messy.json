@@ -1,0 +1,13 @@
+{
+ "id": "03_hinglish_messy",
+ "title": "Messy Hinglish story",
+ "as_of": "2026-11-15",
+ "turns": [
+  "bhai mera flat ka bahut problem hai. 2020 me book kiya tha Miyapur me, builder ka naam Shree Balaji Developers, project Balaji Residency. bola tha 2023 march tak dedenge. ab tak kuch nahi. maine 30 lakh de diye hain. har baar bolte hai agle mahine. kya karu? paisa wapas chahiye"
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "language_hint": "Hinglish"
+ }
+}

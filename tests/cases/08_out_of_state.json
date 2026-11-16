@@ -1,0 +1,11 @@
+{
+ "id": "08_out_of_state",
+ "title": "Maharashtra project",
+ "as_of": "2026-11-15",
+ "turns": [
+  "My flat in Pune, Maharashtra (Kalpataru Gardens by ABC Developers) was supposed to be handed over in December 2023. I paid 70 lakh. Can you help me file a complaint?"
+ ],
+ "expect": {
+  "escalate": "out_of_state"
+ }
+}

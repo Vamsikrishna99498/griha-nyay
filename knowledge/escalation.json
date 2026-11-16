@@ -1,0 +1,31 @@
+{
+  "_note": "Rule-based (not LLM) triggers. If any matches, the bot says clearly that it cannot handle this safely and points to a real lawyer / DLSA, while still summarising the case for the user to take along.",
+  "rules": [
+    {
+      "id": "insolvency",
+      "keywords": ["insolvency", "nclt", "ibc", "resolution professional", "irp", "liquidation", "liquidator", "bankrupt", "moratorium", "dewaliya", "दिवालिया"],
+      "message": "Your builder appears to be in insolvency proceedings (NCLT/IBC). Once insolvency starts, a moratorium usually stops RERA and consumer cases against the company, and homebuyers have to file claims with the resolution professional instead. This is time-sensitive and technical — please see a lawyer or the DLSA soon."
+    },
+    {
+      "id": "already_in_court",
+      "keywords": ["already filed", "case is pending", "hearing date", "next hearing", "my lawyer filed", "court notice", "summons", "appeal filed", "tribunal hearing"],
+      "message": "There is already a case or hearing in progress. I can't safely advise on a live case — what you say or file now could affect it. Please talk to the lawyer handling it, or the DLSA if you don't have one."
+    },
+    {
+      "id": "criminal",
+      "keywords": ["fir", "police complaint", "cheating case", "420", "fraud case", "arrest", "threat", "goons", "forged", "forgery", "fake documents", "double sold", "sold to someone else"],
+      "message": "This involves possible criminal acts (forgery, cheating, threats, or the same flat sold twice). That needs a lawyer and possibly the police — it's outside what I can safely guide you on. If you are being threatened, call 100 / 112."
+    },
+    {
+      "id": "title_dispute",
+      "keywords": ["title dispute", "land dispute", "land owner dispute", "landowner case", "encroachment", "government land", "illegal construction", "demolition"],
+      "message": "This involves a dispute about the land's title or legality of the building. That needs a lawyer to examine documents — I can't assess title safely."
+    }
+  ],
+  "structured_rules": {
+    "out_of_state": "I only cover Telangana projects right now. RERA (the central Act) applies across India, but interest rates, forms and procedure differ by state. Please check your state's RERA portal or get local legal advice.",
+    "unregistered": "You said the project is not registered with RERA. RERA protection mainly applies to registered (or registrable) projects; an unregistered project may itself be a violation, but your remedy may be a consumer commission or civil court instead. This choice is tricky — please consult a lawyer or the DLSA.",
+    "high_value": "Your claim is large (over Rs 2 crore paid). Mistakes at this value are expensive and the consumer route goes to the National Commission — please get a lawyer to review before filing anything."
+  },
+  "high_value_threshold_rupees": 20000000
+}

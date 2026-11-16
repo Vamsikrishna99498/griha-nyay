@@ -1,0 +1,14 @@
+You coached a homebuyer through a practice negotiation with their builder's representative (transcript below). Give short feedback in {language}:
+
+- **What you did well** (2-3 bullets)
+- **What the builder tried** — name each tactic and the best one-line reply to it
+- **What to say next time** — 3 short lines they can use word for word
+- **Don't sign** — remind them not to sign any letter waiving their claims without advice
+
+Use ONLY the verified law below if you mention rights, cite with tags like [RERA-18-1]; never name other sections or court cases.
+
+VERIFIED LAW:
+{law}
+
+TRANSCRIPT:
+{transcript}

@@ -1,0 +1,13 @@
+{
+ "id": "02_unsure_refund_or_flat",
+ "title": "Unsure whether to take refund or wait",
+ "as_of": "2026-11-15",
+ "turns": [
+  "Builder Greenvale Homes, project Greenvale Meadows in Tellapur. Possession was due June 2024. I paid 35 lakh so far. I don't know whether to ask for refund or wait, I really need a house for my family and rent is killing me. What should I do?",
+  "It's registered under TG RERA I think. Agreement signed August 2021."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true
+ }
+}

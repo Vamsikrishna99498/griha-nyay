@@ -1,0 +1,16 @@
+{
+ "id": "10_missing_info",
+ "title": "Vague story, tests follow-up questions",
+ "as_of": "2026-11-15",
+ "turns": [
+  "my builder is cheating me, flat not given. please help",
+  "It is in Hyderabad, Kondapur. Builder is Meridian Homes.",
+  "They promised it by July 2024 and I have paid around 50 lakh."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "needs_followup": true,
+  "second_reply_must_not_ask": "state"
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "id": "06_insolvency",
+ "title": "Builder under insolvency",
+ "as_of": "2026-11-15",
+ "turns": [
+  "My builder Horizon Infra in Kompally stopped work in 2023. Possession was promised in March 2023, I paid 28 lakh. Now I got an email that NCLT has admitted insolvency against them and an IRP is appointed. Can I file a RERA complaint?"
+ ],
+ "expect": {
+  "escalate": "insolvency"
+ }
+}

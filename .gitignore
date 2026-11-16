@@ -1,0 +1,7 @@
+.venv/
+.env
+__pycache__/
+.streamlit/secrets.toml
+# assignment brief is Kuku's document - keep out of the public repo
+*.pdf
+.claude/

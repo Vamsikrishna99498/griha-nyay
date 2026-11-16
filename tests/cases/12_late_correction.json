@@ -1,0 +1,19 @@
+{
+ "id": "12_late_correction",
+ "title": "User corrects amount after first advice",
+ "as_of": "2026-11-15",
+ "turns": [
+  "Flat in Gachibowli, Hyderabad, builder Orion Developers, project Orion Crest, RERA registered. Possession promised 31 March 2024. I paid 48 lakh. I want the flat but with interest for the delay.",
+  "Sorry, I made a mistake: I have actually paid 55 lakh, not 48."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "final_reply_contains": "Updated your case file",
+  "fields": {
+   "amount_paid_rupees": 5500000,
+   "promised_possession_date": "2024-03-31",
+   "goal": "possession"
+  }
+ }
+}

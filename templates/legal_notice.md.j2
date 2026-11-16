@@ -1,0 +1,45 @@
+> **DRAFT — prepared by an AI assistant, not a lawyer. Check every fact, date and amount, fill the [brackets], and ideally have a lawyer or DLSA review it before sending by Registered Post A.D. / email. Keep the postal receipt.**
+
+**LEGAL NOTICE**
+
+Date: {{ today }}
+
+**To:**
+{{ builder or "[Builder / Promoter company name]" }}
+[Registered office address]
+
+**From:**
+{{ buyer or "[Your full name]" }}
+[Your address, phone, email]
+
+**Subject:** Notice for failure to hand over possession of {{ flat or "[flat number]" }} in the project "{{ project or "[project name]" }}"{% if rera %} (TG-RERA Registration No. {{ rera }}){% endif %}, and demand under the Real Estate (Regulation and Development) Act, 2016
+
+Sir/Madam,
+
+**Facts**
+
+{{ facts }}
+
+**Legal position**
+
+{{ n1 }}. Under Section 18(1) of the Real Estate (Regulation and Development) Act, 2016, where a promoter fails to complete or is unable to give possession of an apartment in accordance with the terms of the agreement for sale, the allottee is entitled, at the allottee's option, either to withdraw from the project and receive back the amount paid with interest at the prescribed rate and compensation, or, without withdrawing, to be paid interest for every month of delay until the handing over of possession.
+
+{{ n2 }}. Under Section 11(4)(a) of the said Act, you remain responsible for all obligations under the agreement for sale until conveyance of the apartment.
+
+{{ n3 }}. As on {{ as_of }}, possession is delayed by {{ delay_days }} days from the agreed date of {{ promised or "[promised possession date]" }}.
+
+**Demand**
+
+{% if goal == "refund" %}{{ n4 }}. I hereby withdraw from the project and call upon you, within 15 (fifteen) days of receipt of this notice, to refund the entire amount of {{ paid }} paid by me, together with interest at the rate prescribed under the Telangana RERA Rules from the respective dates of payment until the date of refund{% if refund_interest %} (estimated at {{ refund_interest }} as on {{ as_of }}){% endif %}, and compensation for the loss suffered by me.
+{% else %}{{ n4 }}. I call upon you, within 15 (fifteen) days of receipt of this notice, to (a) give me a firm written date for handing over possession with the occupancy certificate, and (b) pay me interest at the prescribed rate on {{ paid }} for every month of delay from {{ promised or "[promised date]" }}{% if stay_interest %} (estimated at {{ stay_interest }} as on {{ as_of }}, i.e. about {{ monthly }} per month){% endif %} and continue to pay it monthly until possession.
+{% endif %}
+{{ n5 }}. If you fail to comply within the said period, I shall be constrained to file a complaint before the Telangana Real Estate Regulatory Authority under Section 31 of the said Act, and a claim for compensation before the Adjudicating Officer, entirely at your risk as to costs and consequences.
+
+{{ n6 }}. Nothing in this notice waives any of my other rights and remedies under law.
+
+Yours faithfully,
+
+{{ buyer or "[Your name]" }}
+[Signature]
+
+**Enclosures (copies):** {{ enclosures }}

@@ -1,0 +1,8 @@
+Give the homebuyer their first assessment, using these headings (translated into their language):
+
+1. **Your case in short** — 2-3 lines: what happened, how long the delay is.
+2. **Where you stand** — whether the law supports them and why, with tags.
+3. **Your two choices** — (a) withdraw and take a refund with interest (+ compensation), (b) stay and get interest for every month of delay. Give the calculator figures for each. If their goal is known, say which fits it; if unsure, give one simple question that helps them decide (e.g. do they still need this flat, do they trust the builder to finish).
+4. **What to do next** — numbered steps: collect proof, check RERA registration, send a legal notice (I can draft it), then a TG-RERA complaint (Form M; compensation via Form N).
+5. **What I'm not sure about** — honest limits for this specific case, including every item in the case file's "assumptions" (e.g. "I took July 2024 as 1 July 2024").
+6. **When to get a real lawyer** — one or two lines, mention free legal aid (DLSA / helpline 15100).

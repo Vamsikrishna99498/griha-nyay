@@ -1,0 +1,18 @@
+{
+ "id": "05_force_majeure",
+ "title": "Builder claims COVID force majeure",
+ "as_of": "2026-11-15",
+ "turns": [
+  "Bought a flat in Prestige Vista, Narsingi (builder: Vista Realty LLP, TG RERA P02200009876). Promised possession 30 September 2022. Paid 55 lakh. Builder's letter says the delay is due to COVID force majeure and labour shortage and they will give possession in 2027. Is that a valid excuse? I want the flat but with interest."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "caution": "force_majeure",
+  "fields": {
+   "promised_possession_date": "2022-09-30",
+   "amount_paid_rupees": 5500000,
+   "goal": "possession"
+  }
+ }
+}

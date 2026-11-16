@@ -1,0 +1,55 @@
+{
+  "state": "Telangana",
+  "authority": "Telangana Real Estate Regulatory Authority (TG-RERA)",
+  "portal": "https://rera.telangana.gov.in",
+  "interest": {
+    "rule": "SBI Marginal Cost of Lending Rate (MCLR) + 2% per annum",
+    "base_rate_label": "SBI MCLR",
+    "base_rate_pct": 8.70,
+    "markup_pct": 2.0,
+    "_note": "TG-RERA delay orders apply 'SBI MCLR + 2%' (e.g. 10.70% p.a. in 2026 orders against Vasavi Realtors). Exact rule number/wording in the TS RERA Rules 2017 is NOT yet confirmed from the gazette. base_rate_pct is editable in the app; the order of the authority decides the final rate.",
+    "verification": "secondary (TG-RERA orders reported by LiveLaw, 2026)"
+  },
+  "entries": [
+    {
+      "id": "TG-INTEREST",
+      "act": "Telangana State Real Estate (Regulation and Development) Rules, 2017",
+      "section": "Rate of interest rule",
+      "title": "Interest rate in Telangana",
+      "summary": "TG-RERA applies interest at SBI's Marginal Cost of Lending Rate plus 2% per year on refunds and on delayed possession. In 2026 orders this worked out to about 10.70% per year. The actual rate in your case is fixed by the authority's order.",
+      "tags": ["interest", "rate", "calculation", "delay", "refund", "how much"],
+      "verification": "secondary",
+      "source": "TG-RERA orders (2026) applying SBI MCLR + 2%; TS RERA Rules 2017"
+    },
+    {
+      "id": "TG-FORMS",
+      "act": "Telangana State Real Estate (Regulation and Development) Rules, 2017",
+      "section": "Complaint rules (Form M / Form N)",
+      "title": "Which form to file in Telangana",
+      "summary": "A complaint to the TG-RERA authority (for refund, possession, interest for delay, or other violations) is filed in Form M. A claim for compensation goes to the adjudicating officer in Form N. Complaints are filed online through the TG-RERA portal with a fee; check the current fee on the portal before filing.",
+      "tags": ["complaint", "form m", "form n", "file", "procedure", "fee", "where to go", "online"],
+      "verification": "secondary",
+      "source": "TS RERA Rules 2017 complaint rules; TG-RERA portal rera.telangana.gov.in"
+    },
+    {
+      "id": "TG-CHECK-REG",
+      "act": "Practical step",
+      "section": "TG-RERA project search",
+      "title": "Check the project's registration",
+      "summary": "Search the project on the TG-RERA portal to confirm its registration number, the completion date the builder declared to RERA, and any extension granted. This tells you whether RERA covers the project and whether the builder got a force majeure extension.",
+      "tags": ["registration", "rera number", "check", "extension", "project search"],
+      "verification": "practical",
+      "source": "rera.telangana.gov.in"
+    },
+    {
+      "id": "TG-DLSA",
+      "act": "Practical step",
+      "section": "Telangana State Legal Services Authority",
+      "title": "Free legal help in Telangana",
+      "summary": "The Telangana State Legal Services Authority and District Legal Services Authorities (in each district court complex, e.g. City Civil Court, Hyderabad) give free legal advice and, for eligible people, a free lawyer. NALSA helpline: 15100.",
+      "tags": ["free lawyer", "legal aid", "dlsa", "hyderabad", "help", "lawyer"],
+      "verification": "practical",
+      "source": "tslsa.telangana.gov.in; nalsa.gov.in"
+    }
+  ]
+}
