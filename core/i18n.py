@@ -142,7 +142,7 @@ STRINGS = {
         "hi": "इस सवाल पर मेरे पास जाँचा हुआ क़ानून नहीं है, इसलिए मैं अनुमान नहीं लगाऊँगा।",
         "te": "ఈ ప్రశ్నపై నా దగ్గర సరిచూసిన చట్టం లేదు, అందుకే ఊహించి చెప్పను.",
     },
-    "setup": {"en": "⚙️ The AI model is not set up yet, so I can't answer: {detail}. Put it in the `.env` file (see `.env.example`) and restart the app."},
+    "setup": {"en": "⚙️ The AI model is not set up yet, so I can't answer: {detail}. Fix it in the `.env` file (see `.env.example`) and restart the app."},
     "error": {
         "en": "Sorry, I had a technical problem reaching the AI service. Please try again in a moment.",
         "hi": "माफ़ कीजिए, AI सेवा से जुड़ने में तकनीकी दिक़्क़त हुई। कृपया थोड़ी देर में फिर कोशिश करें।",

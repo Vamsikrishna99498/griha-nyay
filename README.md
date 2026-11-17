@@ -6,7 +6,7 @@ explains the options in plain words using **only exact official law text**, does
 drafts a **legal notice**, a **defect notice** and **TG-RERA complaint content** (no AI writes these), and lets the
 user **practise negotiating** with an AI playing the builder's rep.
 
-**Solution doc (2 pages, with architecture and inference diagrams):** [`docs/solution.pdf`](docs/solution.pdf)
+**Solution doc (2 pages, with architecture and inference diagrams):** [`solution.pdf`](solution.pdf) (source: `docs/solution.html`)
 
 **Covers:** (1) delayed possession and (2) defects after possession (RERA s.14(3)), for RERA-registered projects in Telangana.
 **Does not cover - says so honestly and points to specific free help:** other kinds of legal problems (DLSA / NALSA 15100,
@@ -48,7 +48,8 @@ Tests (no key needed unless stated):
    LLM_API_KEY=your-key
    MODEL=your-model-name
    ```
-3. Open the app: `streamlit run app.py`
+3. Open the app: `streamlit run app.py`. If the key or the model name is wrong, the app and `run_tests.py` say which one
+   (missing key, key rejected, model not found) instead of a general error.
 4. Try a new input: `python run_tests.py --text "your story"` (add more `--text` for follow-up messages).
 5. Add a test case: save a file in `tests/cases/`, e.g. `22_my_case.json`:
    ```json
@@ -56,7 +57,7 @@ Tests (no key needed unless stated):
     "turns": ["first message", "follow-up"],
     "expect": {"reaches_advice": true}}
    ```
-   then run `python run_tests.py 22`. Other checks you can put in `expect`: `escalate` (e.g. `"insolvency"`),
+   (put your own messages in `turns`), then run `python run_tests.py 22`. Other checks you can put in `expect`: `escalate` (e.g. `"insolvency"`),
    `final_reply_contains`, `final_reply_must_not_contain`, `fields` (expected case-file values), `language_hint`.
 6. See results in `outputs/<model>/` - one file per case and `summary.md`.
 

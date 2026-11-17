@@ -48,6 +48,15 @@ class LLMConfigError(LLMError):
     """No provider can be called at all (missing key/model, or a blocked paid model)."""
 
 
+PLACEHOLDER_KEYS = {"your-key-here", "your-key", "your-api-key", "changeme", "xxx"}   # values left over from .env.example
+
+
+def _key(p: dict) -> str | None:
+    """The provider's key, or None if it is unset or still the example value."""
+    k = (os.getenv(p["key_env"]) or "").strip()
+    return None if k.lower() in PLACEHOLDER_KEYS else k or None
+
+
 def user_message(fixed: str, changing: str) -> dict:
     """A user message whose text that is identical on every call comes first, so providers can cache it.
     'cache_chars' marks where that text ends; complete() removes the key before anything is sent."""
@@ -84,7 +93,7 @@ def providers() -> list[dict]:
 def describe_providers() -> list[dict]:
     """Safe diagnostics: names, endpoints, models, and only WHETHER a key is set - never the key."""
     return [{"name": p["name"], "base_url": p["base_url"], "model": p["model"] or "(missing)",
-             "key_set": bool(os.getenv(p["key_env"])), "key_var": p["key_env"],
+             "key_set": bool(_key(p)), "key_var": p["key_env"],
              "free_guard": ("ok" if p["model"].endswith(":free") else "BLOCKED unless ALLOW_PAID=1")
              if "openrouter.ai" in p["base_url"] else "n/a (not OpenRouter)"} for p in providers()]
 
@@ -128,9 +137,10 @@ def config_problems() -> list[str]:
     never key values). Empty if at least one provider is usable."""
     problems = []
     for p in providers():
-        if not os.getenv(p["key_env"]):
+        if not _key(p):
             names = "LLM_API_KEY (or OPENROUTER_API_KEY)" if p["name"] == "default" else p["key_env"]
-            problems.append(f"no API key - set {names}")
+            left_over = " (it still has the example value)" if os.getenv(p["key_env"]) else ""
+            problems.append(f"no API key - set {names}{left_over}")
         elif not p["model"] or not p["base_url"]:
             u = p["name"].upper()
             problems.append(f"{p['name']}: set {u}_MODEL and {u}_BASE_URL")
@@ -241,14 +251,16 @@ def complete(messages, *, temperature: float, max_tokens: int, rounds: int = 2, 
         raise LLMConfigError("; ".join(problems))
     errors = []
     for rnd in range(rounds):
+        setup, tried = {}, 0   # providers whose key or model the endpoint refused in this round
         for p in providers():
-            key = os.getenv(p["key_env"])
+            key = _key(p)
             if not key or not p["model"] or not p["base_url"]:
                 errors.append(f"{p['name']}: not configured")
                 continue
             if _paid_blocked(p):
                 errors.append(f"{p['name']}: blocked paid model '{p['model']}' (use a ':free' id or ALLOW_PAID=1)")
                 continue
+            tried += 1
             client = OpenAI(base_url=p["base_url"], api_key=key, timeout=timeout, max_retries=0)  # free tiers can be slow
             budget = max_tokens
             sent = _api_messages(messages, p)
@@ -265,6 +277,10 @@ def complete(messages, *, temperature: float, max_tokens: int, rounds: int = 2, 
                         continue  # same request, with the setting this model wants (at most twice per model)
                     if st == 400:
                         raise LLMError(f"bad request to {p['name']}: {_safe(str(e))}") from None
+                    if st in (401, 403):
+                        setup[p["name"]] = f"the provider rejected the API key in {p['key_env']} (error {st}) - check or replace the key"
+                    elif st == 404:
+                        setup[p["name"]] = f"model '{p['model']}' was not found at {p['base_url']} (error 404) - check the model name"
                     break  # 429/5xx/timeout/auth -> next provider
                 text, finish = _reply_text(resp)
                 if not text and finish == "length" and not doubled:
@@ -280,6 +296,8 @@ def complete(messages, *, temperature: float, max_tokens: int, rounds: int = 2, 
                 last_call.update(meta)
                 call_log.append(meta)
                 return _dedupe(text), finish
+        if tried and len(setup) == tried:   # waiting will not help: every provider refused the key or the model
+            raise LLMConfigError("; ".join(setup.values()))
         if rnd < rounds - 1:
             time.sleep(8 * (rnd + 1))  # every provider busy: short wait, then one more round
     raise LLMError("all providers failed: " + " | ".join(errors[-6:]))
