@@ -8,5 +8,6 @@ __pycache__/
 .claude/
 !data/laws/*.pdf
 !docs/*.pdf
+!solution.pdf
 # local helper, never committed
 scripts/check_key.py

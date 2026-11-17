@@ -351,6 +351,49 @@ def test_setup_problem_is_reported_at_once_without_secrets():
         os.environ.update(saved)
 
 
+def test_wrong_key_or_model_is_named_instead_of_a_general_error():
+    env = {"LLM_PROVIDERS": "", "MODEL": "some-model", "BASE_URL": "https://api.test/v1"}
+    saved = {k: os.environ.pop(k) for k in list(os.environ) if k.endswith("_API_KEY") or k in env or k == "ALLOW_PAID"}
+    calls = []
+
+    class Status(OpenAIError):
+        def __init__(self, code):
+            super().__init__(f"Error code: {code}")
+            self.status_code = code
+
+    def client(outcome):
+        class Fake:
+            def __init__(self, **_):
+                self.chat = SimpleNamespace(completions=SimpleNamespace(create=self.create))
+
+            def create(self, **kw):
+                calls.append(kw["model"])
+                return _raise(outcome) if isinstance(outcome, Exception) else _reply(outcome)
+        return Fake
+
+    real_client, real_sleep = llm.OpenAI, llm.time.sleep
+    llm.time.sleep = lambda s: (_ for _ in ()).throw(AssertionError("must not wait when the setup is wrong"))
+    try:
+        os.environ.update({k: v for k, v in env.items() if v}, OPENROUTER_API_KEY="your-key-here")   # .env.example copied, key not filled in
+        reply = Session().handle("my builder delayed my flat in Hyderabad")
+        assert "still has the example value" in reply and "LLM_API_KEY" in reply and "technical problem" not in reply and not calls
+        os.environ["LLM_API_KEY"] = "a-real-looking-key-000111222"
+        llm.OpenAI = client(Status(401))
+        reply = Session().handle("my builder delayed my flat in Hyderabad")
+        assert "rejected the API key in LLM_API_KEY" in reply and "000111222" not in reply and len(calls) == 1
+        llm.OpenAI = client(Status(404))
+        reply = Session().handle("my builder delayed my flat in Hyderabad")
+        assert "model 'some-model' was not found" in reply and "technical problem" not in reply
+    finally:
+        llm.OpenAI, llm.time.sleep = real_client, real_sleep
+        for k in list(env) + ["LLM_API_KEY", "OPENROUTER_API_KEY"]:
+            os.environ.pop(k, None)
+        os.environ.update(saved)
+    # with a second provider that works, a refused key on the first one is simply skipped
+    text, _ = _with_fake_providers(lambda: _raise(Status(401)), lambda: llm.complete([{"role": "user", "content": "hi"}], temperature=0, max_tokens=10))
+    assert text == "fine" and llm.last_call["provider"] == "good"
+
+
 def _reply(text):
     return SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content=text), finish_reason="stop")], usage=None)
 
