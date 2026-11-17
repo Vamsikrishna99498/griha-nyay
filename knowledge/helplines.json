@@ -1,0 +1,84 @@
+{
+ "_note": "Help pointers are written by code, never by the model, so numbers and links cannot be invented. Every pointer has an official source checked on verified_on. Hindi/Telugu labels were written once and should be reviewed by a fluent speaker.",
+ "pointers": {
+  "dlsa": {
+   "contact": "15100",
+   "label": {
+    "en": "Free legal advice: District Legal Services Authority (DLSA) at your district court, or the NALSA legal aid helpline 15100. A free lawyer if you are eligible (Legal Services Authorities Act, s.12).",
+    "hi": "मुफ़्त कानूनी सलाह: अपने ज़िला न्यायालय में ज़िला विधिक सेवा प्राधिकरण (DLSA), या NALSA हेल्पलाइन 15100। पात्र होने पर मुफ़्त वकील भी (विधिक सेवा प्राधिकरण अधिनियम, धारा 12)।",
+    "te": "ఉచిత న్యాయ సలహా: మీ జిల్లా కోర్టులోని జిల్లా న్యాయ సేవా అధికార సంస్థ (DLSA), లేదా NALSA హెల్ప్‌లైన్ 15100. అర్హత ఉంటే ఉచిత న్యాయవాది కూడా (లీగల్ సర్వీసెస్ అథారిటీస్ చట్టం, సెక్షన్ 12)."
+   },
+   "source_url": "https://nalsa.gov.in",
+   "extra_source": "https://tslsa.telangana.gov.in",
+   "verified_on": "2026-11-17"
+  },
+  "nch": {
+   "contact": "1915",
+   "label": {
+    "en": "National Consumer Helpline 1915 (or 1800-11-4000) - free advice on consumer complaints, including against builders.",
+    "hi": "राष्ट्रीय उपभोक्ता हेल्पलाइन 1915 (या 1800-11-4000) - उपभोक्ता शिकायतों पर मुफ़्त सलाह, बिल्डर के ख़िलाफ़ भी।",
+    "te": "జాతీయ వినియోగదారుల హెల్ప్‌లైన్ 1915 (లేదా 1800-11-4000) - బిల్డర్‌పై సహా వినియోగదారుల ఫిర్యాదులపై ఉచిత సలహా."
+   },
+   "source_url": "https://consumerhelpline.gov.in",
+   "verified_on": "2026-11-17"
+  },
+  "police": {
+   "contact": "112",
+   "label": {
+    "en": "If you are threatened or in danger: call 112 (national emergency number) and report to the police.",
+    "hi": "अगर आपको धमकी मिली है या ख़तरा है: 112 (राष्ट्रीय आपातकालीन नंबर) पर कॉल करें और पुलिस को बताएं।",
+    "te": "మిమ్మల్ని బెదిరిస్తే లేదా ప్రమాదంలో ఉంటే: 112 (జాతీయ అత్యవసర నంబర్)కు కాల్ చేసి పోలీసులకు చెప్పండి."
+   },
+   "source_url": "https://www.mha.gov.in/en/commoncontent/emergency-response-support-system-erss",
+   "verified_on": "2026-11-17"
+  },
+  "cyber": {
+   "contact": "1930",
+   "label": {
+    "en": "Online or bank fraud: call 1930 immediately and report at cybercrime.gov.in.",
+    "hi": "ऑनलाइन या बैंक धोखाधड़ी: तुरंत 1930 पर कॉल करें और cybercrime.gov.in पर शिकायत करें।",
+    "te": "ఆన్‌లైన్ లేదా బ్యాంక్ మోసం: వెంటనే 1930కు కాల్ చేసి cybercrime.gov.in లో ఫిర్యాదు చేయండి."
+   },
+   "source_url": "https://financialservices.gov.in/beta/page/csft",
+   "verified_on": "2026-11-17"
+  },
+  "tgrera": {
+   "contact": "https://rera.telangana.gov.in",
+   "label": {
+    "en": "TG-RERA portal (rera.telangana.gov.in): check the project's registration and file complaints online.",
+    "hi": "TG-RERA पोर्टल (rera.telangana.gov.in): प्रोजेक्ट का पंजीकरण देखें और ऑनलाइन शिकायत करें।",
+    "te": "TG-RERA పోర్టల్ (rera.telangana.gov.in): ప్రాజెక్ట్ రిజిస్ట్రేషన్ చూడండి, ఆన్‌లైన్‌లో ఫిర్యాదు చేయండి."
+   },
+   "source_url": "https://rera.telangana.gov.in",
+   "verified_on": "2026-11-17"
+  },
+  "consumer_commission": {
+   "contact": "https://consumerhelpline.gov.in",
+   "label": {
+    "en": "Consumer commission: a homebuyer can complain about deficient service (Consumer Protection Act 2019). Ask the National Consumer Helpline 1915 how to file.",
+    "hi": "उपभोक्ता आयोग: घर ख़रीदार सेवा में कमी की शिकायत कर सकता है (उपभोक्ता संरक्षण अधिनियम 2019)। दाख़िल करने का तरीका जानने के लिए 1915 पर पूछें।",
+    "te": "వినియోగదారుల కమిషన్: సేవలో లోపంపై ఇంటి కొనుగోలుదారు ఫిర్యాదు చేయవచ్చు (వినియోగదారుల రక్షణ చట్టం 2019). ఎలా ఫైల్ చేయాలో 1915లో అడగండి."
+   },
+   "source_url": "https://consumerhelpline.gov.in",
+   "verified_on": "2026-11-17"
+  }
+ },
+ "when": {
+  "off_topic": ["dlsa", "nch"],
+  "insolvency": ["dlsa"],
+  "already_in_court": ["dlsa"],
+  "criminal": ["police", "dlsa"],
+  "title_dispute": ["dlsa"],
+  "unregistered": ["consumer_commission", "dlsa"],
+  "high_value": ["dlsa"],
+  "out_of_state": ["dlsa", "nch"],
+  "defect_window_passed": ["consumer_commission", "dlsa"],
+  "advice": ["tgrera", "dlsa"]
+ },
+ "state_rera_portals": {
+  "Andhra Pradesh": {"url": "https://rera.ap.gov.in", "verified_on": "2026-11-17"},
+  "Karnataka": {"url": "https://rera.karnataka.gov.in", "verified_on": "2026-11-17"},
+  "Maharashtra": {"url": "https://maharera.maharashtra.gov.in", "verified_on": "2026-11-17"},
+  "Tamil Nadu": {"url": "https://rera.tn.gov.in", "verified_on": "2026-11-17"}
+ }
+}

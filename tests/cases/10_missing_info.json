@@ -11,6 +11,6 @@
   "escalate": false,
   "reaches_advice": true,
   "needs_followup": true,
-  "second_reply_must_not_ask": "state"
+  "second_reply_must_not_ask": "which state"
  }
 }

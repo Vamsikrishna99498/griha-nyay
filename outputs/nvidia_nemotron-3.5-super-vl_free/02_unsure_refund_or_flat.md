@@ -1,144 +1,77 @@
 # 02_unsure_refund_or_flat — Unsure whether to take refund or wait
-Model: `nvidia/nemotron-3.5-super-vl:free` · as_of: 2026-11-15
+Commit `not a git checkout` · run 2026-11-18 01:41 · as_of 2026-11-15 · answered by: `default:nvidia/nemotron-3.5-super-vl:free` · 6 model calls · 27773 input tokens (13008 from cache) · 7026 output tokens (3444 hidden reasoning) · 76s
+
 
 ## 🧑 User
 Builder Greenvale Homes, project Greenvale Meadows in Tellapur. Possession was due June 2024. I paid 35 lakh so far. I don't know whether to ask for refund or wait, I really need a house for my family and rent is killing me. What should I do?
 
 ## 🤖 Griha Nyay
-I am not a lawyer. This is general information, not legal advice.
+**Your case in short**
+Greenvale Homes promised possession of your flat in Greenvale Meadows, Tellapur, by 30 June 2024. By my calculation, the delay is 868 days (~28.5 months).
 
-**1. Your case in short**  
-Greenvale Homes was to give you possession of your flat in Greenvale Meadows, Tellapur, by 1 June 2024. It has not happened. As of 15 Nov 2026, the delay is about 897 days (~29.5 months). You have paid Rs 35,00,000.
+**Where you stand**
+The law supports you. [RERA-18-1] "fails to complete or is unable to give possession of an apartment" [RERA-19-4] "claim the refund of amount paid along with interest"
 
-**2. Where you stand**  
-The law supports your right to act because the builder missed the possession date in your agreement. You can choose to withdraw and get your money back with interest, or stay in the project and get interest for every month of delay [RERA-18-1]. You can also claim refund with interest and compensation [RERA-19-4]. A complaint goes to the TG-RERA authority [RERA-31].
+**Your two choices**
+(a) Withdraw: get your Rs 35,00,000 back with interest plus compensation. Refund interest so far is unknown; I need your payment dates to work it out.
+(b) Stay: get interest for every month of delay. Monthly interest: Rs 31,937. Interest accrued so far: Rs 9,11,400.
 
-**3. Your two choices**  
-(a) **Withdraw and take a refund with interest (+ compensation):** Refund interest so far is unknown; total refund so far is unknown. I need your payment dates to estimate refund interest. Compensation is decided by the adjudicating officer based on facts such as the builder’s gain and your loss [RERA-71-72].  
-(b) **Stay and get interest for every month of delay:** Monthly interest is Rs 31,208. Interest accrued so far is Rs 9,20,347. The rate is 10.70% per year (SBI MCLR + 2%) [TG-INTEREST].  
+You are unsure. One question may help: do you still want this flat, and do you trust the builder to finish?
 
-Since your goal is unsure, ask yourself: *Do I still want this flat, and do I trust Greenvale Homes to finish it?*
+**What to do next**
+1. Collect proof: payment receipts, the agreement for sale, and any messages from Greenvale Homes. You still lack the agreement date, total price, RERA number, and payment dates.
+2. Check the project's registration on the TG-RERA portal.
+3. Send a legal notice (I can draft it).
+4. File a complaint: Form M to TG-RERA for refund and delay interest (fee Rs 1,000); Form N to the adjudicating officer for compensation (fee Rs 1,000).
 
-**4. What to do next**  
-1. Collect proof: agreement for sale, payment receipts, emails/WhatsApp, and any builder excuses.  
-2. Check if the project is registered with TG-RERA and note the RERA number.  
-3. Send a legal notice to the builder (I can help draft it).  
-4. File a TG-RERA complaint online: Form M for refund, possession, or delay interest; Form N for compensation [TG-FORMS]. Check the current fee on the portal before filing.
+**What I'm not sure about**
+- The delay count assumes possession was due on the last day of June 2024, because only the month was given.
+- I was not given the agreement date, total price, RERA number, or payment dates.
+- The final interest rate, period, and compensation are decided by TG-RERA or the adjudicating officer.
 
-**5. What I’m not sure about**  
-I don’t know your flat details, RERA number, agreement date, or exact payment dates. I also don’t know if Greenvale Homes is still active or if the project is registered. These are outside what I can confirm from your message.
-
-**6. When to get a real lawyer**  
-If the builder ignores your notice or disputes the claim, consult a lawyer. Free legal aid is available through DLSA or helpline 15100.
-
-The TG-RERA authority decides the final interest, refund, and compensation based on facts. I cannot promise an outcome.
+**When to get a real lawyer**
+Speak to a lawyer or the DLSA before you send a notice or file, to confirm the correct form and route.
 
 ---
-**Sources used** (from my checked list — nothing else):
-- **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) — _Delay in possession: refund or monthly interest_ (source: RERA Act 2016, s.18 — India Code (indiacode.nic.in); check status: memory+secondary)
-- **[RERA-19-4]** Real Estate (Regulation and Development) Act, 2016, Section 19(4) — _Buyer's right to refund with interest and compensation_ (source: RERA Act 2016, s.19 — India Code (indiacode.nic.in); check status: memory+secondary)
-- **[RERA-31]** Real Estate (Regulation and Development) Act, 2016, Section 31 — _Who can file a complaint and where_ (source: RERA Act 2016, s.31 — India Code (indiacode.nic.in); check status: memory+secondary)
-- **[RERA-71-72]** Real Estate (Regulation and Development) Act, 2016, Sections 71 and 72 — _Compensation is decided by the adjudicating officer_ (source: RERA Act 2016, ss.71-72 — India Code (indiacode.nic.in); check status: memory+secondary)
-- **[TG-INTEREST]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rate of interest rule — _Interest rate in Telangana_ (source: TG-RERA orders (2026) applying SBI MCLR + 2%; TS RERA Rules 2017; check status: secondary)
-- **[TG-FORMS]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Complaint rules (Form M / Form N) — _Which form to file in Telangana_ (source: TS RERA Rules 2017 complaint rules; TG-RERA portal rera.telangana.gov.in; check status: secondary)
+**Sources used** (official text, checked):
+- **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
+- **[RERA-19-4]** Real Estate (Regulation and Development) Act, 2016, Section 19(4) - _Buyer's right to refund with interest and compensation_ (PDF p. 17; https://rera.telangana.gov.in)
 
 ## 🧑 User
 It's registered under TG RERA I think. Agreement signed August 2021.
 
 ## 🤖 Griha Nyay
-I am not a lawyer. This is general information, not legal advice.
+📝 **Updated your case file:** RERA registered: — → True; Agreement date: — → 2021-08-01
 
-**Your situation now**  
-Agreement signed August 2021. Possession due 1 June 2024. You paid Rs 35,00,000. Delay as of 15 Nov 2026: 897 days (~29.5 months). You think the project is TG-RERA registered.
+Thank you. Agreement signed August 2021, possession due 30 June 2024. Delay: 868 days (~28.5 months). Amount paid: Rs 35,00,000.
 
-**Your two choices under the law**  
-(a) **Withdraw and get refund with interest (+ compensation):** Refund interest so far is unknown; total refund so far is unknown. I need your payment dates to estimate refund interest [RERA-18-1] [RERA-19-4].  
-(b) **Stay and get interest for every month of delay:** Monthly interest is Rs 31,208. Interest accrued so far is Rs 9,20,347. Rate is 10.70% per year (SBI MCLR + 2%) [TG-INTEREST] [RERA-18-1].
+**Your two choices under RERA**
+[RERA-18-1] "he shall be liable on demand to the allottees, in case the allottee wishes to withdraw from the project... to return the amount received by him... with interest... including compensation"
+[RERA-18-1] "where an allottee does not intend to withdraw from the project, he shall be paid... interest for every month of delay"
 
-Since rent is killing you and you need a home, think carefully: do you still want this flat and do you trust Greenvale Homes to finish it? If yes, staying lets you claim monthly interest. If no, refund may be better.
+(a) **Withdraw:** Get Rs 35,00,000 back with interest plus compensation. Refund interest so far is unknown; I need your payment dates to work it out.
+(b) **Stay:** Get interest for every month of delay. Monthly interest: Rs 31,937. Interest accrued so far: Rs 9,11,400.
 
-**Next steps**  
-1. Confirm registration: search Greenvale Meadows on the TG-RERA portal and note the RERA number and declared completion date [TG-CHECK-REG].  
-2. Collect proof: agreement (August 2021), payment receipts, builder messages/excuses.  
-3. Send a legal notice to the builder (I can help draft it).  
-4. File online with TG-RERA: Form M for refund/possession/delay interest; Form N for compensation [TG-FORMS] [RERA-31]. Check the current fee on the portal first.
+Interest rate: [TS-R15] highest SBI MCLR + 2% (10.95% per year as calculated).
 
-**What I don’t know**  
-Exact RERA number, exact payment dates, and whether the builder is still active. These affect the final calculation. A lawyer or DLSA (free legal aid, helpline 15100) can help if the builder resists.
+**Next steps**
+1. Verify TG-RERA registration on the portal. [RERA-3-1] bars builders from selling without registering. TG-RERA's FAQ says you can complain even if the agreement was signed before registration. (⚠ I couldn't confirm this against the law text)
+2. Collect payment receipts, the agreement copy, and any builder messages.
+3. Send a legal notice to Greenvale Homes.
+4. File Form M with TG-RERA (fee Rs 1,000) for refund and delay interest. [TS-R34-1]
+5. File Form N with the adjudicating officer (fee Rs 1,000) for compensation.
 
-I cannot promise an outcome; the TG-RERA authority decides based on facts.
+I do not know the final interest period or compensation amount; TG-RERA or the adjudicating officer decides that. Please speak to a lawyer or the DLSA before you file.
 
 ---
-**Sources used** (from my checked list — nothing else):
-- **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) — _Delay in possession: refund or monthly interest_ (source: RERA Act 2016, s.18 — India Code (indiacode.nic.in); check status: memory+secondary)
-- **[RERA-19-4]** Real Estate (Regulation and Development) Act, 2016, Section 19(4) — _Buyer's right to refund with interest and compensation_ (source: RERA Act 2016, s.19 — India Code (indiacode.nic.in); check status: memory+secondary)
-- **[TG-INTEREST]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rate of interest rule — _Interest rate in Telangana_ (source: TG-RERA orders (2026) applying SBI MCLR + 2%; TS RERA Rules 2017; check status: secondary)
-- **[TG-CHECK-REG]** Practical step, TG-RERA project search — _Check the project's registration_ (source: rera.telangana.gov.in; check status: practical)
-- **[TG-FORMS]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Complaint rules (Form M / Form N) — _Which form to file in Telangana_ (source: TS RERA Rules 2017 complaint rules; TG-RERA portal rera.telangana.gov.in; check status: secondary)
-- **[RERA-31]** Real Estate (Regulation and Development) Act, 2016, Section 31 — _Who can file a complaint and where_ (source: RERA Act 2016, s.31 — India Code (indiacode.nic.in); check status: memory+secondary)
+**Sources used** (official text, checked):
+- **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
+- **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
+- **[RERA-3-1]** Real Estate (Regulation and Development) Act, 2016, Section 3(1) - _Projects must be registered with RERA_ (PDF p. 7; https://rera.telangana.gov.in)
+- **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
 
-## 📄 Generated legal notice
-> **DRAFT — prepared by an AI assistant, not a lawyer. Check every fact, date and amount, fill the [brackets], and ideally have a lawyer or DLSA review it before sending by Registered Post A.D. / email. Keep the postal receipt.**
-
-**LEGAL NOTICE**
-
-Date: 15 November 2026
-
-**To:**
-Greenvale Homes
-[Registered office address]
-
-**From:**
-[Your full name]
-[Your address, phone, email]
-
-**Subject:** Notice for failure to hand over possession of [flat number] in the project "Greenvale Meadows", and demand under the Real Estate (Regulation and Development) Act, 2016
-
-Sir/Madam,
-
-**Facts**
-
-1. I booked a flat in the project "Greenvale Meadows" developed by Greenvale Homes, located at Tellapur, Telangana. The details of the flat are [flat details].
-
-2. The agreement for the said flat was executed on [date of agreement].
-
-3. I have paid a sum of Rs. 35,00,000 (Rupees Thirty Five Lakhs Only) to Greenvale Homes towards the purchase of the said flat. The total price of the flat is [total price of the flat].
-
-4. The builder promised to hand over possession of the flat on 1st June 2024.
-
-5. As per the agreed timeline, possession of the flat was due on 1st June 2024.
-
-6. Despite the passage of the promised possession date, possession of the flat has not been handed over to me.
-
-7. The RERA registration details of the project are [RERA number], and the RERA registration status is [RERA registered status].
-
-**Legal position**
-
-8. Under Section 18(1) of the Real Estate (Regulation and Development) Act, 2016, where a promoter fails to complete or is unable to give possession of an apartment in accordance with the terms of the agreement for sale, the allottee is entitled, at the allottee's option, either to withdraw from the project and receive back the amount paid with interest at the prescribed rate and compensation, or, without withdrawing, to be paid interest for every month of delay until the handing over of possession.
-
-9. Under Section 11(4)(a) of the said Act, you remain responsible for all obligations under the agreement for sale until conveyance of the apartment.
-
-10. As on 15 November 2026, possession is delayed by 897 days from the agreed date of 01 June 2024.
-
-**Demand**
-
-11. I call upon you, within 15 (fifteen) days of receipt of this notice, to (a) give me a firm written date for handing over possession with the occupancy certificate, and (b) pay me interest at the prescribed rate on Rs 35,00,000 for every month of delay from 01 June 2024 (estimated at Rs 9,20,347 as on 15 November 2026, i.e. about Rs 31,208 per month) and continue to pay it monthly until possession.
-
-12. If you fail to comply within the said period, I shall be constrained to file a complaint before the Telangana Real Estate Regulatory Authority under Section 31 of the said Act, and a claim for compensation before the Adjudicating Officer, entirely at your risk as to costs and consequences.
-
-13. Nothing in this notice waives any of my other rights and remedies under law.
-
-Yours faithfully,
-
-[Your name]
-[Signature]
-
-**Enclosures (copies):** [agreement for sale, payment receipts, builder's letters/emails]
-
-
-## 🥊 Practice round
-**Buyer:** I want possession or my refund with interest. When will you hand over?
-**Builder rep:** I understand your concern, and we appreciate your patience. There has been a delay due to pending government approvals and a labour shortage, but we expect to hand over possession within the next six months, sir. I wouldn’t recommend going to RERA—those cases take years to resolve.
+## 📄 Legal notice not generated
+The buyer has not said whether they want a refund or the flat; the Drafts tab asks them to choose first.
 
 ## 🗂️ Case file (extracted)
 ```json
@@ -146,25 +79,31 @@ Yours faithfully,
  "language": "English",
  "state": "Telangana",
  "city": "Tellapur",
- "buyer_name": null,
  "builder_name": "Greenvale Homes",
  "project_name": "Greenvale Meadows",
  "flat_details": null,
  "rera_number": null,
- "rera_registered": null,
- "agreement_date": null,
- "promised_possession_date": "2024-06-01",
+ "rera_registered": true,
+ "permission_before_2017": null,
+ "categories": [
+  "delay"
+ ],
+ "agreement_date": "2021-08-01",
+ "promised_possession_date": "2024-06-30",
+ "possession_handed_over_date": null,
  "total_price_rupees": null,
  "amount_paid_rupees": 3500000,
  "payments": [],
- "evidence": [],
  "goal": "unsure",
+ "defects": [],
+ "defect_reported_date": null,
+ "builder_response": null,
+ "evidence": [],
  "builder_excuses": [],
- "timeline": [
-  {
-   "date": "2024-06-01",
-   "event": "Possession was due"
-  }
+ "timeline": [],
+ "assumptions": [
+  "Only the month was given for the promised possession date, so the delay is counted from the last day of that month (30 June 2024).",
+  "Only the month and year were given for the agreement date, so the 1st of that month is assumed."
  ]
 }
 ```
@@ -172,29 +111,56 @@ Yours faithfully,
 ```json
 {
  "as_of": "2026-11-15",
- "promised_possession_date": "2024-06-01",
- "delay": "897 days (~29.5 months)",
- "interest_rate": "10.70% per year (SBI Marginal Cost of Lending Rate (MCLR) + 2% per annum)",
+ "promised_possession_date": "2024-06-30",
+ "delay": "868 days (~28.5 months)",
+ "interest_rate": "10.95% per year (highest SBI Marginal Cost of Lending Rate (MCLR) + 2% per year (TS RERA Rules 2017, Rule 15))",
  "amount_paid": "Rs 35,00,000",
- "option_stay_monthly_interest": "Rs 31,208",
- "option_stay_interest_accrued_so_far": "Rs 9,20,347",
+ "option_stay_monthly_interest": "Rs 31,937",
+ "option_stay_interest_accrued_so_far": "Rs 9,11,400",
  "option_refund_interest_so_far": "unknown",
  "option_refund_total_so_far": "unknown",
  "notes": [
   "Simple interest estimate only. The TG-RERA order decides the final rate, period and compensation.",
-  "Refund interest normally runs from the date of each payment; give payment dates for that estimate."
+  "Delay interest assumes everything was paid before the promised date; give payment dates for a more exact figure.",
+  "Refund interest runs from the date of each payment; give payment dates for that estimate."
  ]
 }
 ```
 ## 🛡️ Guardrail log
 - Escalations: none
 - Cautions: none
-- Citations/references removed by validator: none
-- Other log: none
+- Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'index', 'TS-R34-1': 'case', 'TS-R35-1': 'linked'}, {'RERA-3-1': 'index', 'TS-R2-ONGOING': 'index', 'RERA-18-1': 'case', 'TS-R15': 'case', 'TS-R34-1': 'case', 'RERA-19-4': 'case'}]
+- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 10, 'unsupported': 0, 'error': None}
+  - [user_fact] Greenvale Homes promised possession by 30 June 2024 (no tag)
+  - [user_fact] The delay is 868 days (~28.5 months) (no tag)
+  - [supported] Section 18(1) covers failure to complete or give possession of an apartment (RERA-18-1)
+  - [supported] Section 19(4) entitles a buyer to claim refund of amount paid along with interest (RERA-19-4)
+  - [user_fact] Withdraw: get Rs 35,00,000 back with interest plus compensation (no tag)
+  - [supported] Stay: get interest for every month of delay (RERA-18-1)
+  - [calculator] Monthly interest: Rs 31,937 (no tag)
+  - [calculator] Interest accrued so far: Rs 9,11,400 (no tag)
+  - [supported] File Form M to TG-RERA for refund and delay interest (fee Rs 1,000) (TS-R34-1)
+  - [supported] File Form N to the adjudicating officer for compensation (fee Rs 1,000) (TS-R35-1)
+- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 14, 'unsupported': 1, 'error': None}
+  - [supported] RERA bars builders from selling without registering (RERA-3-1)
+  - [unsupported] TG-RERA's FAQ says you can complain even if the agreement was signed before registration (no tag)
+  - [supported] File Form M with TG-RERA (fee Rs 1,000) for refund and delay interest (TS-R34-1)
+  - [supported] File Form N with the adjudicating officer (fee Rs 1,000) for compensation (TS-R34-1)
+  - [supported] Interest rate: highest SBI MCLR + 2% (10.95% per year as calculated) (TS-R15)
+  - [user_fact] Monthly interest: Rs 31,937 (no tag)
+  - [user_fact] Interest accrued so far: Rs 9,11,400 (no tag)
+  - [user_fact] Delay: 868 days (~28.5 months) (no tag)
+  - [user_fact] Amount paid: Rs 35,00,000 (no tag)
+  - [user_fact] Possession due 30 June 2024 (no tag)
+  - [user_fact] Agreement signed August 2021 (no tag)
+  - [supported] Get Rs 35,00,000 back with interest plus compensation (RERA-18-1)
+  - [supported] Get interest for every month of delay (RERA-18-1)
+  - [not_law] TG-RERA or the adjudicating officer decides the final interest period or compensation amount (no tag)
+- Other log: [{'type': 'case_updated', 'fields': ['rera_registered', 'agreement_date']}]
 ## ✅ Checks
 - PASS no_false_escalation
 - PASS reached_advice
 - PASS no_llm_errors
+- PASS no_cut_off_reply
+- PASS no_internal_names
 - PASS no_duplicated_answer
-
-_Time: 94.4s_

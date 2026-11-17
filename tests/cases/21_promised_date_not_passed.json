@@ -1,0 +1,23 @@
+{
+ "id": "21_promised_date_not_passed",
+ "title": "Promised date is still in the future",
+ "as_of": "2026-11-15",
+ "turns": [
+  "Flat in Narsingi, Hyderabad, project Cedar Park by Lotus Infra, RERA registered. Possession is promised by 30 June 2027 and I have paid 30 lakh. Construction looks very slow and I am worried. I want the flat."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "delay_notice_blocked": true,
+  "calc": {
+   "delay_days": 0
+  },
+  "fields": {
+   "promised_possession_date": "2027-06-30",
+   "amount_paid_rupees": 3000000
+  },
+  "final_reply_must_not_contain": [
+   "I can draft"
+  ]
+ }
+}

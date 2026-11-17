@@ -1,0 +1,77 @@
+{
+ "docs": {
+  "RERA_ACT": {
+   "title": "Real Estate (Regulation and Development) Act, 2016",
+   "short": "RERA Act",
+   "act_key": "rera",
+   "kind": "law",
+   "file": "data/laws/rera_act_2016.pdf",
+   "publisher": "Gazette of India, Act No. 16 of 2016 (copy from rera.telangana.gov.in)",
+   "url": "https://rera.telangana.gov.in",
+   "retrieved": "2026-11-16",
+   "sha256": "312d8c92bb8a3be7b915281197f65e45b8951af53bcb32548d434067b6591127",
+   "pdf_pages": 39
+  },
+  "TS_RULES": {
+   "title": "Telangana State Real Estate (Regulation and Development) Rules, 2017",
+   "short": "TS RERA Rules",
+   "act_key": "ts_rules",
+   "kind": "law",
+   "file": "data/laws/ts_rera_rules_2017.pdf",
+   "publisher": "G.O.Ms.No.202, MA&UD (M1) Dept., Govt. of Telangana, 31-07-2017 (copy from rera.telangana.gov.in)",
+   "url": "https://rera.telangana.gov.in",
+   "retrieved": "2026-11-16",
+   "sha256": "155ef9da64d499c449cc76e98273e7f6a2242b5b73e107288faae4306b6e7e14",
+   "pdf_pages": 81
+  },
+  "TG_FAQ": {
+   "title": "TG-RERA Frequently Asked Questions (07.07.2023)",
+   "short": "TG-RERA FAQ",
+   "act_key": "faq",
+   "kind": "guidance",
+   "file": "data/laws/tgrera_faq_2023.pdf",
+   "publisher": "Telangana Real Estate Regulatory Authority website",
+   "url": "https://rera.telangana.gov.in",
+   "retrieved": "2026-11-16",
+   "note": "Practical guidance, not law. Contains some wrong section numbers, so the bot never takes section numbers from it.",
+   "sha256": "6b70ab85318a2e2f974a6e6f81fff4be8d871e82d048790b0c4185f6bd061859",
+   "pdf_pages": 6
+  },
+  "CPA_2019": {
+   "title": "Consumer Protection Act, 2019",
+   "short": "Consumer Protection Act",
+   "act_key": "cpa",
+   "kind": "law",
+   "file": "data/laws/cpa_2019.pdf",
+   "publisher": "Gazette of India Extraordinary, Part II Sec. 1, No. 54, 9 Aug 2019 (Act No. 35 of 2019); scan hosted by PRS Legislative Research",
+   "url": "https://prsindia.org/files/bills_acts/bills_parliament/2021/Consumer%20Protection%20Act%202019.pdf",
+   "retrieved": "2026-11-17",
+   "sha256": "0ae7f82ab5b77d50087cd4cd2dd2dbc12755c0bdb31371fdefd042b020d50756",
+   "pdf_pages": 40
+  },
+  "CP_JUR_2021": {
+   "title": "Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021",
+   "short": "Consumer Protection Jurisdiction Rules 2021",
+   "act_key": "cpa_rules",
+   "kind": "law",
+   "file": "data/laws/cp_jurisdiction_rules_2021.pdf",
+   "publisher": "Gazette of India Extraordinary, G.S.R. 912(E), 30 Dec 2021, Dept. of Consumer Affairs; copy hosted on thc.nic.in",
+   "url": "https://www.thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(Jurisdiction%20of%20the%20District%20Commission,%20the%20State%20Commission%20and%20the%20National%20Commission)%20Rules,%202021.pdf",
+   "retrieved": "2026-11-17",
+   "sha256": "2c10f5a312064d5d7eaf80181580919fc13aff09f2df47b4ecc2ca7b79ade979",
+   "pdf_pages": 1
+  },
+  "LSA_1987": {
+   "title": "Legal Services Authorities Act, 1987",
+   "short": "Legal Services Authorities Act",
+   "act_key": "lsa",
+   "kind": "law",
+   "file": "data/laws/lsa_act_1987.pdf",
+   "publisher": "Act No. 39 of 1987 as amended; copy published by Jharkhand State Legal Services Authority",
+   "url": "https://www.jhalsa.org/pdfs/LSA_1987.pdf",
+   "retrieved": "2026-11-17",
+   "sha256": "4601c585a2fcd8cad87faa197aa543ebcbc966b5a19a2b31644d462c78d8ed78",
+   "pdf_pages": 26
+  }
+ }
+}

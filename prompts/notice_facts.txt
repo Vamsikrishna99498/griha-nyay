@@ -1,9 +1,0 @@
-Write ONLY the "Facts" section of a legal notice from a homebuyer to their builder, in formal English, as numbered paragraphs (5-9 paragraphs).
-Use ONLY the facts in the case file below. Do not add any fact, date, amount or law that is not in it. Where an important fact is missing, write a placeholder in square brackets like [date of agreement].
-Do not cite any law or section — the legal grounds are added separately.
-Write in the first person as the buyer ("I booked...", "I have paid...").
-
-CASE FILE:
-{case_json}
-
-Return only the numbered paragraphs, nothing else.

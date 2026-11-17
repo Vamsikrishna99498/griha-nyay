@@ -1,54 +1,138 @@
-# Griha Nyay — AI legal help for homebuyers facing builder delays (Telangana)
+# Griha Nyay - AI legal help for Telangana homebuyers (builder delays & defects)
 
-A chat assistant for an ordinary homebuyer whose builder hasn't handed over the flat on time.
-It turns a messy story (English / Hindi / Telugu / mixed) into a case file, explains the buyer's
-options under RERA in plain words with **real calculated interest**, drafts a **legal notice** and a
-**TG-RERA complaint**, and lets them **practise negotiating** with an AI playing the builder's rep.
+A chat assistant for an ordinary homebuyer in Hyderabad/Telangana whose builder **delayed possession** or left
+**defects** in the flat. It turns a messy story (English / Hindi / Telugu / Hinglish / Tenglish) into a case file,
+explains the options in plain words using **only exact official law text**, does all money and date maths in code,
+drafts a **legal notice**, a **defect notice** and **TG-RERA complaint content** (no AI writes these), and lets the
+user **practise negotiating** with an AI playing the builder's rep.
 
-**Covers:** delayed possession of RERA-registered projects in Telangana.
-**Does not cover (says so and points to a lawyer / DLSA):** other states, builder insolvency (NCLT/IBC),
-unregistered projects, criminal matters (forgery, double sale, threats), title disputes, cases already in court,
-claims above Rs 2 crore, and anything that isn't a builder-delay problem (e.g. landlord deposits). It never cites court judgments.
+**Solution doc (2 pages, with architecture and inference diagrams):** [`docs/solution.pdf`](docs/solution.pdf)
+
+**Covers:** (1) delayed possession and (2) defects after possession (RERA s.14(3)), for RERA-registered projects in Telangana.
+**Does not cover - says so honestly and points to specific free help:** other kinds of legal problems (DLSA / NALSA 15100,
+National Consumer Helpline 1915), other states (central-law explanation + that state's RERA portal), builder insolvency,
+cases already in court, criminal matters (police 112), land-title disputes, unregistered / pre-2017 projects, claims above
+Rs 2 crore, and defects reported after the 5-year window. It never cites court judgments and never estimates compensation.
 
 ## Run
+Needs Python 3.9 or newer. With [uv](https://docs.astral.sh/uv/) (installs the exact versions pinned in `uv.lock`):
+```bash
+cp .env.example .env             # add your free key(s) - see "Models" below
+uv run streamlit run app.py      # opens on localhost only
+```
+Or with plain pip:
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-cp .env.example .env          # add your free OpenRouter key
+cp .env.example .env
 .venv/bin/streamlit run app.py
 ```
-Tests:
-- `python -m tests.test_offline` — maths, parsing, guardrails (no key needed)
-- `python -m tests.test_engine_mocked` — conversation flows with a fake model (no key, no cost)
-- `python run_tests.py` — all 12 written cases on the real model → `outputs/<model>/` (raw, unedited)
+With uv, put `uv run` in front of the commands below (e.g. `uv run python -m tests.test_offline`). Lint: `uv run ruff check`
+(rules in `pyproject.toml`). Dependencies are listed in `pyproject.toml`; `requirements.txt` is the same list for pip users.
 
-## Swap the model
-Only env vars: `MODEL=<any OpenRouter id>`; or `BASE_URL` + `LLM_API_KEY` for any OpenAI-compatible endpoint.
-Nothing else in the code names a model. `MODEL=x python run_tests.py` writes results to a separate folder for side-by-side comparison.
+Tests (no key needed unless stated):
+- `python -m tests.test_offline` - maths, defect window, parsing, guardrails, privacy, schema, language, retrieval
+- `python -m tests.test_law_quotes` - every law quote is verbatim on its official PDF page; PDF hashes; templates
+- `python -m tests.eval_retrieval` - retrieval on 32 labelled questions in 5 language styles
+- Latest raw outputs: `outputs/gemini-3.5-flash-lite/` - all 21 cases on the current code (Gemini free tier): 176/176 checks passed.
+  Earlier runs, kept for comparison: `outputs/nvidia_nemotron-3.5-super-vl_free/` (free OpenRouter endpoint; 20 of 21 cases
+  passed, case 21 was stopped by the provider's daily free-request limit, and it predates the conversational replies in
+  `prompts/chat.txt`) and `outputs/nvidia_nemotron-3.5-super-vl/` (the same model's paid endpoint, earlier prompts).
+- `python run_tests.py` - all 21 written cases on the real model -> `outputs/<model>/` (raw, unedited, stamped) **(uses your key)**
+- `python run_tests.py --text "a new story" --text "a follow-up"` - run any new input and save the raw output **(uses your key)**
+
+## Use your own model and your own test cases (quick start)
+1. Install: `pip install -r requirements.txt`
+2. Set the model: copy `.env.example` to `.env` and fill three lines (any OpenAI-compatible API):
+   ```
+   BASE_URL=https://your-api/v1
+   LLM_API_KEY=your-key
+   MODEL=your-model-name
+   ```
+3. Open the app: `streamlit run app.py`
+4. Try a new input: `python run_tests.py --text "your story"` (add more `--text` for follow-up messages).
+5. Add a test case: save a file in `tests/cases/`, e.g. `22_my_case.json`:
+   ```json
+   {"id": "22_my_case", "title": "My case",
+    "turns": ["first message", "follow-up"],
+    "expect": {"reaches_advice": true}}
+   ```
+   then run `python run_tests.py 22`. Other checks you can put in `expect`: `escalate` (e.g. `"insolvency"`),
+   `final_reply_contains`, `final_reply_must_not_contain`, `fields` (expected case-file values), `language_hint`.
+6. See results in `outputs/<model>/` - one file per case and `summary.md`.
+
+## Models (swap with env vars only)
+Single provider: `MODEL`, `LLM_API_KEY` (or `OPENROUTER_API_KEY`), `BASE_URL` (any OpenAI-compatible endpoint).
+Fallback chain across free providers: `LLM_PROVIDERS=openrouter,gemini,groq` plus `<NAME>_BASE_URL`, `<NAME>_API_KEY`,
+`<NAME>_MODEL` for each. On a rate limit / outage the next provider answers; the sidebar and every test output show which
+one did. Nothing else in the code names a model. On OpenRouter only `:free` models run unless `ALLOW_PAID=1`.
+
+## Prompt caching
+Providers can reuse the start of a request when it is identical to a recent one, which makes repeated input cheaper and
+faster. The prompts are ordered for that: the text that never changes (the instructions and the law index, roughly 4,900
+estimated tokens for intake and 3,500 for advice) comes first, and the case details come last. The intake prefix is the
+same for every user; the advice prefix is shared only by users writing in the same language, because the advice
+instructions name the reply language.
+- OpenAI and Gemini 2.5+ models cache such a prefix automatically (per OpenRouter's prompt-caching guide); nothing to switch on.
+- Anthropic models need an explicit breakpoint. `PROMPT_CACHE_MARKERS=1` adds one after the law index for `anthropic/...`
+  models on OpenRouter. It is **off by default** because that request shape has only been unit-tested, not run on a live model.
+- Every test output and the app sidebar show how many input tokens came from the cache, when the provider reports it.
+- Measured: an earlier run on a paid OpenRouter endpoint served 53% of input tokens from its cache, and a free-endpoint
+  run 15%; Gemini's free tier reported about 1% in the latest run. Caching is not always a saving - some providers charge extra to write the
+  cache, so it pays off only when requests repeat within the cache lifetime.
 
 ## How it avoids invented law
 | Layer | What it does | Where |
 |---|---|---|
-| Closed knowledge base | ~20 provisions written as plain summaries, each with source + verification status | `knowledge/*.json` |
-| Retrieval | Only the matching entries are given to the model, tagged like `[RERA-18-1]` | `core/retrieve.py` |
-| Prompt rules | Cite only given tags; no judgments; no own maths; say "I don't know" | `prompts/advisor.txt` |
-| **Validator (code)** | Removes any tag, section/rule number or case citation not in that turn's entries; flags rupee amounts the calculator didn't produce | `core/guardrails.py` |
-| Fixed legal text | Legal paragraphs in notices/complaints are templates, not AI text; the LLM only writes the facts | `templates/` |
-| Escalation rules (code) | Keyword + case-field rules send risky cases to a lawyer / DLSA | `knowledge/escalation.json` |
+| Official corpus | 6 official PDFs (RERA Act, TS RERA Rules, TG-RERA FAQ, Consumer Protection Act 2019 + 2021 Jurisdiction Rules, Legal Services Authorities Act), page text + sha256 committed | `data/laws/`, `knowledge/sources.json` |
+| Verified entries | 32 entries whose quotes are **cut from the page text by code** (`tools/build_law.py`), each with PDF page; a test re-checks every quote | `knowledge/law.json`, `tests/test_law_quotes.py` |
+| Structured retrieval (no vectors) | exact lookup ("section 14"), the model picks from a compact **law index** during intake, case-state rules, multilingual keywords, linked entries; max 6 (8 when a case has both delay and defects); nothing relevant -> says so | `core/retrieve.py`, `knowledge/retrieval_map.json` |
+| Prompt rules | cite only by tag, copy law wording exactly in quotes, no section numbers, no judgments, no own maths | `prompts/advisor.txt` |
+| Citation validator (code) | unknown tags removed; a bare "Section 18" becomes a tag only if it matches a retrieved entry of the same Act and sub-section ("Section 19(7)" is not the verified 19(4)); other Acts, Articles, IPC/BNS and case citations removed | `core/guardrails.py` |
+| Quote check (code) | text in quotes next to a tag must appear verbatim in that entry, else marked "⚠ not exact law text" | `core/guardrails.py` |
+| Amount check (code) | rupee figures (incl. lakh/crore, Hindi/Telugu) not produced by the calculator are marked "⚠ unverified" | `core/guardrails.py` |
+| Grounding check (1 extra model call) | lists each legal claim and judges it against the exact text; unsupported claims are flagged, never deleted (switch off: `GROUNDING_CHECK=0`) | `core/grounding.py` |
+| Fixed legal text in drafts | notices/complaints are built by code from the case file; legal paragraphs quote the verified entries | `core/drafts.py`, `templates/` |
+| Escalation (code + flags) | keyword stems in en/hi/te + structured case rules; intake flags can only escalate, never unlock. A denial ("no case pending") or a question about a possibility ("what if the builder goes bankrupt?") does not escalate. Escalations worked out from case facts (state, amount, registration, defect window) are lifted if the fact is corrected; what the person said in words stays | `knowledge/escalation.json` |
 
 ## What is AI vs code
-- **LLM:** extracting facts from the story, follow-up questions, plain-language explanation, facts section of drafts, builder role-play, coaching.
-- **Code:** conversation flow, delay/interest maths, escalation decisions, citation validation, legal text of drafts, Indian number formatting.
+- **Model:** reading the story into structured fields (+ picking relevant law from the index), the plain-language explanation,
+  short conversational replies (answering a greeting, a worry or a general question, and asking for missing facts -
+  `prompts/chat.txt`, with a code-written fallback), builder role-play, coaching, and the grounding check.
+- **Code:** conversation flow, language detection, all maths (delay, interest per payment, the 5-year defect window),
+  escalation, retrieval, citation/quote/amount checks, privacy scrubbing, every draft document, and all helpline numbers.
 
-## Memory
-Per browser tab, in memory only (no database; refresh = new case). Facts live in a structured case file that is
-merged by code (nulls never erase known facts; later corrections win and are shown to the user as
-"Updated your case file: X → Y"). Each model call is rebuilt from the case file + the last 8 messages.
+## Privacy, injection, memory
+- **Session only:** nothing is written to disk; closing the tab ends the case. The user can download their own case summary.
+- **ID numbers removed before any model call:** Aadhaar, PAN, mobile and landline numbers, email, IFSC and account numbers
+  (next to an "account" cue) are replaced with `[removed: ...]` and never re-inserted - also in the part of an over-long message
+  that is kept. Spaced-out round figures and years ("paid 75000 50000", "in 2022 2023 2024") are left alone, as they are facts. Name/address for documents go in a local form on the Drafts tab
+  that is never sent to a model. The app tells users their messages are processed by an AI provider.
+- **Local only:** `.streamlit/config.toml` binds to localhost; no usage stats; conversations are never logged.
+- **Prompt injection:** user text is wrapped in `<user_message>` tags and treated as data; case data never goes into a
+  system prompt; the model's JSON passes a strict whitelist/enum/length check; messages over 4,000 characters are refused.
+- **Memory:** the case file *is* the memory. Intake reads only the newest message (+ the case file + the last question) and
+  returns changes, which code merges (lists are unioned; a correction replaces the payment it fixes; hypotheticals never change facts; facts can be removed;
+  dates that cannot be true, such as a handover in the future, are dropped and listed as an assumption).
+  Advice calls get the case file, retrieved law and a token-capped window of recent turns.
+- **Sampling:** temperature 0 for intake and grounding, 0.2 advice, 0.4 conversational replies, 0.3 coaching, 0.7 role-play; `max_tokens` on every call,
+  scaled up for Hindi/Telugu; reasoning off for JSON tasks; cut-off replies are detected and marked.
 
 ## Known limits
-- Knowledge entries are written from memory + secondary sources (marked `memory+secondary`); **not yet checked line-by-line against the bare act.** The Telangana interest rule wording/number is unconfirmed (orders apply SBI MCLR + 2%).
-- Interest is a simple-interest estimate; the authority's order decides.
-- Refreshing the page loses the case (no saved sessions).
-- Off-topic detection relies on the model's `in_scope` judgement during intake.
-- Escalation is keyword-based, so it can miss euphemisms or trigger on unrelated words.
-- The section validator checks numbers, not which Act they belong to (e.g. "Section 18 of another Act" would pass).
-- Cost guard: on OpenRouter only `:free` models run (`core/llm.py` blocks others unless `ALLOW_PAID=1`). Voice needs a free audio-capable `VOICE_MODEL`, so it is off by default; text in Indian languages works.
+- Free models are slow, uneven and rate-limited: about 20-40 s for an advised answer on Gemini's free tier but around 160 s when a call hangs; 35-145 s on the free OpenRouter model, whose 50-requests-a-day cap stopped two test runs. The fallback chain helps but needs more than one key.
+- The SBI base rate (8.95%, effective 15 Nov 2026) changes; it is editable in the app and the authority's order decides.
+- Rule 35's text routes interest to Form N; current practice differs. The bot states both and says a lawyer should confirm.
+- Name/address detection in free text is not attempted (unreliable in Indian languages) - the local form is used instead.
+- Hindi/Telugu code-written messages were written once and need review by a fluent speaker; drafts are English only.
+- Keyword escalation can miss euphemisms (the model's flags are a second signal) and cannot judge criminal intent. A real
+  problem worded as a condition ("if the builder is insolvent, as the news says...") is left to the model's flag.
+- The state is not asked for. If no place is mentioned, the flat is taken to be in Telangana and this is listed under
+  "What I'm not sure about"; naming a place outside Telangana at any point switches to the out-of-state reply. A person
+  elsewhere who never names a place therefore gets Telangana advice with that one line of warning.
+- A bare greeting gets an instant code-written welcome. Anything more that is not yet a case (a name, "what can you do?", a
+  general question) gets a short model-written reply that answers it and invites the story; it uses up no follow-up question,
+  and it stops at the same lines as advice (verified law only, no figures, no other legal areas, no drafting in chat).
+- Conversational replies add one model call to a follow-up turn (two when the reply carries law and is grounding-checked).
+- Some reasoning models refuse `max_tokens` or a custom `temperature`; the call is repeated the way the model asks (unit-tested, not run live).
+- The grounding check is a model judging a model: it can miss things or raise false alarms; it only flags.
+- The retrieval test set was written by the same person who wrote the keyword tags, so it overstates real-world recall.
+- The CPA 2019 copy is the Gazette scan hosted by PRS; the LSA Act copy is from the Jharkhand SLSA (India Code was unreachable).
