@@ -1,0 +1,21 @@
+{
+ "_note": "Case state -> law entries, applied by code before any keyword scoring. Keys are matched against the case file (category, goal, cautions, escalations).",
+ "category": {
+  "delay": ["RERA-18-1", "TS-R15", "TS-R34-1"],
+  "defects": ["RERA-14-3", "TS-AGMT-12", "TS-R34-1", "TS-R35-1"]
+ },
+ "goal": {
+  "refund": ["RERA-19-4"],
+  "possession": ["FAQ-8"],
+  "unsure": ["RERA-19-4"]
+ },
+ "caution": {
+  "force_majeure": ["RERA-6-FM"]
+ },
+ "escalation": {
+  "unregistered": ["RERA-3-1", "TS-R2-ONGOING", "CPA-2-42"],
+  "high_value": ["CPJUR-3-5"],
+  "defect_window_passed": ["RERA-14-3", "CPA-69-1"],
+  "out_of_state": ["RERA-18-1"]
+ }
+}

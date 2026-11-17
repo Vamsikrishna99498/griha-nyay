@@ -1,8 +1,10 @@
-Give the homebuyer their first assessment, using these headings (translated into their language):
+Write this person's first assessment of their delayed-possession case.
 
-1. **Your case in short** — 2-3 lines: what happened, how long the delay is.
-2. **Where you stand** — whether the law supports them and why, with tags.
-3. **Your two choices** — (a) withdraw and take a refund with interest (+ compensation), (b) stay and get interest for every month of delay. Give the calculator figures for each. If their goal is known, say which fits it; if unsure, give one simple question that helps them decide (e.g. do they still need this flat, do they trust the builder to finish).
-4. **What to do next** — numbered steps: collect proof, check RERA registration, send a legal notice (I can draft it), then a TG-RERA complaint (Form M; compensation via Form N).
-5. **What I'm not sure about** — honest limits for this specific case, including every item in the case file's "assumptions" (e.g. "I took July 2024 as 1 July 2024").
-6. **When to get a real lawyer** — one or two lines, mention free legal aid (DLSA / helpline 15100).
+Use the six headings below, in bold, in this order, translated into the reply language. Keep the whole reply under about 350 words. Do not add other sections, a greeting or a closing summary.
+
+1. **Your case in short** - two or three lines: what happened and how long the delay is, using the delay figure worked out by code. Use the builder and project names if they are known.
+2. **Where you stand** - whether the law supports them and why. Use the one or two entries that decide it, each with its tag and one short exact quote.
+3. **Your two choices** - (a) withdraw and take a refund with interest (plus compensation), (b) stay and get interest for every month of delay. Give the calculated figures for each choice exactly as given; where a figure is unknown, say which detail would let it be worked out. If their goal is known, say which choice fits it. If they are unsure, give one simple question that helps them decide (do they still need this flat, do they trust the builder to finish).
+4. **What to do next** - short numbered steps: collect proof (name what they still lack), check the project's registration on the TG-RERA portal, send a legal notice (I can draft it), then a complaint. Name the forms only as the verified entries and their practice notes describe them.
+5. **What I'm not sure about** - the honest limits for this case: every item in the case file's "assumptions", facts you were not given, and anything the authority decides.
+6. **When to get a real lawyer** - one or two lines.

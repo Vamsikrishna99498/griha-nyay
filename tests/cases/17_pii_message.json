@@ -1,0 +1,19 @@
+{
+ "id": "17_pii_message",
+ "title": "Message with Aadhaar, phone, PAN and bank account",
+ "as_of": "2026-11-15",
+ "turns": [
+  "My name is Lakshmi. Flat in Kompally, Hyderabad, builder Sunrise Infra, promised possession 1 January 2024, I paid 38 lakh, I want a refund. My Aadhaar is 4567 8912 3456, phone 9848022338, PAN ABCPL1234K, account no 50100234567891."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "pii_not_sent": [
+   "4567 8912 3456",
+   "9848022338",
+   "ABCPL1234K",
+   "50100234567891"
+  ],
+  "final_reply_contains": "removed some personal numbers"
+ }
+}

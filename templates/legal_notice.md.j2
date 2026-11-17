@@ -1,4 +1,9 @@
-> **DRAFT — prepared by an AI assistant, not a lawyer. Check every fact, date and amount, fill the [brackets], and ideally have a lawyer or DLSA review it before sending by Registered Post A.D. / email. Keep the postal receipt.**
+> **DRAFT - prepared by an AI assistant, not a lawyer.**
+> - **What it is:** a formal letter telling the builder what you demand for the delay.
+> - **Where it comes from:** your facts, filled in by code, and the official law text, quoted.
+> - **Before sending:** check every fact, date and amount · fill the [brackets] · ideally have a lawyer or DLSA review it.
+> - **How to send:** Registered Post A.D. or email. Keep the postal receipt.{% if non_english %}
+> - **Translate:** some details below are in the language you typed them in - translate them into English before sending.{% endif %}
 
 **LEGAL NOTICE**
 
@@ -6,36 +11,40 @@ Date: {{ today }}
 
 **To:**
 {{ builder or "[Builder / Promoter company name]" }}
-[Registered office address]
+{{ builder_address or "[Registered office address]" }}
 
 **From:**
 {{ buyer or "[Your full name]" }}
-[Your address, phone, email]
+{{ buyer_address or "[Your address]" }}
+{{ buyer_contact or "[Your phone / email]" }}
 
-**Subject:** Notice for failure to hand over possession of {{ flat or "[flat number]" }} in the project "{{ project or "[project name]" }}"{% if rera %} (TG-RERA Registration No. {{ rera }}){% endif %}, and demand under the Real Estate (Regulation and Development) Act, 2016
+**Subject:** Notice for {% if possession %}delay in handing over{% else %}failure to hand over{% endif %} possession of {{ flat or "[flat number]" }} in the project "{{ project or "[project name]" }}"{% if rera %} (TG-RERA Registration No. {{ rera }}){% endif %}, and demand under the Real Estate (Regulation and Development) Act, 2016
 
 Sir/Madam,
 
 **Facts**
 
-{{ facts }}
-
+{% for f in facts %}{{ loop.index }}. {{ f }}
+{% endfor %}
 **Legal position**
 
-{{ n1 }}. Under Section 18(1) of the Real Estate (Regulation and Development) Act, 2016, where a promoter fails to complete or is unable to give possession of an apartment in accordance with the terms of the agreement for sale, the allottee is entitled, at the allottee's option, either to withdraw from the project and receive back the amount paid with interest at the prescribed rate and compensation, or, without withdrawing, to be paid interest for every month of delay until the handing over of possession.
+{% set n = facts|length %}{{ n + 1 }}. Section 18(1) of the Real Estate (Regulation and Development) Act, 2016 provides: "{{ law["RERA-18-1"].quote_text }}"
 
-{{ n2 }}. Under Section 11(4)(a) of the said Act, you remain responsible for all obligations under the agreement for sale until conveyance of the apartment.
+{{ n + 2 }}. Section 11(4)(a) of the said Act provides that the promoter shall "{{ law["RERA-11-4A"].quote_text | replace("(4) The promoter shall- (a) ", "") }}"
 
-{{ n3 }}. As on {{ as_of }}, possession is delayed by {{ delay_days }} days from the agreed date of {{ promised or "[promised possession date]" }}.
+{{ n + 3 }}. Rule 15 of the Telangana State Real Estate (Regulation and Development) Rules, 2017 fixes the rate of interest as the "highest Marginal Cost of Lending Rate of State Bank of India plus two per cent".
+
+{{ n + 4 }}. {% if possession %}Possession was handed over on {{ possession }}, that is {{ delay_days }} days after the agreed date of {{ promised or "[promised possession date]" }}.{% else %}As on {{ as_of }}, possession is delayed by {{ delay_days }} days from the agreed date of {{ promised or "[promised possession date]" }}.{% endif %}
 
 **Demand**
 
-{% if goal == "refund" %}{{ n4 }}. I hereby withdraw from the project and call upon you, within 15 (fifteen) days of receipt of this notice, to refund the entire amount of {{ paid }} paid by me, together with interest at the rate prescribed under the Telangana RERA Rules from the respective dates of payment until the date of refund{% if refund_interest %} (estimated at {{ refund_interest }} as on {{ as_of }}){% endif %}, and compensation for the loss suffered by me.
-{% else %}{{ n4 }}. I call upon you, within 15 (fifteen) days of receipt of this notice, to (a) give me a firm written date for handing over possession with the occupancy certificate, and (b) pay me interest at the prescribed rate on {{ paid }} for every month of delay from {{ promised or "[promised date]" }}{% if stay_interest %} (estimated at {{ stay_interest }} as on {{ as_of }}, i.e. about {{ monthly }} per month){% endif %} and continue to pay it monthly until possession.
+{% if demand == "interest_only" %}{{ n + 5 }}. I call upon you, within 15 (fifteen) days of receipt of this notice, to pay me interest at the rate prescribed under Rule 15 for every month of delay from {{ promised or "[promised date]" }} to {{ possession }}{% if stay_interest %} (estimated at {{ stay_interest }}, i.e. about {{ monthly }} per month){% endif %}.
+{% elif demand == "refund" %}{{ n + 5 }}. I hereby withdraw from the project and call upon you, within 15 (fifteen) days of receipt of this notice, to refund the entire amount of {{ paid }} paid by me, together with interest at the rate prescribed under Rule 15 from the respective dates of payment until the date of refund{% if refund_interest %} (estimated at {{ refund_interest }} as on {{ as_of }}{% if undated %}, counting only the payments whose dates are listed above{% endif %}){% endif %}, and compensation for the loss suffered by me.
+{% else %}{{ n + 5 }}. I call upon you, within 15 (fifteen) days of receipt of this notice, to (a) give me a firm written date for handing over possession with the occupancy certificate, and (b) pay me interest at the rate prescribed under Rule 15 for every month of delay from {{ promised or "[promised date]" }}{% if stay_interest %} (estimated at {{ stay_interest }} as on {{ as_of }}, i.e. about {{ monthly }} per month){% endif %}, and continue to pay it monthly until possession.
 {% endif %}
-{{ n5 }}. If you fail to comply within the said period, I shall be constrained to file a complaint before the Telangana Real Estate Regulatory Authority under Section 31 of the said Act, and a claim for compensation before the Adjudicating Officer, entirely at your risk as to costs and consequences.
+{{ n + 6 }}. If you fail to comply within the said period, I shall be constrained to file a complaint before the Telangana Real Estate Regulatory Authority under Section 31 of the said Act, and a claim for compensation before the Adjudicating Officer, entirely at your risk as to costs and consequences.
 
-{{ n6 }}. Nothing in this notice waives any of my other rights and remedies under law.
+{{ n + 7 }}. Nothing in this notice waives any of my other rights and remedies under law.
 
 Yours faithfully,
 
