@@ -1,0 +1,20 @@
+{
+ "id": "27_defects_conversation",
+ "title": "Defects with a danger, a relative date, a ghosted builder, then a compensation question",
+ "as_of": "2026-11-15",
+ "turns": [
+  "hi my name is ravi i am living near madhapur juction. I bought this flat recently but after shifting I observed walls are falling,plumbing is not done properly, Also there is no parking space when I bought it they would give parking for car and bike but now I have to share it with my neighbhours or keep my bike outside. What can I do to get some kind compensation or anything that can help. Are there any laws that can help me or whom to ask for help",
+  "I think 6 months ago",
+  "i already told him the problem but he is not responding to my calls and he ghosted me fully I only know his phone number,name and adress he gave but not avialable when i go there",
+  "what kind compensation I can get and what might be covered among my problems can you tell that"
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "category": ["defects"],
+  "fields": {"possession_handed_over_date": "2026-05-01"},
+  "reply_contains": {"0": "112", "1": "Your case in short"},
+  "reply_must_not_contain": {"2": ["**Your case in short**", "**Where you stand**"], "3": ["**Your case in short**", "**Where you stand**"]},
+  "final_reply_must_not_contain": ["SCC", "Supreme Court"]
+ }
+}

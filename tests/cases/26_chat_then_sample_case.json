@@ -1,0 +1,23 @@
+{
+ "id": "26_chat_then_sample_case",
+ "title": "Chat, an unrelated request and 'I'm testing', then the sample case",
+ "as_of": "2026-11-15",
+ "turns": [
+  "hi",
+  "i want to write love lettwer can you help just make a draft",
+  "so what can do give me some examplesn so i can ask",
+  "just assume a hypothethical situation and take it as example",
+  "assume those too",
+  "I am testing this app so that's why",
+  "Yes that's why you assume a case and show me what you can do",
+  "sample case"
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "reply_contains": {"0": "delaying possession", "7": "Sources used"},
+  "reply_must_not_contain": {"1": ["15100", "Where to get help"], "2": ["15100", "Where to get help"], "3": ["15100", "Where to get help"],
+                             "4": ["15100", "Where to get help"], "5": ["15100", "Where to get help"], "6": ["15100", "Where to get help"]},
+  "fields": {"promised_possession_date": "2023-12-31", "amount_paid_rupees": 4800000, "goal": "refund"}
+ }
+}

@@ -41,7 +41,9 @@ Tests (no key needed unless stated):
   Earlier runs, kept for comparison: `outputs/nvidia_nemotron-3.5-super-vl_free/` (free OpenRouter endpoint; 20 of 21 cases
   passed, case 21 was stopped by the provider's daily free-request limit, and it predates the conversational replies in
   `prompts/chat.txt`) and `outputs/nvidia_nemotron-3.5-super-vl/` (the same model's paid endpoint, earlier prompts).
-- `python run_tests.py` - all 25 written cases on the real model -> `outputs/<model>/` (raw, unedited, stamped) **(uses your key)**
+- Two longer conversations from manual testing (cases 26-27: chat and "I'm testing" then the sample case; a defects
+  conversation with a relative date and follow-ups) were run afterwards on the same code: `outputs/conversation_tests/` (39/39).
+- `python run_tests.py` - all 27 written cases on the real model -> `outputs/<model>/` (raw, unedited, stamped) **(uses your key)**
 - `python run_tests.py --text "a new story" --text "a follow-up"` - run any new input and save the raw output **(uses your key)**
 
 ## Use your own model and your own test cases (quick start)
