@@ -1,0 +1,17 @@
+{
+ "id": "22_greeting_then_story",
+ "title": "Greeting and a question about the bot, then the story",
+ "as_of": "2026-11-15",
+ "turns": [
+  "hi",
+  "my name is Asha. what can you do for me?",
+  "My builder Sunrise Homes promised my flat in Kondapur by 31 March 2024. I have paid 40 lakh. It is still not given and I want my money back."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "reply_contains": {"0": "delaying possession"},
+  "reply_must_not_contain": {"0": ["outside what I cover", "which state"], "1": ["outside what I cover", "which state"]},
+  "fields": {"promised_possession_date": "2024-03-31", "amount_paid_rupees": 4000000, "goal": "refund"}
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "15_defects_and_delay",
+ "title": "Late possession and then defects",
+ "as_of": "2026-11-15",
+ "turns": [
+  "Flat in Tellapur, Hyderabad, project Lake View Heights by Vertex Builders, RERA registered. Promised possession was 31 December 2023 but they handed over only on 1 August 2025. I paid 72 lakh in total. Now the bathroom ceiling leaks and the plaster is cracking. I want delay interest and the defects fixed."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "category_includes": [
+   "delay",
+   "defects"
+  ],
+  "calc": {
+   "delay_days": 579
+  },
+  "fields": {
+   "promised_possession_date": "2023-12-31",
+   "possession_handed_over_date": "2025-08-01",
+   "amount_paid_rupees": 7200000
+  }
+ }
+}

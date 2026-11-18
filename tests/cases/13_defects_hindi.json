@@ -1,0 +1,20 @@
+{
+ "id": "13_defects_hindi",
+ "title": "Defects after possession, told in Hindi",
+ "as_of": "2026-11-15",
+ "turns": [
+  "नमस्ते। मैंने हैदराबाद के कोंडापुर में Sri Sai Constructions के Sai Residency प्रोजेक्ट में फ्लैट लिया। कब्ज़ा 2023-06-01 को मिला। अब दीवारों में दरारें हैं और बाथरूम में लीकेज और सीलन है। मैंने 2026-09-20 को बिल्डर को ईमेल से शिकायत भेजी थी, पर अब तक कुछ ठीक नहीं किया। मुझे मरम्मत चाहिए।"
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "language_hint": "Hindi",
+  "category": [
+   "defects"
+  ],
+  "fields": {
+   "possession_handed_over_date": "2023-06-01",
+   "defect_reported_date": "2026-09-20"
+  }
+ }
+}

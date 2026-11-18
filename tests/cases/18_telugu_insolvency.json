@@ -1,0 +1,13 @@
+{
+ "id": "18_telugu_insolvency",
+ "title": "Telugu story: builder in insolvency",
+ "as_of": "2026-11-15",
+ "turns": [
+  "నమస్తే. నేను హైదరాబాద్ నార్సింగిలో Vamsi Projects వారి ఫ్లాట్ బుక్ చేశాను, 45 లక్షలు కట్టాను. ఇప్పుడు ఆ కంపెనీ దివాలా తీసింది, NCLT లో కేసు నడుస్తోందని విన్నాను. నా డబ్బు ఎలా వస్తుంది?"
+ ],
+ "expect": {
+  "escalate": "insolvency",
+  "language_hint": "Telugu",
+  "final_reply_contains": "15100"
+ }
+}

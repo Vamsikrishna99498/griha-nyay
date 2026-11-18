@@ -1,0 +1,20 @@
+{
+ "id": "20_month_only_promised",
+ "title": "Promised date given as a month only",
+ "as_of": "2026-11-15",
+ "turns": [
+  "Flat in Kondapur, Hyderabad, project Maple Court by Arka Developers, RERA registered. They promised possession by December 2024. I paid 40 lakh. I want my money back."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "calc": {
+   "delay_days": 684
+  },
+  "fields": {
+   "promised_possession_date": "2024-12-31",
+   "amount_paid_rupees": 4000000,
+   "goal": "refund"
+  }
+ }
+}

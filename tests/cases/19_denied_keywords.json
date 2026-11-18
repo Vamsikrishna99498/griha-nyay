@@ -1,0 +1,17 @@
+{
+ "id": "19_denied_keywords",
+ "title": "Buyer says there is NO court case, FIR or insolvency",
+ "as_of": "2026-11-15",
+ "turns": [
+  "Flat in Miyapur, Hyderabad, project Silver Oak by Trident Homes, RERA registered. Possession was promised by 31 March 2024, I have paid 44 lakh and I want the flat with delay interest. To be clear: there is no case pending anywhere, I have not filed any FIR, and the builder is not bankrupt."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "fields": {
+   "promised_possession_date": "2024-03-31",
+   "amount_paid_rupees": 4400000,
+   "goal": "possession"
+  }
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "id": "24_other_problem_first_aid",
+ "title": "Unpaid salary: first aid, no law stated",
+ "as_of": "2026-11-15",
+ "turns": [
+  "My employer ABC Tech in Hyderabad has not paid my salary for the last three months, about 90,000 rupees in total. I have my offer letter and bank statements. What can I do?",
+  "They stopped paying from August 2026 and HR is not replying to my emails."
+ ],
+ "expect": {
+  "first_aid": true,
+  "general_category": "salary",
+  "reply_contains": {"0": ["outside what I cover", "15100", "Collect these"]},
+  "reply_must_not_contain": {"0": ["Payment of Wages", "Industrial Disputes", "Labour Court", "[RERA"],
+                             "1": ["Payment of Wages", "Industrial Disputes", "Labour Court", "[RERA"]}
+ }
+}

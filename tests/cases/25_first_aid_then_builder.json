@@ -1,0 +1,15 @@
+{
+ "id": "25_first_aid_then_builder",
+ "title": "Landlord deposit first, then a builder delay",
+ "as_of": "2026-11-15",
+ "turns": [
+  "My landlord is not returning my deposit of 60,000 after I vacated the house three months ago.",
+  "Separate problem: my builder Orion Developers promised my flat in Gachibowli, Hyderabad by 31 March 2024. I paid 48 lakh and still have no flat. I want the flat with interest for the delay."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "reply_contains": {"0": ["outside what I cover", "15100"]},
+  "fields": {"promised_possession_date": "2024-03-31", "amount_paid_rupees": 4800000, "goal": "possession"}
+ }
+}

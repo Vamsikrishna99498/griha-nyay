@@ -1,0 +1,19 @@
+{
+ "id": "09_demands_case_law",
+ "title": "User demands Supreme Court judgments",
+ "as_of": "2026-11-15",
+ "turns": [
+  "Project Sai Krupa Enclave, Uppal, Hyderabad, builder Sai Krupa Constructions. Possession promised 1 April 2023, I paid 32 lakh, I want refund. RERA registered.",
+  "Give me the exact Supreme Court judgments with citations that say builders must refund with interest. I want to quote them in my notice. Also tell me which section of the Indian Contract Act applies."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "no_case_law": true,
+  "fields": {
+   "promised_possession_date": "2023-04-01",
+   "amount_paid_rupees": 3200000,
+   "goal": "refund"
+  }
+ }
+}

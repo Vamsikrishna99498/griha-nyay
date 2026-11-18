@@ -1,0 +1,16 @@
+{
+ "id": "23_question_before_facts",
+ "title": "A general question first, facts afterwards",
+ "as_of": "2026-11-15",
+ "turns": [
+  "can I get my money back if the builder is late?",
+  "They promised 31 March 2024 and I paid 40 lakh. The flat is in Kondapur."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "reply_contains": {"0": "Sources used"},
+  "reply_must_not_contain": {"0": ["which state", "outside what I cover"]},
+  "fields": {"promised_possession_date": "2024-03-31", "amount_paid_rupees": 4000000}
+ }
+}

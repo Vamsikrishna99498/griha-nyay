@@ -1,0 +1,33 @@
+{
+ "id": "01_clean_refund",
+ "title": "Clean Hyderabad delay, wants refund",
+ "as_of": "2026-11-15",
+ "turns": [
+  "My name is Ravi Kumar. I booked a 2BHK (Flat 504, Tower B) in Skyline Heights, Kokapet, Hyderabad by Sunrise Constructions Pvt Ltd. Agreement for sale signed on 10 March 2021, possession promised by 31 December 2023. Total price 62 lakh, I have paid 48 lakh: 6 lakh on 10 March 2021, 20 lakh on 1 Sept 2021, 22 lakh on 15 June 2022. RERA number P02400003456. Still no flat, builder keeps saying 'next quarter'. I have the agreement, bank statements and their emails. I've lost trust, I just want my money back."
+ ],
+ "expect": {
+  "escalate": false,
+  "reaches_advice": true,
+  "fields": {
+   "agreement_date": "2021-03-10",
+   "promised_possession_date": "2023-12-31",
+   "amount_paid_rupees": 4800000,
+   "total_price_rupees": 6200000,
+   "goal": "refund",
+   "payments": [
+    {
+     "date": "2021-03-10",
+     "amount_rupees": 600000
+    },
+    {
+     "date": "2021-09-01",
+     "amount_rupees": 2000000
+    },
+    {
+     "date": "2022-06-15",
+     "amount_rupees": 2200000
+    }
+   ]
+  }
+ }
+}

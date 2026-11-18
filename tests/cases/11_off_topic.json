@@ -1,0 +1,12 @@
+{
+ "id": "11_off_topic",
+ "title": "Landlord deposit (outside scope)",
+ "as_of": "2026-11-15",
+ "turns": [
+  "My landlord in Hyderabad is not returning my security deposit of 60,000 rupees after I vacated the flat 3 months ago. What can I do?"
+ ],
+ "expect": {
+  "escalate": false,
+  "final_reply_contains": "outside what I cover"
+ }
+}

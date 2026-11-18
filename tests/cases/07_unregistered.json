@@ -1,0 +1,11 @@
+{
+ "id": "07_unregistered",
+ "title": "Project not registered with RERA",
+ "as_of": "2026-11-15",
+ "turns": [
+  "I booked a villa in a gated project near Shamshabad by a small developer, Om Sai Builders. They said the project is not registered with RERA because approvals were pending. Possession was promised in January 2024, I paid 22 lakh in cash and cheque. Nothing built yet."
+ ],
+ "expect": {
+  "escalate": "unregistered"
+ }
+}
