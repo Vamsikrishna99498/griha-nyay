@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from core import drafts, llm, roleplay
 from core.calculator import TG, default_rate_pct, inr
 from core.docx_export import DOCX_MIME, markdown_to_docx
-from core.engine import MAX_USER_CHARS, Session
+from core.engine import MAX_USER_CHARS, SAMPLE_CASE, Session
 from core.i18n import ESC_LABELS, T
 from core.privacy import scrub
 
@@ -108,6 +108,8 @@ if mode == "💬 Get help":
               "Where you stand, your choices with figures, and the next steps.")
     st.caption("**Tell me:** builder and project · area or city · promised date (or the date you got the flat) · "
                "amount paid · what you want.  \nEnglish, Hindi, Telugu or a mix.")
+    sample = (not s.has_problem() and getattr(s, "mode", "builder") == "builder"
+              and st.button("🧪 Try a sample case", help="Runs a made-up case through the whole tool, so you can see what it does"))
     if not s.messages:
         with st.chat_message("assistant"):
             st.markdown(T("welcome") + "\n\n" + T("privacy"))
@@ -115,6 +117,8 @@ if mode == "💬 Get help":
         with st.chat_message(m["role"]):
             st.markdown(m["content"])
     text = st.chat_input("Type your problem…")
+    if sample:
+        text = SAMPLE_CASE
     if text:
         with st.chat_message("user"):   # show the message at once, exactly as it will be kept (ID numbers removed)
             st.markdown(s.stored_text(text)[0])

@@ -48,7 +48,14 @@ PROBLEM_FIELDS = ["categories", "builder_name", "project_name", "promised_posses
                   "amount_paid_rupees", "total_price_rupees", "defects", "goal", "rera_number", "agreement_date"]
 SHORT_MESSAGE_WORDS = 3    # "hi", "hello there": a greeting, not a different legal problem
 OFF_TOPIC_MIN_WORDS = 6    # "outside what I cover" needs a described problem; shorter lines get the welcome instead
-IDLE_BEFORE_POINTERS = 4   # that many messages with no builder problem: offer free help in case it is another problem
+# "Try a sample case": a clearly labelled made-up case, run through the whole flow, for anyone who wants to see what
+# the tool does before telling their own story (or who is testing it). Typing one of these words does the same.
+SAMPLE_TRIGGERS = {"sample case", "sample", "try a sample case", "demo", "/sample", "example case"}
+SAMPLE_CASE = ("Sample case (made-up facts): I booked Flat 504, Tower B in Skyline Heights, Kokapet, Hyderabad from Sunrise "
+               "Constructions. The agreement for sale was signed on 10 March 2021 and possession was promised by 31 December 2023. "
+               "The total price is 62 lakh and I have paid 48 lakh: 6 lakh on 10 March 2021, 20 lakh on 1 September 2021 and "
+               "22 lakh on 15 June 2022. The RERA number is P02400003456. I still don't have the flat and the builder keeps "
+               "saying next quarter. I have the agreement and bank statements. I want my money back.")
 CORE_FACTS = ["promised_possession_date", "possession_handed_over_date", "amount_paid_rupees", "payments", "defects"]
 SMALL_TALK_TOPIC = re.compile(r"(?i)greet|introduc|\bname\b|small talk|thank|chit|hello|pleasantr")   # intake's own label for it
 CHAT_PATIENCE = {"timeout": 30, "rounds": 2}   # a conversational turn gets two quick tries; then the code-written reply
@@ -82,6 +89,9 @@ class Session:
         self.stage = "intake"       # intake | advised
         self.followups = 0
         self.idle = 0               # messages in a row that described no builder problem (greetings, small talk)
+        self._story_asked = 0       # times the full list of details to give has been shown
+        self._sample_offered = False  # the sample case has been pointed out once already
+        self._pointers_shown = False  # free-help contacts for another kind of problem are listed once, not every turn
         self.assessed = False       # the structured first assessment has been given
         self.escalations = []       # rule ids
         self.cautions = []
@@ -291,7 +301,7 @@ class Session:
     def _small_talk(text: str, x: dict) -> bool:
         """Models label "hi" as out of scope (topic: greeting). A greeting, a name or a few words is not a
         different legal problem: it gets the welcome, and the free-help pointers if it keeps happening."""
-        return x.get("message_kind") == "other" or len(text.split()) < OFF_TOPIC_MIN_WORDS
+        return x.get("message_kind") in ("other", "chat") or len(text.split()) < OFF_TOPIC_MIN_WORDS
 
     @staticmethod
     def _asks_something(text: str, x: dict) -> bool:
@@ -306,21 +316,39 @@ class Session:
         lang = self.language
         self.idle += 1
         self.log.append({"type": "no_problem_yet", "count": self.idle})
+        first = not any(m["role"] == "assistant" for m in self.messages)
         short = len(text.split()) <= SHORT_MESSAGE_WORDS
-        elsewhere = x.get("in_scope") is False and not short and not SMALL_TALK_TOPIC.search(self._topic or "")
-        pointers = ["off_topic"] if elsewhere or self.idle >= IDLE_BEFORE_POINTERS else None
-        if not short:
-            situation = ["No builder problem has been described yet. After responding, invite them in one sentence to tell you "
-                         f"what happened with their flat: {STORY_ITEMS}."]
+        chat = x.get("message_kind") in ("chat", "other") or bool(SMALL_TALK_TOPIC.search(x.get("topic") or ""))
+        # contacts only for a real legal problem of another kind, and only once - never for chat, a joke or a test
+        elsewhere = x.get("in_scope") is False and not short and not chat
+        pointers = ["off_topic"] if elsewhere and not self._pointers_shown else None
+        if not (short and first):   # only the very first bare greeting gets the instant code-written welcome
+            if self._story_asked == 0:
+                ending = f"invite them in one sentence to tell you what happened with their flat: {STORY_ITEMS}"
+            else:
+                ending = ("invite them briefly to share their situation whenever they are ready. Do not list again the details to "
+                          "give - they have already seen that list")
+            if not self._sample_offered:
+                demo = "If they want to see what you can do, point them to the sample case."
+            else:
+                demo = ("You have already told them about the sample case. Mention it again only if they ask again for an example, "
+                        "and then in a few words only (for example: just type sample case). Do not repeat sentences from your "
+                        "earlier replies.")
+            situation = [f"No builder problem has been described yet. After responding to what they said, {ending}. {demo}"]
             if elsewhere:
-                situation.append(f"The intake step read this message as a different kind of problem ({self._topic or 'not a builder matter'}). "
+                situation.append(f"The intake step read this message as a different kind of legal problem ({x.get('topic') or 'not a builder matter'}). "
                                  "If it is, say kindly, in one sentence, that it is outside what you cover, and stop there.")
-            reply = self._chat_reply(text, x, situation, pointers=pointers, pointers_head="where_help" if elsewhere else "tell_me_other")
+            reply = self._chat_reply(text, x, situation, pointers=pointers, pointers_head="where_help")
             if reply:
+                self._story_asked += 1
+                self._pointers_shown = self._pointers_shown or bool(pointers)
+                self._sample_offered = self._sample_offered or "sample case" in reply.lower()
                 return reply
-        lines = [(T("hello", lang) if self.idle == 1 else "") + T("tell_me", lang)]   # greet once, not every time
+        self._story_asked += 1
+        lines = [(T("hello", lang) if first else "") + T("tell_me", lang)]   # greet once, not every time
         if pointers:
-            lines += ["", T("tell_me_other", lang), help_block(pointers, lang)]
+            self._pointers_shown = True
+            lines += ["", T("where_help", lang), help_block(pointers, lang)]
         return "\n".join(lines)
 
     def _ask_for_missing(self, text: str, x: dict, missing_before: list | None, progressed: bool) -> str:
@@ -488,6 +516,12 @@ class Session:
 
     # ---------- public ----------
     def handle(self, text: str) -> str:
+        if text.strip().lower().strip(".!") in SAMPLE_TRIGGERS:
+            if self.has_problem():
+                self.messages += [{"role": "user", "content": text.strip()}, {"role": "assistant", "content": T("sample_busy", self.language)}]
+                return self.messages[-1]["content"]
+            self.log.append({"type": "sample_case"})
+            text = SAMPLE_CASE
         clean, kinds = self.stored_text(text)
         if len(text) > MAX_USER_CHARS:
             reply = T("too_long", self.language, n=len(text), max=MAX_USER_CHARS)
@@ -563,9 +597,11 @@ class Session:
             missing_before = self.case.missing_required()
             before = self.case.to_dict()
             x = self._intake(text)
-            if x.get("in_scope") is False and self._in_scope is not True and not self._small_talk(text, x):
-                # judged on THIS message, so a later greeting or unclear line is not called off-topic again
+            if x.get("in_scope") is False and self._in_scope is not True and not self._small_talk(text, x) and not self._pointers_shown:
+                # judged on THIS message, so a later greeting or unclear line is not called off-topic again;
+                # the contacts are given once - after that the conversation simply continues
                 self.log.append({"type": "off_topic"})
+                self._pointers_shown = True
                 return self._off_topic_reply()
             after = self.case.to_dict()   # what the person's message itself added (before any assumption by code)
             progressed = any(before[k] != after[k] for k in after if k != "language")

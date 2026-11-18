@@ -783,8 +783,8 @@ def test_greetings_get_a_welcome_and_use_up_no_questions():
     assert replies[0].startswith("Hello") and "delaying possession" in replies[0]   # a bare greeting: instant welcome from code
     assert "Which state" not in replies[0] and "15100" not in replies[0]
     assert replies[1] == CHAT and replies[2] == CHAT                       # anything more gets a real reply, no helpline list
-    assert replies[3].startswith(CHAT) and "15100" in replies[3]           # still no builder problem: free help is added by code
-    assert "delaying possession" in replies[4] and not replies[4].startswith("Hello")   # greeted once only
+    assert replies[3] == CHAT and replies[4] == CHAT                       # unclear or short, mid-conversation: still the model
+    assert all("15100" not in r for r in replies)                         # no legal problem described, so no helplines
     assert all("Thanks, that helps" not in r for r in replies)
     # the real story afterwards still gets the full first assessment
     s, replies, sent = _talk([("flat in Hyderabad, promised 1 Jan 2025, paid 37 lakh, want refund", FULL_DELAY)], s)
@@ -838,7 +838,7 @@ def test_conversational_replies_pass_the_same_guards_and_stops():
 def test_another_kind_of_problem_in_a_few_words_gets_a_kind_reply_and_free_help():
     s, replies, sent = _talk([("my salary is not paid", {"in_scope": False, "topic": "unpaid salary", "message_kind": "facts"})])
     assert replies[0].startswith(CHAT) and "15100" in replies[0] and "1915" in replies[0]   # contacts come from code
-    assert "different kind of problem (unpaid salary)" in " ".join(sent)
+    assert "different kind of legal problem (unpaid salary)" in " ".join(sent)
     s, replies, sent = _talk([("my name is vamsi", {"in_scope": False, "topic": "introduction", "message_kind": "facts"})])
     assert replies[0] == CHAT and "different kind of problem" not in " ".join(sent)          # a name is not 'another problem'
 
@@ -859,8 +859,9 @@ def test_out_of_state_follow_ups_are_answered_not_repeated():
 def test_a_greeting_the_model_calls_in_scope_is_still_only_a_greeting():
     # what another real model returned for "hi": in scope, nothing else
     s, replies, sent = _talk([("hi", {"in_scope": True, "message_kind": "other"}), ("hello there", {"in_scope": True})])
-    assert replies[0].startswith("Hello") and "delaying possession" in replies[1]       # the code-written welcome, at once
-    assert s.followups == 0 and s.case.state is None and not any("<situation>" in m for m in sent)
+    assert replies[0].startswith("Hello") and "delaying possession" in replies[0]       # the code-written welcome, at once
+    assert replies[1] == CHAT                                                           # later short lines go to the model
+    assert s.followups == 0 and s.case.state is None and sum("<situation>\n" in m for m in sent) == 1
 
 
 def test_several_tags_in_one_bracket_are_checked_and_sourced():
@@ -889,7 +890,7 @@ def test_a_greeting_the_model_calls_out_of_scope_still_gets_the_welcome():
     greeting = {"language": "English", "message_kind": "other", "in_scope": False, "topic": "greeting"}
     s, replies, _ = _talk([("hi'", greeting), ("hi", greeting), ("my name is vamsi", {"in_scope": False, "topic": "introduction"})])
     assert all("outside what I cover" not in r for r in replies), replies
-    assert replies[0].startswith("Hello") and "delaying possession" in replies[1] and "15100" not in replies[0] + replies[1]
+    assert replies[0].startswith("Hello") and replies[1] == CHAT and "15100" not in replies[0] + replies[1]
     assert replies[2] == CHAT and s.stage == "intake" and s.followups == 0   # a name gets a real reply, not a helpline list
     s, replies, _ = _talk([("flat in Hyderabad, promised 1 Jan 2025, paid 37 lakh, want refund", FULL_DELAY)], s)
     assert s.stage == "advised" and s.assessed   # and the real story is then handled normally
@@ -1406,6 +1407,74 @@ def test_case_summary_downloads_as_a_readable_word_file():
     assert all(str(v) in text for v in figures.values() if not isinstance(v, list))    # every figure, exactly as computed
     assert all(n in text for n in figures["notes"]) and "Delay interest per month: Rs 43,800" in text
     assert "Five-year defect period ends: 2030-08-01" in text and "15100" in text
+
+
+
+def test_sample_case_button_runs_a_made_up_case_in_the_app():
+    from streamlit.testing.v1 import AppTest
+
+    def scripted(messages, **kw):
+        data = messages[1]["content"] if len(messages) > 1 else ""
+        if "<missing>" in data:
+            return json.dumps(dict(FULL_DELAY, message_kind="facts")), "stop"
+        return ('{"claims": []}' if "<answer>" in data else "Here is where you stand [RERA-18-1]."), "stop"
+
+    env = {"OPENROUTER_API_KEY": "k", "MODEL": "stub:free", "LLM_PROVIDERS": ""}
+    saved = {k: os.environ.get(k) for k in [*env, "BASE_URL", "LLM_API_KEY"]}
+    os.environ.update(env)
+    for k in ("BASE_URL", "LLM_API_KEY"):
+        os.environ.pop(k, None)
+    real = llm.complete
+    llm.complete = scripted
+    try:
+        at = AppTest.from_file(str(Path(__file__).parent.parent / "app.py"), default_timeout=60).run()
+        sample = next(b for b in at.button if "sample case" in b.label)
+        sample.click().run()
+        s = at.session_state.s
+        assert not at.exception and s.messages[0]["content"].startswith("Sample case (made-up facts):") and s.assessed
+        assert not any("sample case" in b.label for b in at.button)          # gone once a case is under way
+    finally:
+        llm.complete = real
+        for k, v in saved.items():
+            if v is None:
+                os.environ.pop(k, None)
+            else:
+                os.environ[k] = v
+
+
+
+def test_the_mechanical_conversation_from_manual_testing_now_reads_naturally():
+    """The exact conversation from manual testing: a love letter, asking for examples, 'assume a case', 'I am testing'.
+    The intake labels are what the model is now told to return for such lines."""
+    chat = {"message_kind": "chat", "topic": "chat"}
+    turns = [("hi", chat), ("i want to write love lettwer can you help just make a draft", dict(chat, topic="writing a love letter")),
+             ("so what can do give me some examplesn so i can ask", chat),
+             ("just assume a hypothethical situation and take it as example", chat), ("assume those too", chat),
+             ("why you already assumed right", chat), ("I am testing this app so that's why", dict(chat, topic="testing the app")),
+             ("Yes that's why you assume a case and show me what you can do", chat)]
+    s, replies, sent = _talk(turns)
+    assert all("15100" not in r and "Where to get help" not in r and "outside what I cover" not in r for r in replies)   # no helplines, no refusals
+    assert replies[0].startswith("Hello") and all(r == CHAT for r in replies[1:])        # every later line answered by the model
+    notes = [m.split("<situation>\n")[1].split("\n</situation>")[0] for m in sent if "<situation>\n" in m]
+    assert len(notes) == 7 and "the builder and project" not in notes[-1] and "Do not list again" in notes[-1]   # list asked once
+    assert "point them to the sample case" in notes[0] and s.followups == 0 and getattr(s, "mode", "builder") == "builder"
+    s2, _, sent2 = _talk(turns[:3], chat=("You can type sample case to see an example. What happened with your flat?", "stop"))
+    later = [m.split("<situation>\n")[1] for m in sent2 if "<situation>\n" in m][-1]
+    assert "already told them about the sample case" in later and s2._sample_offered        # offered once, then kept short
+    # a real legal problem of another kind still gets the contacts - once, not on every turn
+    other = {"in_scope": False, "message_kind": "question", "topic": "unspecified legal issue"}
+    s, replies, _ = _talk([("what about my other legal issue then", other), ("and what else can you tell me about that", other)])
+    assert "15100" in replies[0] and "15100" not in replies[1]
+
+
+def test_a_sample_case_runs_the_whole_flow_on_made_up_facts():
+    s, replies, sent = _talk([("sample case", FULL_DELAY)])
+    assert s.messages[0]["content"].startswith("Sample case (made-up facts):") and s.assessed and s.stage == "advised"
+    assert any("Sample case (made-up facts)" in m for m in sent) and {"type": "sample_case"} in s.log
+    # in the middle of a real case it is refused, so made-up facts never mix with real ones
+    s, replies, _ = _talk([("my builder has not given my flat", {"categories": ["delay"], "state": "Telangana"}), ("sample case", {})])
+    assert "Start a new case" in replies[1] and s.case.amount_paid_rupees is None
+    assert "Try a sample case" in _prompt("chat.txt")
 
 
 if __name__ == "__main__":
