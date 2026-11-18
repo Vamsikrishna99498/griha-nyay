@@ -1381,6 +1381,13 @@ def test_drafts_download_as_word_with_exactly_the_same_words():
         assert highlighted and all(h.startswith("[") and h.endswith("]") for h in highlighted), build.__name__
         assert "Asha Rao" in text and "Rs 48,00,000" in text
     assert "Heading 1" in {p.style.name for p in Document(io.BytesIO(markdown_to_docx(drafts.rera_complaint(s)))).paragraphs}
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    notice = Document(io.BytesIO(markdown_to_docx(drafts.legal_notice(s)))).paragraphs
+    title = next(p for p in notice if p.text == "LEGAL NOTICE")
+    assert title.alignment == WD_ALIGN_PARAGRAPH.CENTER                                   # the letter's title is centred
+    gap = notice[notice.index(title) - 1]
+    assert gap.text == "" and notice[notice.index(title) - 2].text.startswith("How to send")   # a gap after the grey note
+    assert next(p for p in notice if p.text == "Facts").alignment != WD_ALIGN_PARAGRAPH.CENTER  # ordinary headings stay left
 
 
 
