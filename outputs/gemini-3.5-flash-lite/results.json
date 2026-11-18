@@ -19,7 +19,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 4,
-  "prompt_tokens": 15241,
+  "prompt_tokens": 16687,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -38,7 +38,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 6,
-  "prompt_tokens": 28373,
+  "prompt_tokens": 28242,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -58,7 +58,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 3,
-  "prompt_tokens": 13845,
+  "prompt_tokens": 14274,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -78,7 +78,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 3,
-  "prompt_tokens": 14090,
+  "prompt_tokens": 14514,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -101,7 +101,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 3,
-  "prompt_tokens": 14109,
+  "prompt_tokens": 14528,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -119,7 +119,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 1,
-  "prompt_tokens": 5457,
+  "prompt_tokens": 5649,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -137,7 +137,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 1,
-  "prompt_tokens": 5455,
+  "prompt_tokens": 5647,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -155,7 +155,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 1,
-  "prompt_tokens": 5437,
+  "prompt_tokens": 5629,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -178,8 +178,8 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 6,
-  "prompt_tokens": 27811,
-  "cached_tokens": 2034,
+  "prompt_tokens": 28739,
+  "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
  },
@@ -199,7 +199,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 8,
-  "prompt_tokens": 32097,
+  "prompt_tokens": 33676,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -218,7 +218,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 1,
-  "prompt_tokens": 5427,
+  "prompt_tokens": 5619,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -241,7 +241,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 6,
-  "prompt_tokens": 27620,
+  "prompt_tokens": 28001,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -264,7 +264,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 4,
-  "prompt_tokens": 15137,
+  "prompt_tokens": 15321,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -284,7 +284,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 1,
-  "prompt_tokens": 5464,
+  "prompt_tokens": 5656,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -308,7 +308,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 3,
-  "prompt_tokens": 15436,
+  "prompt_tokens": 15760,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -333,9 +333,9 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 3,
-  "prompt_tokens": 14123,
-  "cached_tokens": 2033,
-  "removed": 1,
+  "prompt_tokens": 15264,
+  "cached_tokens": null,
+  "removed": 2,
   "unsupported": 0
  },
  "17_pii_message": {
@@ -354,9 +354,9 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 3,
-  "prompt_tokens": 13696,
+  "prompt_tokens": 14557,
   "cached_tokens": null,
-  "removed": 0,
+  "removed": 1,
   "unsupported": 0
  },
  "18_telugu_insolvency": {
@@ -374,7 +374,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 1,
-  "prompt_tokens": 5458,
+  "prompt_tokens": 5650,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -396,7 +396,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 3,
-  "prompt_tokens": 14196,
+  "prompt_tokens": 14159,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0
@@ -419,9 +419,9 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 3,
-  "prompt_tokens": 13660,
+  "prompt_tokens": 14697,
   "cached_tokens": null,
-  "removed": 0,
+  "removed": 1,
   "unsupported": 0
  },
  "21_promised_date_not_passed": {
@@ -443,7 +443,7 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 3,
-  "prompt_tokens": 14072,
+  "prompt_tokens": 14147,
   "cached_tokens": null,
   "removed": 0,
   "unsupported": 0

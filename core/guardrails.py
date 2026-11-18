@@ -329,7 +329,8 @@ QUOTE_RE = re.compile(r"[\"“”]([^\"“”]{12,600})[\"“”]")
 
 def check_quotes(text: str, entries: list, language: str = "English") -> tuple[str, list]:
     """A quoted span within 60 chars of a tag must appear verbatim (after norm) in that tag's
-    exact text. Otherwise its quotation marks are dropped and it's marked 'not exact law text'."""
+    exact text. Otherwise its quotation marks are dropped, so it reads as a paraphrase rather than as the law's
+    own words (logged, not shown to the person - the grounding check still judges the claim)."""
     by_id = {e["id"]: norm(e["quote_text"]).lower() for e in entries}
     bad = []
 
@@ -344,6 +345,6 @@ def check_quotes(text: str, entries: list, language: str = "English") -> tuple[s
         if parts and all(any(p in by_id[t] for t in tags) for p in parts):
             return m.group(0)
         bad.append(span[:80])
-        return f"{span} ({T('not_exact_law', language)})"
+        return span
 
     return QUOTE_RE.sub(sub, text), bad

@@ -1,5 +1,5 @@
 # 01_clean_refund — Clean Hyderabad delay, wants refund
-Commit `not a git checkout` · run 2026-11-18 02:46 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 4 model calls · 15241 input tokens (cached not reported) · 1406 output tokens · 47s
+Commit `not a git checkout` · run 2026-11-18 15:21 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 4 model calls · 16687 input tokens (cached not reported) · 1858 output tokens · 175s
 
 
 ## 🧑 User
@@ -7,33 +7,38 @@ My name is Ravi Kumar. I booked a 2BHK (Flat 504, Tower B) in Skyline Heights, K
 
 ## 🤖 Griha Nyay
 **Your case in short**
-You booked a flat in Skyline Heights by Sunrise Constructions Pvt Ltd, where possession was promised by 31 December 2023. From the dates you gave, the delay is 1050 days (~34.5 months) as of my calculation, and the builder keeps delaying.
+From the dates you gave, your possession is delayed by 1050 days (~34.5 months).
 
 **Where you stand**
-The law supports your right to seek relief for this delay. Under [RERA-18-1] "interest for every month of delay", if the builder fails to give possession by the agreed date, you can withdraw and get your refund with interest and compensation [RERA-18-1] "to return the amount received by him in respect of that apartment, plot, building, as the case may be, with interest at such rate as may be prescribed in this behalf including compensation".
+The law supports you because if the builder fails to give possession by the agreed date, you have legal rights [RERA-18-1] "If the promoter fails to complete or is unable to give possession of an apartment, plot or building,- (a) in accordance with the terms of the agreement for sale or, as the case may be, duly completed by the date specified therein". Furthermore, the law states that [RERA-19-4] "The allottee shall be entitled to claim the refund of amount paid along with interest at such rate as may be prescribed and compensation in the manner as provided under this Act".
 
 **Your two choices**
-Your goal is a refund, which fits the first choice:
-(a) Withdraw and take a refund: By my calculation, the amount paid is Rs 48,00,000, interest so far is Rs 25,79,520, and the total so far is Rs 73,79,520 (using an interest rate of 10.95% per year, which is highest SBI MCLR + 2% per year [TS-R15]).
-(b) Stay in the project: You can stay and receive monthly interest of Rs 43,800, with interest accrued so far at Rs 15,12,000.
+(a) Withdraw from the project and get your money back with interest and compensation [RERA-18-1]. Based on your paid amount of Rs 48,00,000, my calculation shows an estimated interest so far of Rs 25,79,520, making a total estimated refund amount so far of Rs 73,79,520 (using the interest rate of 10.95% per year under [TS-R15]). This choice fits your goal of wanting a refund.
+(b) Stay in the project and get interest for every month of delay until handover [RERA-18-1]. My calculation for this choice shows an estimated monthly interest of Rs 43,800, with an estimated interest accrued so far of Rs 15,12,000.
 
 **What to do next**
-1. Check the project's registration on the TG-RERA portal as explained in [FAQ-3] "TG RERA website which would display all the registered projects".
-2. Gather your agreement, bank statements, and emails.
-3. File a complaint [TS-R34-1] "file a complaint with the Authority for any violation under the Act or the rules and regulations made thereunder, save as those provided to be adjudicated by the adjudicating officer, in Form 'M'".
+1. Collect your proof: ensure you have your agreement, bank statements, and builder emails ready.
+2. Check the project's registration on the TG-RERA portal as explained in [FAQ-3] "The Flat/Plot Buyer should visit TG RERA website which would display all the registered projects".
+3. Send a dated written notice to the builder with proof of delivery.
+4. File a complaint [RERA-31-1]. Complaints to the Authority are filed in Form 'M' with a fee of Rs 1,000, while compensation claims go to the adjudicating officer in Form 'N' with a fee of Rs 1,000 [TS-R34-1] [TS-R35-1]. A lawyer or the TG-RERA portal can confirm the correct route for your case [TS-R34-1].
 
 **What I'm not sure about**
-I am not sure about any additional facts beyond what you shared, and the authority decides the final interest period, rate, and compensation.
+I calculate only on your actual facts and make no assumptions. I am not sure about the final compensation amount, as that is decided by the adjudicating officer [RERA-71-1] [RERA-72]. The final interest rate and period are set by the authority's order [TS-R15].
 
 **When to get a real lawyer**
-Consult a lawyer or legal aid (such as DLSA under [LSA-12]) before filing documents or if you need help drafting a legal notice.
+Consult a lawyer or free legal aid (under [LSA-12]) before filing your formal complaint or if you need help drafting your legal notice. I am not a lawyer.
 
 ---
 **Sources used** (official text, checked):
 - **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
+- **[RERA-19-4]** Real Estate (Regulation and Development) Act, 2016, Section 19(4) - _Buyer's right to refund with interest and compensation_ (PDF p. 17; https://rera.telangana.gov.in)
 - **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
 - **[FAQ-3]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 3 (guidance, not law) - _How to check if a project is registered_ (PDF p. 2; https://rera.telangana.gov.in)
+- **[RERA-31-1]** Real Estate (Regulation and Development) Act, 2016, Section 31(1) - _Who can file a complaint, and where_ (PDF p. 20; https://rera.telangana.gov.in)
 - **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
+- **[TS-R35-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 35(1) - _Claim to the adjudicating officer (Form N)_ (PDF p. 23; https://rera.telangana.gov.in)
+- **[RERA-71-1]** Real Estate (Regulation and Development) Act, 2016, Section 71(1) - _Compensation is decided by the adjudicating officer_ (PDF p. 30; https://rera.telangana.gov.in)
+- **[RERA-72]** Real Estate (Regulation and Development) Act, 2016, Section 72 - _What decides the amount of compensation_ (PDF p. 31; https://rera.telangana.gov.in)
 - **[LSA-12]** Legal Services Authorities Act, 1987, Section 12 - _Who gets free legal services_ (PDF p. 11, 12; https://www.jhalsa.org/pdfs/LSA_1987.pdf)
 
 ## 📄 Generated legal notice (code-built)
@@ -99,7 +104,7 @@ Yours faithfully,
 
 ## 🥊 Practice round
 **Buyer:** I want my rights under RERA. When will you fix this?
-**Builder rep:** Good morning, sir/madam. Please don't rush to legal paths like RERA, as those proceedings take years and only cause unnecessary stress for everyone involved. Let me personally speak with senior management regarding your file for Skyline Heights today and see how we can fast-track things for you.
+**Builder rep:** Good morning, sir or madam. RERA cases tend to drag on for years in endless proceedings, so it is really much better to resolve things amicably with us directly. I completely understand your frustration about the delay at Skyline Heights, and I assure you that management is pushing hard to hand over possession by next quarter.
 
 ## 🗂️ Case file (extracted)
 ```json
@@ -171,15 +176,18 @@ Yours faithfully,
 ## 🛡️ Guardrail log
 - Escalations: none
 - Cautions: none
-- Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'case', 'TS-R34-1': 'case', 'RERA-3-1': 'keyword', 'FAQ-3': 'keyword'}]
-- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 6, 'unsupported': 0, 'error': None}
-  - [supported] Under Section 18(1), if the builder fails to give possession by the agreed date, you can withdraw and get your refund with interest and compensation. (RERA-18-1)
-  - [supported] The builder is liable to return the amount received with interest and compensation if they fail to give possession. (RERA-18-1)
-  - [supported] Interest rate is the highest SBI MCLR plus 2% per year in Telangana. (TS-R15)
-  - [supported] Check the project's registration on the TG-RERA website. (FAQ-3)
-  - [supported] File a complaint with the Authority in Form M for violations under the Act. (TS-R34-1)
-  - [supported] You can consult legal aid such as DLSA under Section 12. (LSA-12)
-- Other log: [{'type': 'index_tags_added', 'ids': ['LSA-12']}]
+- Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'index', 'TS-R34-1': 'case', 'RERA-3-1': 'keyword', 'FAQ-3': 'keyword'}]
+- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 9, 'unsupported': 0, 'error': None}
+  - [supported] Builder failing to give possession by agreed date allows allottee to withdraw and get refund with interest or stay and get monthly interest. (RERA-18-1)
+  - [supported] Allottee is entitled to claim refund of amount paid along with prescribed interest and compensation if promoter fails to give possession. (RERA-19-4)
+  - [supported] Interest rate in Telangana is SBI's highest MCLR plus 2%. (TS-R15)
+  - [supported] Flat/Plot Buyer should visit TG RERA website which displays all registered projects. (FAQ-3)
+  - [supported] Aggrieved person may file a complaint with the Authority or adjudicating officer for violation of the Act. (RERA-31-1)
+  - [supported] Complaints to the Authority are filed in Form M with a fee of Rs 1,000, and compensation claims go to the adjudicating officer in Form N. (TS-R34-1)
+  - [supported] Compensation claims are decided by an adjudicating officer, who is a serving or former District Judge. (RERA-71-1)
+  - [supported] The adjudicating officer considers unfair gain, loss, and repetitive nature when deciding compensation. (RERA-72)
+  - [supported] Free legal services are available to eligible persons under Section 12 of the Legal Services Authorities Act. (LSA-12)
+- Other log: [{'type': 'index_tags_added', 'ids': ['RERA-31-1', 'TS-R35-1', 'RERA-71-1', 'RERA-72', 'LSA-12']}]
 ## ✅ Checks
 - PASS no_false_escalation
 - PASS reached_advice

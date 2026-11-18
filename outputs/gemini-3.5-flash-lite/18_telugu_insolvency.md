@@ -1,5 +1,5 @@
 # 18_telugu_insolvency — Telugu story: builder in insolvency
-Commit `not a git checkout` · run 2026-11-18 03:03 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 1 model calls · 5458 input tokens (cached not reported) · 185 output tokens · 6s
+Commit `not a git checkout` · run 2026-11-18 15:37 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 1 model calls · 5650 input tokens (cached not reported) · 159 output tokens · 8s
 
 
 ## 🧑 User
@@ -14,10 +14,10 @@ Commit `not a git checkout` · run 2026-11-18 03:03 · as_of 2026-11-15 · answe
 - ఉచిత న్యాయ సలహా: మీ జిల్లా కోర్టులోని జిల్లా న్యాయ సేవా అధికార సంస్థ (DLSA), లేదా NALSA హెల్ప్‌లైన్ 15100. అర్హత ఉంటే ఉచిత న్యాయవాది కూడా (లీగల్ సర్వీసెస్ అథారిటీస్ చట్టం, సెక్షన్ 12).
 
 **ఈ కేసు సారాంశాన్ని మీతో తీసుకెళ్లండి:**
-- **Problem:** delay
+- **Problem:** —
 - **Builder:** Vamsi Projects
 - **Project:** Narsingi
-- **Flat:** Narsingi
+- **Flat:** —
 - **City / State:** Hyderabad, Telangana
 - **RERA no.:** —
 - **Agreement date:** —
@@ -42,13 +42,11 @@ Commit `not a git checkout` · run 2026-11-18 03:03 · as_of 2026-11-15 · answe
  "city": "Hyderabad",
  "builder_name": "Vamsi Projects",
  "project_name": "Narsingi",
- "flat_details": "Narsingi",
+ "flat_details": null,
  "rera_number": null,
  "rera_registered": null,
  "permission_before_2017": null,
- "categories": [
-  "delay"
- ],
+ "categories": [],
  "agreement_date": null,
  "promised_possession_date": null,
  "possession_handed_over_date": null,

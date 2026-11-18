@@ -1,43 +1,43 @@
 # 15_defects_and_delay — Late possession and then defects
-Commit `not a git checkout` · run 2026-11-18 03:02 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 15436 input tokens (cached not reported) · 1394 output tokens · 25s
+Commit `not a git checkout` · run 2026-11-18 15:35 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 15760 input tokens (cached not reported) · 1205 output tokens · 29s
 
 
 ## 🧑 User
 Flat in Tellapur, Hyderabad, project Lake View Heights by Vertex Builders, RERA registered. Promised possession was 31 December 2023 but they handed over only on 1 August 2025. I paid 72 lakh in total. Now the bathroom ceiling leaks and the plaster is cracking. I want delay interest and the defects fixed.
 
 ## 🤖 Griha Nyay
-1. **Your case in short**
-Possession of your flat was handed over to you on 2025-08-01. You are now dealing with post-handover issues, specifically a leaking bathroom ceiling and cracking plaster.
+**Your case in short**
+You took possession of your flat after a delay of 579 days (~19.0 months), and you now face defects like a leaking bathroom ceiling and cracking plaster.
 
-2. **Where you stand**
-The law requires the builder to fix reported defects [RERA-14-3] "(3) In case any structural defect or any other defect in workmanship, quality or provision of services or any other obligations of the promoter as per the agreement for sale relating to such development is brought to the notice of the promoter within a period of five years by the allottee from the date of handing over possession, it shall be the duty of the promoter to rectify such defects without further charge, within thirty days". From the dates you gave, you are inside the five-year window, which ends on 2030-08-01. However, the Telangana model agreement excludes fittings with natural wear and tear and painting-type wear from free repair [TS-AGMT-12].
+**Where you stand**
+Under the law, if you report defects within five years of possession, the builder must fix them free of charge [RERA-14-3] "within thirty days". From the dates you gave, you are well inside the five-year window, which ends on 2030-08-01. However, the Telangana model agreement excludes fittings with natural wear and tear or allowable structural deformations from free repair [TS-AGMT-12]. A lawyer can confirm whether your specific defects fall under these exclusions.
 
-3. **What to do next**
+**What to do next**
 1. Send the builder a dated, written defect notice listing every defect and keep proof of delivery.
-2. Take dated photos or videos of the defects.
-3. If the defects are not fixed within thirty days, file a complaint. A complaint can be made to the Authority in Form 'M' [TS-R34-1], and a claim for interest and compensation can be made to the adjudicating officer in Form 'N' [TS-R35-1].
+2. Take clear, dated photos or videos of the ceiling leaks and cracking plaster as evidence.
+3. If the defects are not fixed within thirty days of your written notice, you can file a complaint. Rule entries and their practice notes mention that claims for interest and compensation go to the adjudicating officer in Form 'N' [TS-R35-1], while other complaints go to the Authority in Form 'M' [TS-R34-1], with the portal and lawyers helping confirm the exact route.
 
-4. **About compensation**
-Compensation is decided by the adjudicating officer [RERA-71-1]. I do not estimate compensation.
+**About compensation**
+Compensation for unfixed defects is decided by the adjudicating officer; I do not estimate it.
 
-5. **What I'm not sure about**
-I am not sure whether your specific defects fall under the model agreement's exclusions, and I made no assumptions.
+**What I'm not sure about**
+My calculations assume delay interest based on the premise that you paid everything before the promised date, and I am not sure if your specific defects fall under model agreement exclusions. A lawyer can confirm whether anything else applies.
 
-6. **When to get a real lawyer**
-A lawyer can review your documents, help draft notices, and confirm the correct complaint route.
+**When to get a real lawyer**
+Consult a legal professional or free legal aid to review your documents and guide you through filing your complaint.
 
 **Delay in possession**
-Possession was handed over on 2025-08-01, resulting in a delay of 579 days (~19.0 months) from the promised date of 2023-12-31. Based on an amount paid of Rs 72,00,000 at an interest rate of 10.95% per year [TS-R15], the delay interest is Rs 65,700 per month, totaling Rs 12,50,640 for the whole delay [RERA-18-1]. A lawyer can confirm whether anything else applies.
+Possession was handed over on 2025-08-01, after a delay of 579 days (~19.0 months) from the promised date of 2023-12-31. Based on an amount paid of Rs 72,00,000 and an interest rate of 10.95% per year (highest SBI MCLR + 2%), the delay interest comes to Rs 65,700 per month, totaling Rs 12,50,640 for the whole delay [RERA-18-1] [TS-R15]. TG-RERA's FAQ says delay interest should be paid automatically [FAQ-8], and a lawyer can confirm whether anything else applies.
 
 ---
 **Sources used** (official text, checked):
 - **[RERA-14-3]** Real Estate (Regulation and Development) Act, 2016, Section 14(3) - _Defects reported within 5 years must be fixed in 30 days_ (PDF p. 15; https://rera.telangana.gov.in)
 - **[TS-AGMT-12]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Annexure (model agreement for sale), clause 12 - _Defect liability and its exclusions_ (PDF p. 75; https://rera.telangana.gov.in)
-- **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
 - **[TS-R35-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 35(1) - _Claim to the adjudicating officer (Form N)_ (PDF p. 23; https://rera.telangana.gov.in)
-- **[RERA-71-1]** Real Estate (Regulation and Development) Act, 2016, Section 71(1) - _Compensation is decided by the adjudicating officer_ (PDF p. 30; https://rera.telangana.gov.in)
-- **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
+- **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
 - **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
+- **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
+- **[FAQ-8]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 8(ii) (guidance, not law) - _Delay interest should be paid automatically_ (PDF p. 2; https://rera.telangana.gov.in)
 
 ## 📄 Generated legal notice (code-built)
 > **DRAFT - prepared by an AI assistant, not a lawyer.**
@@ -66,29 +66,28 @@ Sir/Madam,
 **Facts**
 
 1. I booked Flat in Tellapur in the project "Lake View Heights" at Hyderabad and entered into an agreement for sale with you dated [date of agreement].
-2. The total price agreed for the flat is Rs 72,00,000.
-3. In all, I have paid you Rs 72,00,000 so far.
-4. Under the agreement, you were to hand over possession of the flat by 31 December 2023.
-5. You handed over possession of the flat to me on 01 August 2025.
-6. The flat has the following defects: bathroom ceiling leaks; plaster is cracking.
+2. In all, I have paid you Rs 72,00,000 so far.
+3. Under the agreement, you were to hand over possession of the flat by 31 December 2023.
+4. You handed over possession of the flat to me on 01 August 2025.
+5. The flat has the following defects: bathroom ceiling leaks; plaster is cracking.
 
 **Legal position**
 
-7. Section 18(1) of the Real Estate (Regulation and Development) Act, 2016 provides: "18. (1) If the promoter fails to complete or is unable to give possession of an apartment, plot or building,- (a) in accordance with the terms of the agreement for sale or, as the case may be, duly completed by the date specified therein; or (b) due to discontinuance of his business as a developer on account of suspension or revocation of the registration under this Act or for any other reason, he shall be liable on demand to the allottees, in case the allottee wishes to withdraw from the project, without prejudice to any other remedy available, to return the amount received by him in respect of that apartment, plot, building, as the case may be, with interest at such rate as may be prescribed in this behalf including compensation in the manner as provided under this Act: Provided that where an allottee does not intend to withdraw from the project, he shall be paid, by the promoter, interest for every month of delay, till the handing over of the possession, at such rate as may be prescribed."
+6. Section 18(1) of the Real Estate (Regulation and Development) Act, 2016 provides: "18. (1) If the promoter fails to complete or is unable to give possession of an apartment, plot or building,- (a) in accordance with the terms of the agreement for sale or, as the case may be, duly completed by the date specified therein; or (b) due to discontinuance of his business as a developer on account of suspension or revocation of the registration under this Act or for any other reason, he shall be liable on demand to the allottees, in case the allottee wishes to withdraw from the project, without prejudice to any other remedy available, to return the amount received by him in respect of that apartment, plot, building, as the case may be, with interest at such rate as may be prescribed in this behalf including compensation in the manner as provided under this Act: Provided that where an allottee does not intend to withdraw from the project, he shall be paid, by the promoter, interest for every month of delay, till the handing over of the possession, at such rate as may be prescribed."
 
-8. Section 11(4)(a) of the said Act provides that the promoter shall "be responsible for all obligations, responsibilties and functions under the provisions of this Act or the rules and regulations made thereunder or to the allottees as per the agreement for sale, or to the association of allottees, as the case may be, till the conveyance of all the apartments, plots or buildings, as the case may be, to the allottees, or the common areas to the association of allottees or the competent authority, as the case may be:"
+7. Section 11(4)(a) of the said Act provides that the promoter shall "be responsible for all obligations, responsibilties and functions under the provisions of this Act or the rules and regulations made thereunder or to the allottees as per the agreement for sale, or to the association of allottees, as the case may be, till the conveyance of all the apartments, plots or buildings, as the case may be, to the allottees, or the common areas to the association of allottees or the competent authority, as the case may be:"
 
-9. Rule 15 of the Telangana State Real Estate (Regulation and Development) Rules, 2017 fixes the rate of interest as the "highest Marginal Cost of Lending Rate of State Bank of India plus two per cent".
+8. Rule 15 of the Telangana State Real Estate (Regulation and Development) Rules, 2017 fixes the rate of interest as the "highest Marginal Cost of Lending Rate of State Bank of India plus two per cent".
 
-10. Possession was handed over on 01 August 2025, that is 579 days after the agreed date of 31 December 2023.
+9. Possession was handed over on 01 August 2025, that is 579 days after the agreed date of 31 December 2023.
 
 **Demand**
 
-11. I call upon you, within 15 (fifteen) days of receipt of this notice, to pay me interest at the rate prescribed under Rule 15 for every month of delay from 31 December 2023 to 01 August 2025 (estimated at Rs 12,50,640, i.e. about Rs 65,700 per month).
+10. I call upon you, within 15 (fifteen) days of receipt of this notice, to pay me interest at the rate prescribed under Rule 15 for every month of delay from 31 December 2023 to 01 August 2025 (estimated at Rs 12,50,640, i.e. about Rs 65,700 per month).
 
-12. If you fail to comply within the said period, I shall be constrained to file a complaint before the Telangana Real Estate Regulatory Authority under Section 31 of the said Act, and a claim for compensation before the Adjudicating Officer, entirely at your risk as to costs and consequences.
+11. If you fail to comply within the said period, I shall be constrained to file a complaint before the Telangana Real Estate Regulatory Authority under Section 31 of the said Act, and a claim for compensation before the Adjudicating Officer, entirely at your risk as to costs and consequences.
 
-13. Nothing in this notice waives any of my other rights and remedies under law.
+12. Nothing in this notice waives any of my other rights and remedies under law.
 
 Yours faithfully,
 
@@ -123,25 +122,24 @@ Vertex Builders
 Sir/Madam,
 
 1. I booked Flat in Tellapur in the project "Lake View Heights" at Hyderabad and entered into an agreement for sale with you dated [date of agreement].
-2. The total price agreed for the flat is Rs 72,00,000.
-3. In all, I have paid you Rs 72,00,000 so far.
-4. Under the agreement, you were to hand over possession of the flat by 31 December 2023.
-5. You handed over possession of the flat to me on 01 August 2025.
-6. The flat has the following defects: bathroom ceiling leaks; plaster is cracking.
+2. In all, I have paid you Rs 72,00,000 so far.
+3. Under the agreement, you were to hand over possession of the flat by 31 December 2023.
+4. You handed over possession of the flat to me on 01 August 2025.
+5. The flat has the following defects: bathroom ceiling leaks; plaster is cracking.
 
-7. The defects are:
+6. The defects are:
    - bathroom ceiling leaks [location in the flat, since when]
    - plaster is cracking [location in the flat, since when]
 
-8. Section 14(3) of the Real Estate (Regulation and Development) Act, 2016 provides: "(3) In case any structural defect or any other defect in workmanship, quality or provision of services or any other obligations of the promoter as per the agreement for sale relating to such development is brought to the notice of the promoter within a period of five years by the allottee from the date of handing over possession, it shall be the duty of the promoter to rectify such defects without further charge, within thirty days, and in the event of promoter's failure to rectify such defects within such time, the aggrieved allottees shall be entitled to receive appropriate compensation in the manner as provided under this Act."
+7. Section 14(3) of the Real Estate (Regulation and Development) Act, 2016 provides: "(3) In case any structural defect or any other defect in workmanship, quality or provision of services or any other obligations of the promoter as per the agreement for sale relating to such development is brought to the notice of the promoter within a period of five years by the allottee from the date of handing over possession, it shall be the duty of the promoter to rectify such defects without further charge, within thirty days, and in the event of promoter's failure to rectify such defects within such time, the aggrieved allottees shall be entitled to receive appropriate compensation in the manner as provided under this Act."
 
-9. Possession was handed over on 01 August 2025, so the five-year period runs till 01 August 2030. These defects are brought to your notice within that period by this letter.
+8. Possession was handed over on 01 August 2025, so the five-year period runs till 01 August 2030. These defects are brought to your notice within that period by this letter.
 
-10. I call upon you to rectify all the above defects without any charge within 30 (thirty) days of receipt of this notice, and to inform me in writing of the dates on which your team will visit.
+9. I call upon you to rectify all the above defects without any charge within 30 (thirty) days of receipt of this notice, and to inform me in writing of the dates on which your team will visit.
 
-11. If you fail to do so, I shall be constrained to approach the Telangana Real Estate Regulatory Authority and the Adjudicating Officer for directions and appropriate compensation, entirely at your risk as to costs and consequences.
+10. If you fail to do so, I shall be constrained to approach the Telangana Real Estate Regulatory Authority and the Adjudicating Officer for directions and appropriate compensation, entirely at your risk as to costs and consequences.
 
-12. Nothing in this notice waives any of my other rights and remedies under law.
+11. Nothing in this notice waives any of my other rights and remedies under law.
 
 Yours faithfully,
 
@@ -170,7 +168,7 @@ Yours faithfully,
  "agreement_date": null,
  "promised_possession_date": "2023-12-31",
  "possession_handed_over_date": "2025-08-01",
- "total_price_rupees": 7200000,
+ "total_price_rupees": null,
  "amount_paid_rupees": 7200000,
  "payments": [],
  "goal": "possession",
@@ -225,16 +223,16 @@ Yours faithfully,
 ## 🛡️ Guardrail log
 - Escalations: none
 - Cautions: none
-- Retrieval (id: why): [{'RERA-14-3': 'index', 'RERA-18-1': 'index', 'TS-R15': 'index', 'TS-R34-1': 'case', 'TS-AGMT-12': 'case', 'TS-R35-1': 'case', 'FAQ-8': 'case', 'RERA-3-1': 'keyword'}]
+- Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-14-3': 'index', 'TS-R15': 'index', 'TS-R34-1': 'case', 'TS-AGMT-12': 'case', 'TS-R35-1': 'case', 'FAQ-8': 'case', 'RERA-3-1': 'keyword'}]
 - Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 7, 'unsupported': 0, 'error': None}
-  - [supported] The law requires the builder to fix reported defects within 30 days if brought to notice within 5 years. (RERA-14-3)
-  - [supported] The Telangana model agreement excludes fittings with natural wear and tear and painting-type wear from free repair. (TS-AGMT-12)
-  - [supported] A complaint can be made to the Authority in Form 'M'. (TS-R34-1)
-  - [supported] A claim for interest and compensation can be made to the adjudicating officer in Form 'N'. (TS-R35-1)
-  - [supported] Compensation is decided by the adjudicating officer. (RERA-71-1)
-  - [supported] Interest rate in Telangana is highest SBI MCLR plus 2 percent. (TS-R15)
-  - [supported] If the builder fails to give possession by the date specified, they are liable to pay interest for every month of delay. (RERA-18-1)
-- Other log: [{'type': 'index_tags_added', 'ids': ['RERA-71-1']}]
+  - [supported] If defects are reported within 5 years of possession, the builder must fix them free of charge within 30 days. (RERA-14-3)
+  - [supported] The Telangana model agreement excludes fittings with natural wear and tear or allowable structural deformations from free repair. (TS-AGMT-12)
+  - [supported] Claims for interest and compensation go to the adjudicating officer in Form 'N', while other complaints go to the Authority in Form 'M'. (TS-R35-1)
+  - [supported] Claims for interest and compensation go to the adjudicating officer in Form 'N', while other complaints go to the Authority in Form 'M'. (TS-R34-1)
+  - [supported] If the promoter fails to give possession by the specified date, the allottee who stays in the project is entitled to interest for every month of delay. (RERA-18-1)
+  - [supported] In Telangana, the interest rate payable by the promoter is the highest SBI MCLR plus 2 percent. (TS-R15)
+  - [supported] TG-RERA's FAQ states that delay interest should be paid automatically under the agreement. (FAQ-8)
+- Other log: none
 ## ✅ Checks
 - PASS no_false_escalation
 - PASS reached_advice

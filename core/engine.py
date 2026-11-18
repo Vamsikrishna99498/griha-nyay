@@ -212,7 +212,8 @@ class Session:
         missing = ", ".join(self.case.missing_required()) or "nothing"
         self._step("reading")
         fixed = f"<law_index>\n{retrieve.law_index()}\n</law_index>\n"
-        data_msg = (f"<case_file>\n{json.dumps(self.case.to_dict(), ensure_ascii=False)}\n</case_file>\n"
+        today = (self.as_of or date.today()).isoformat()
+        data_msg = (f"<today>{today}</today>\n<case_file>\n{json.dumps(self.case.to_dict(), ensure_ascii=False)}\n</case_file>\n"
                     f"<missing>{missing}</missing>\n<last_question>\n{last_q}\n</last_question>\n\n" + wrap_user(text))
         raw = llm.chat_json([{"role": "system", "content": _p("intake.txt")}, llm.user_message(fixed, data_msg)],
                             temperature=0.0, task="intake", language=self.language)
@@ -411,6 +412,11 @@ class Session:
             return T("no_law", self.language) + "\n\n" + T("where_help", self.language) + "\n" + help_block(["off_topic"], self.language)
         _, unknown_refs = retrieve.lookup(text)
         notes = []
+        if not first:
+            notes.append("This is a follow-up after the first assessment. Answer this question directly, in a few short paragraphs, "
+                         "with no headings. Do not retell their story or repeat the earlier assessment, and do not quote again law "
+                         "you already quoted earlier in the conversation - refer to it by its tag. Mention a lawyer only if it is "
+                         "newly relevant.")
         if x.get("message_kind") == "hypothetical" and WHAT_IF_FIGURES.search(text):
             # only a what-if about amounts or dates ("what if I had paid 10 lakh?"); "what if the builder
             # blames covid?" is an ordinary question and is simply answered

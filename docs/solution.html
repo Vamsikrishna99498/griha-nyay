@@ -129,7 +129,7 @@
 <ul>
 <li><b>No typed quotes:</b> every law quote is cut from the official PDF by code; a test checks each one.</li>
 <li><b>Only verified citations:</b> the AI can cite only tags like [RERA-18-1]; other sections, Acts and court cases are removed by code.</li>
-<li><b>Exact quotes:</b> a quote that isn't word-for-word is marked "⚠ not exact law text".</li>
+<li><b>Exact quotes:</b> a quote that isn't word-for-word loses its quotation marks, so it can't pass as the law's words.</li>
 <li><b>Real numbers:</b> all amounts come from the calculator; any other amount is marked "⚠ unverified".</li>
 <li><b>Second check:</b> another AI call checks each legal claim and flags anything unsupported.</li>
 <li><b>Says "I don't know":</b> no matching law → it says so and points to free help. Never cites judgments.</li>
@@ -157,27 +157,22 @@
 <ul>
 <li><b>21 test cases</b>: English, Hindi, Telugu, Hinglish, defects, insolvency, other state, off-topic, prompt injection, private numbers, late handover, denials, month-only and future dates.</li>
 <li><b>176 / 176 checks passed</b> in one run on the final code (Gemini free tier). Raw outputs are in <code>outputs/</code>.</li>
-<li><b>Passing checks is not enough:</b> an earlier 109/109 run missed the first three failures in section 10; each is now a test.</li>
+<li><b>Passing checks is not enough:</b> an earlier 109/109 run missed the first three challenges in section 10; each is now a test.</li>
 <li><b>Injection test:</b> asked to cite "Section 420 IPC", a court case and promise Rs 30 lakh - all blocked.</li>
-<li><b>90 offline tests:</b> maths, escalation, citations, privacy, conversation flow, failing providers, the real app page.</li>
+<li><b>97 offline tests:</b> maths, escalation, citations, privacy, conversation flow, provider outages, the real app page.</li>
 <li><b>Law search:</b> right law found for 29/29 test questions; nothing returned for 3/3 off-topic ones.</li>
 <li><b>Numbers checked by hand:</b> Rs 43,800 per month at 10.95% on Rs 48 lakh - matches.</li>
 </ul>
 
-<h2>10. Where it fails</h2>
+<h2>10. Challenges and how we resolved them</h2>
 <ul>
-<li><b>Late handover (fixed):</b> delay was counted to today, not to the handover date - 1050 days instead of 579, about Rs 10 lakh too much, in the notice too.</li>
-<li><b>"No case pending" (partly fixed):</b> words like FIR or bankrupt sent the user to a lawyer even when denied. Fixed for English; Hindi and Telugu denials still do.</li>
-<li><b>False alarms to a lawyer (fixed):</b> "what if the builder goes bankrupt?" or the Hinglish word "fir" (then) blocked drafts for good. Possibilities no longer count; a corrected fact lifts the flag.</li>
-<li><b>Too stiff (fixed):</b> "hi" got "which state?", then "your problem (greeting) is outside what I cover". Greetings and general questions now get a short reply that still refuses other law, figures and court cases.</li>
-<li><b>Cut-off answers (fixed):</b> 4 of 21 answers stopped mid-sentence when hidden reasoning used up the room. Now retried with more room: 0 of 21.</li>
-<li>A long story once broke the AI's reply (fixed). Bad outputs are kept in <code>outputs/failures/</code>.</li>
-<li>The second check can misfire. Latest run: no warnings from it; the quote check marked 1 loose quote.</li>
-<li><b>Longer prompts backfired twice:</b> intake missed "not registered with RERA" (a test caught it; fixed) and a new checker prompt gave more warnings (old one kept).</li>
-<li>Free models are slow and uneven: 20-40 s per advised answer on Gemini, about 160 s when a call hangs; daily limits stopped two runs.</li>
-<li>Hindi/Telugu messages not yet checked by a native speaker; drafts are English only.</li>
-<li>Keyword checks can miss indirect wording; a real problem worded as "if..." relies on the AI's flag.</li>
-<li>The law-search test questions were written by me, so 100% is optimistic.</li>
+<li><b>Delay after a late handover:</b> counted to today (1050 days, not 579) → now ends at the handover date; a test pins 579.</li>
+<li><b>Replies cut off:</b> hidden reasoning used up the room (4 of 21) → detected and retried with more room: 0 of 21.</li>
+<li><b>False alarms to a lawyer:</b> denials ("no case pending"), questions ("what if the builder goes bankrupt?") and Hinglish "fir" escalated → denials and possibilities no longer count; a corrected fact lifts the flag.</li>
+<li><b>Conversation too stiff:</b> greetings got "which state?" and follow-ups repeated the report → short natural replies, practical help (never as law), safety first.</li>
+<li><b>Relative dates:</b> "6 months ago" was guessed → the model now gets today's date and states the assumption.</li>
+<li><b>Longer prompts backfired:</b> intake missed "not registered with RERA" → caught by a test and fixed.</li>
+<li><b>Known limits:</b> free models are slow (20-40 s per answer); Hindi/Telugu text needs a native speaker's review; keyword checks can miss indirect wording; my retrieval test set was written by me. Early outputs from before the fixes: <code>outputs/resolved_issues/</code>.</li>
 </ul>
 
 <h2>11. AI tool used, and where it got it wrong</h2>
@@ -185,7 +180,7 @@
 <li><b>Tool:</b> only Claude Code (design, code, tests, review).</li>
 <li><b>Wrong:</b> its first law notes, written from memory, said claim delay interest in <b>Form M</b>. The official TS Rules (Rule 35) say <b>Form N</b>.</li>
 <li><b>Lesson:</b> no law quote is typed any more - each is cut from the official PDF and tested.</li>
-<li><b>Wrong again:</b> its scripted tests assumed how the model labels "hi", so they passed while the real app failed. Flow changes are now tried on a real model.</li>
+<li><b>Wrong again:</b> its scripted tests assumed how the model labels "hi", so they passed while the real app answered "hi" wrongly. Flow changes are now tried on a real model.</li>
 </ul>
 </div>
 

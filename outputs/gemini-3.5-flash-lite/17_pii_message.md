@@ -1,5 +1,5 @@
 # 17_pii_message — Message with Aadhaar, phone, PAN and bank account
-Commit `not a git checkout` · run 2026-11-18 03:03 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 13696 input tokens (cached not reported) · 1221 output tokens · 21s
+Commit `not a git checkout` · run 2026-11-18 15:36 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 14557 input tokens (cached not reported) · 1144 output tokens · 28s
 
 
 ## 🧑 User
@@ -9,27 +9,27 @@ My name is Lakshmi. Flat in Kompally, Hyderabad, builder Sunrise Infra, promised
 🔒 I removed some personal numbers from your message (PAN, bank account, Aadhaar, phone) before processing it. I don't need them to help you.
 
 **Your case in short**
-You paid Rs 38,00,000 to Sunrise Infra for a flat in Kompally, Hyderabad. The promised possession date was 1 January 2024, and the delay is currently 1049 days (~34.5 months).
+Your possession is delayed by 1049 days (~34.5 months) past the promised date.
 
 **Where you stand**
-The law supports your right to seek a refund or interest. Under [RERA-18-1] "If the promoter fails to complete or is unable to give possession of an apartment", you have clear remedies when a builder misses the deadline. Furthermore, [RERA-19-4] confirms that "The allottee shall be entitled to claim the refund of amount paid along with interest".
+The law supports your right to seek relief for delayed possession. Under [RERA-18-1] "If the promoter fails to complete or is unable to give possession of an apartment", you have the right to act if the builder misses the agreed handover date. Furthermore, [RERA-19-4] states that "(4) The allottee shall be entitled to claim the refund of amount paid along with interest at such rate as may be prescribed".
 
 **Your two choices**
-(a) Withdraw from the project and claim a refund of your Rs 38,00,000 with interest and compensation. The total refund interest so far is unknown because the exact payment dates are missing. 
-(b) Stay in the project and receive monthly interest for the delay. The estimated interest accrued so far is Rs 11,95,860, with a monthly interest of Rs 34,675 based on an interest rate of 10.95% per year [TS-R15]. 
-Since your goal is to get a refund, choice (a) fits your aim. 
+(a) Withdraw from the project and claim your refund of Rs 38,00,000 with interest and compensation. The total refund interest so far is unknown because individual payment dates are needed. 
+(b) Stay in the project and get delay interest. By my calculation, interest accrued so far is Rs 11,95,860, with an ongoing monthly interest of Rs 34,675 based on an interest rate of 10.95% per year (highest SBI Marginal Cost of Lending Rate (MCLR) + 2% per year (TS RERA [unverified legal reference removed]7, [TS-R15])) [TS-R15]. 
+Since your goal is a refund, choice (a) fits your objective.
 
 **What to do next**
-1. Collect your payment receipts and the agreement for sale.
-2. Check if the project is registered on the TG-RERA website [FAQ-3].
-3. Send a legal notice to the builder.
-4. File a complaint. Refund and delay-interest complaints are decided by the Authority using Form 'M' with a fee of Rs 1,000 [TS-R34-1], while compensation claims go to the adjudicating officer in Form 'N' with a fee of Rs 1,000 [TS-R35-1].
+1. Collect your payment receipts, bank statements, and your agreement for sale.
+2. Check the project's registration on the TG-RERA website as explained in [FAQ-3] Check the TG-RERA website for the project.
+3. Send a formal dated written notice to the builder asking for your refund.
+4. File a complaint [TS-R34-1] "Any aggrieved person may file a complaint with the Authority" using Form 'M' on the portal, while noting that compensation claims go to the adjudicating officer in Form 'N' [TS-R35-1].
 
 **What I'm not sure about**
-I do not know your exact payment dates, whether the project is registered with TG-RERA, or what building permission date the project has. The final rate, period, and compensation amount are decided entirely by the authority.
+I am working on assumptions that your payment dates and agreement terms match what was provided, and that no force majeure events apply. Exact refund interest is unknown since payment dates were not given. TG-RERA decides the final rate, period, and compensation.
 
 **When to get a real lawyer**
-Consult a lawyer to review your documents, confirm the correct filing forum, and draft your legal notice and complaint.
+Consult a lawyer or legal aid (under [LSA-12]) to review your documents and ensure your complaint and notices are correctly filed. (I am a free legal help assistant, not a lawyer.)
 
 ---
 **Sources used** (official text, checked):
@@ -39,6 +39,7 @@ Consult a lawyer to review your documents, confirm the correct filing forum, and
 - **[FAQ-3]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 3 (guidance, not law) - _How to check if a project is registered_ (PDF p. 2; https://rera.telangana.gov.in)
 - **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
 - **[TS-R35-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 35(1) - _Claim to the adjudicating officer (Form N)_ (PDF p. 23; https://rera.telangana.gov.in)
+- **[LSA-12]** Legal Services Authorities Act, 1987, Section 12 - _Who gets free legal services_ (PDF p. 11, 12; https://www.jhalsa.org/pdfs/LSA_1987.pdf)
 
 ## 📄 Generated legal notice (code-built)
 > **DRAFT - prepared by an AI assistant, not a lawyer.**
@@ -151,14 +152,14 @@ Yours faithfully,
 - Escalations: none
 - Cautions: none
 - Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'case', 'TS-R34-1': 'case', 'TS-R35-1': 'linked'}]
-- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 6, 'unsupported': 0, 'error': None}
-  - [supported] Under Section 18(1), if the promoter fails to give possession, you have remedies when a builder misses the deadline. (RERA-18-1)
-  - [supported] The allottee is entitled to claim a refund of the amount paid along with interest and compensation. (RERA-19-4)
-  - [supported] In Telangana, the interest rate is based on SBI's highest Marginal Cost of Lending Rate plus 2% per year. (TS-R15)
-  - [supported] Check if the project is registered on the TG-RERA website. (FAQ-3)
-  - [supported] Refund and delay-interest complaints are decided by the Authority using Form 'M' with a fee of Rs 1,000. (TS-R34-1)
-  - [supported] Compensation claims go to the adjudicating officer in Form 'N' with a fee of Rs 1,000. (TS-R35-1)
-- Other log: [{'type': 'ids_removed', 'kinds': ['PAN', 'bank account', 'Aadhaar', 'phone']}, {'type': 'index_tags_added', 'ids': ['FAQ-3']}]
+- Answer check: citations removed ['unverified_section']; quotes not exact: 1; amounts unverified: 0; grounding: {'claims': 6, 'unsupported': 0, 'error': None}
+  - [supported] Promoter is liable to return amount with interest if they fail to give possession. (RERA-18-1)
+  - [supported] Allottee is entitled to claim refund of amount paid along with prescribed interest and compensation if possession is not given. (RERA-19-4)
+  - [supported] Interest rate is highest SBI MCLR plus two percent. (TS-R15)
+  - [supported] Aggrieved person may file a complaint with the Authority in Form 'M'. (TS-R34-1)
+  - [supported] Compensation claims go to the adjudicating officer in Form N. (TS-R35-1)
+  - [supported] Eligible persons are entitled to legal services under the Legal Services Authorities Act. (LSA-12)
+- Other log: [{'type': 'ids_removed', 'kinds': ['PAN', 'bank account', 'Aadhaar', 'phone']}, {'type': 'index_tags_added', 'ids': ['FAQ-3', 'LSA-12']}]
 ## ✅ Checks
 - PASS no_false_escalation
 - PASS reached_advice

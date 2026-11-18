@@ -133,7 +133,6 @@ STRINGS = {
         "te": "నమూనా కేసు మీ కేసులో కల్పిత వివరాలను కలిపేస్తుంది. ముందు సైడ్‌బార్‌లో **Start a new case** నొక్కి, తర్వాత నమూనా ప్రయత్నించండి.",
     },
     "unverified_amount": {"en": "⚠ unverified - not from my calculator", "hi": "⚠ असत्यापित - मेरे कैलकुलेटर से नहीं", "te": "⚠ ధృవీకరించలేదు - నా కాలిక్యులేటర్ నుండి కాదు"},
-    "not_exact_law": {"en": "⚠ not exact law text", "hi": "⚠ यह क़ानून का सटीक पाठ नहीं", "te": "⚠ ఇది చట్టం యొక్క ఖచ్చిత పాఠం కాదు"},
     "unsupported_claim": {"en": "⚠ I couldn't confirm this against the law text", "hi": "⚠ मैं इसे क़ानून के पाठ से पुष्ट नहीं कर सका", "te": "⚠ దీన్ని చట్టం పాఠంతో నిర్ధారించలేకపోయాను"},
     "cut_short": {"en": "(My reply was cut short - ask me to continue.)", "hi": "(मेरा जवाब अधूरा रह गया - आगे बताने को कहें।)", "te": "(నా సమాధానం మధ్యలో ఆగిపోయింది - కొనసాగించమని అడగండి.)"},
     "sources_head": {

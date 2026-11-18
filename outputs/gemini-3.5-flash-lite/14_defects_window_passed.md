@@ -1,5 +1,5 @@
 # 14_defects_window_passed — Defects reported more than 5 years after possession
-Commit `not a git checkout` · run 2026-11-18 03:02 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 1 model calls · 5464 input tokens (cached not reported) · 156 output tokens · 11s
+Commit `not a git checkout` · run 2026-11-18 15:35 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 1 model calls · 5656 input tokens (cached not reported) · 166 output tokens · 7s
 
 
 ## 🧑 User
@@ -18,7 +18,7 @@ I live in Miyapur, Hyderabad. Possession of my flat in Green Valley Apartments b
 - **Problem:** defects
 - **Builder:** Ramky Homes
 - **Project:** Green Valley Apartments
-- **Flat:** —
+- **Flat:** Flat in Green Valley Apartments
 - **City / State:** Hyderabad, Telangana
 - **RERA no.:** —
 - **Agreement date:** —
@@ -43,7 +43,7 @@ I live in Miyapur, Hyderabad. Possession of my flat in Green Valley Apartments b
  "city": "Hyderabad",
  "builder_name": "Ramky Homes",
  "project_name": "Green Valley Apartments",
- "flat_details": null,
+ "flat_details": "Flat in Green Valley Apartments",
  "rera_number": null,
  "rera_registered": null,
  "permission_before_2017": null,

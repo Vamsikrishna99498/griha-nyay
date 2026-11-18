@@ -1,40 +1,40 @@
 # 04_telugu — Telugu-language story
-Commit `not a git checkout` · run 2026-11-18 02:52 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 14090 input tokens (cached not reported) · 1294 output tokens · 162s
+Commit `not a git checkout` · run 2026-11-18 15:27 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 14514 input tokens (cached not reported) · 1415 output tokens · 42s
 
 
 ## 🧑 User
 నమస్కారం. నేను హైదరాబాద్ లోని బాచుపల్లి లో Lakshmi Infra వారి Lakshmi Towers ప్రాజెక్ట్ లో ఫ్లాట్ బుక్ చేశాను. 2022 జనవరి లో అగ్రిమెంట్ చేశాం, 2024 డిసెంబర్ లోగా ఫ్లాట్ ఇస్తామన్నారు. ఇప్పటి వరకు 40 లక్షలు కట్టాను. ఇంకా ఫ్లాట్ ఇవ్వలేదు. నాకు ఫ్లాట్ కావాలి, కానీ ఆలస్యానికి పరిహారం కావాలి.
 
 ## 🤖 Griha Nyay
-1. **మీ కేస్ సంక్షిప్తంగా**
-మీరు హైదరాబాద్‌లోని బాచుపల్లిలో లక్ష్మి ఇన్ఫ్రా వారి లక్ష్మి టవర్స్ ప్రాజెక్ట్‌లో ఫ్లాట్ కోసం రూ. 40,00,000 చెల్లించారు. 2024 డిసెంబర్ నాటికి పొజిషన్ ఇవ్వాల్సి ఉండగా, నా దగ్గర ఉన్న లెక్కల ప్రకారం ఇప్పటివరకు 684 రోజులు (సుమారు 22.5 నెలలు) ఆలస్యం అయింది.
+**మీ కేస్ యొక్క సంక్షిప్త వివరాలు**
+మీ ప్రాజెక్ట్‌లో స్వాధీనం 684 రోజులు (~22.5 నెలలు) ఆలస్యమైంది.
 
-2. **మీ ప్రస్తుత పరిస్థితి**
-చట్టం ప్రకారం బిల్డర్ గడువులోగా ఫ్లాట్ ఇవ్వకపోతే మీకు హక్కు ఉంటుంది. మీరు ప్రాజెక్ట్‌లో కొనసాగుతూ ఆలస్యమైన ప్రతి నెలకు వడ్డీని పొందవచ్చు [RERA-18-1] "interest for every month of delay, till the handing over of the possession".
+**మీ ప్రస్తుత పరిస్థితి**
+నిర్దేశిత గడువులోగా ఫ్లాట్ ఇవ్వకపోతే, కొనుగోలుదారుకు చట్టపరంగా రక్షణ ఉంటుంది. అగ్రిమెంట్ ప్రకారం గడువులోగా స్వాధీనం ఇవ్వడంలో విఫలమైతే కొనుగోలుదారుకు హక్కు ఉంటుందని [RERA-19-4] the allottees, in case the allottee wishes to withdraw from the project తెలపడం జరిగింది. అలాగే ప్రాజెక్ట్‌లో కొనసాగుతూ ప్రతి నెలా ఆలస్యానికి వడ్డీ పొందవచ్చని [RERA-18-1] "interest for every month of delay" తెలియజేస్తుంది. తెలంగాణ నిబంధనల ప్రకారం ఈ వడ్డీ రేటు SBI అత్యధిక MCLR కు 2% కలుపుకుని లెక్కించబడుతుంది [TS-R15].
 
-3. **మీ ముందున్న రెండు మార్గాలు**
-మీకు ఫ్లాట్ కావాలని కోరుకుంటున్నారు కాబట్టి, ప్రాజెక్ట్‌లోనే ఉంటూ ఆలస్య వడ్డీని పొందడం సరైన మార్గం. 
-(ఎ) ప్రాజెక్ట్ నుండి వైదొలగి, వడ్డీ మరియు పరిహారంతో రిఫండ్ తీసుకోవడం (దీని మొత్తం తెలుసుకోవడానికి మీ చెల్లింపు తేదీలు కావాలి). 
-(బి) ప్రాజెక్ట్‌లోనే ఉంటూ ప్రతి నెలకు వడ్డీ పొందడం [RERA-18-1]. నా అంచనా ప్రకారం ఇప్పటివరకు పేరుకుపోయిన వడ్డీ రూ. 8,20,800 మరియు ప్రతి నెలా వచ్చే వడ్డీ రూ. 36,500 (SBI MCLR + 2% చొప్పున [TS-R15]).
+**మీ రెండు ఎంపికలు**
+(ఎ) ప్రాజెక్ట్ నుండి వైదొలిగి, చెల్లించిన మొత్తంపై వడ్డీ మరియు నష్టపరిహారం పొందడం. దీనికి సంబంధించిన రిఫండ్ మొత్తం ఇంకా లెక్కించబడలేదు (చెల్లింపు తేదీల వివరాలు ఇస్తే ఇది సాధ్యమవుతుంది).
+(బి) ప్రాజెక్ట్‌లో కొనసాగుతూ ఆలస్యమైన ప్రతి నెలా వడ్డీ పొందడం. మీ కేస్‌లో ఇప్పటివరకు రూ. 40,00,000 చెల్లించారు కాబట్టి, ప్రస్తుత అంచనా ప్రకారం ప్రతి నెలా వచ్చే వడ్డీ సుమారు Rs 36,500 మరియు ఇప్పటివరకు చేరిన మొత్తం వడ్డీ సుమారు Rs 8,20,800 అవుతుంది. మీ లక్ష్యం ఫ్లాట్ తీసుకోవడం కాబట్టి, రెండవ ఎంపిక (అక్కడే ఉండి వడ్డీ పొందడం) మీకు సరిపోతుంది.
 
-4. **తదుపరి ఏమి చేయాలి**
-1. అగ్రిమెంట్ పత్రాలు మరియు చెల్లింపు రసీదులను సేకరించండి. 
-2. ప్రాజెక్ట్ TG-RERA పోర్టల్‌లో రిజిస్టర్ అయిందో లేదో తనిఖీ చేయండి [FAQ-3]. 
-3. బిల్డర్‌కు లీగల్ నోటీసు పంపండి. 
-4. TG-RERA నిబంధనల ప్రకారం ఫిర్యాదు చేయండి [TS-R34-1].
+**తదుపరి ఏమి చేయాలి**
+1. మీ వద్ద ఉన్న చెల్లింపు రసీదులు మరియు అగ్రిమెంట్ పత్రాలను సేకరించండి.
+2. TG-RERA పోర్టల్‌లో ఈ ప్రాజెక్ట్ రిజిస్ట్రేషన్ వివరాలను తనిఖీ చేయండి.
+3. బిల్డర్‌కు లిఖితపూర్వకంగా నోటీసు పంపండి.
+4. ఆ తరువాత అధికారులకు ఫిర్యాదు చేయండి. సంబంధిత ఫారం (Form 'M' లేదా Form 'N') మరియు దాని విధానాన్ని న్యాయవాది లేదా పోర్టల్ ద్వారా నిర్ధారించుకోవాలి [TS-R34-1].
 
-5. **నాకు స్పష్టంగా తెలియని విషయాలు**
-ఇచ్చిన గడువుకు కేవలం నెల మరియు సంవత్సరం మాత్రమే తెలపడంతో, ఆలస్యం ఆ నెల చివరి తేదీ (31 డిసెంబర్ 2024) నుండి లెక్కించబడింది; అలాగే అగ్రిమెంట్ తేదీని 2022 జనవరి 1గా పరిగణించాము. ఖచ్చితమైన వడ్డీ గణన మరియు తుది నిర్ణయం అథారిటీ చేతిలో ఉంటుంది.
+**నాకు స్పష్టంగా తెలియని అంశాలు**
+అగ్రిమెంట్ ప్రకారం ఇచ్చిన తేదీల ఆధారంగా మాత్రమే ఈ లెక్కలు చేయబడ్డాయి. చెల్లింపు తేదీలు మరియు ప్రాజెక్ట్ రిజిస్ట్రేషన్ గురించిన పూర్తి వివరాలు నాకు తెలియవు. తుది వడ్డీ రేటు, కాలపరిమితి మరియు నష్టపరిహారాన్ని అథారిటీ లేదా నిర్ణయాధికారి నిర్ణయిస్తారు [TS-R15] [RERA-71-1].
 
-6. **అసలైన లాయర్‌ను ఎప్పుడు కలవాలి**
-మీరు లీగల్ నోటీసులు పంపేటప్పుడు లేదా అథారిటీ ముందు ఫిర్యాదు దాఖలు చేసేటప్పుడు లాయర్‌ను లేదా జిల్లా లీగల్ సర్వీసెస్ అథారిటీ (DLSA)ని సంప్రదించడం మంచిది.
+**నిజమైన న్యాయవాదిని ఎప్పుడు సంప్రదించాలి**
+ఫిర్యాదు దాఖలు చేయడానికి ముందు మరియు లీగల్ నోటీసు పంపే సమయంలో సరైన మార్గదర్శకత్వం కోసం నిజమైన న్యాయవాదిని సంప్రదించడం మంచిది.
 
 ---
 **వాడిన మూలాలు** (అధికారిక పాఠం, సరిచూసినవి):
+- **[RERA-19-4]** Real Estate (Regulation and Development) Act, 2016, Section 19(4) - _Buyer's right to refund with interest and compensation_ (PDF p. 17; https://rera.telangana.gov.in)
 - **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
 - **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
-- **[FAQ-3]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 3 (guidance, not law) - _How to check if a project is registered_ (PDF p. 2; https://rera.telangana.gov.in)
 - **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
+- **[RERA-71-1]** Real Estate (Regulation and Development) Act, 2016, Section 71(1) - _Compensation is decided by the adjudicating officer_ (PDF p. 30; https://rera.telangana.gov.in)
 
 ## 📄 Generated legal notice (code-built)
 > **DRAFT - prepared by an AI assistant, not a lawyer.**
@@ -56,13 +56,13 @@ Lakshmi Infra
 [Test address]
 [Your phone / email]
 
-**Subject:** Notice for failure to hand over possession of [flat number] in the project "Lakshmi Towers", and demand under the Real Estate (Regulation and Development) Act, 2016
+**Subject:** Notice for failure to hand over possession of Flat in the project "Lakshmi Towers", and demand under the Real Estate (Regulation and Development) Act, 2016
 
 Sir/Madam,
 
 **Facts**
 
-1. I entered into an agreement for sale with you dated 01 January 2022 for [flat number] in the project "Lakshmi Towers" at Bachupally.
+1. I entered into an agreement for sale with you dated 01 January 2022 for Flat in the project "Lakshmi Towers" at Bachupally.
 2. In all, I have paid you Rs 40,00,000 so far.
 3. Under the agreement, you were to hand over possession of the flat by 31 December 2024.
 4. As on date, you have not handed over possession of the flat to me.
@@ -101,7 +101,7 @@ Yours faithfully,
  "city": "Bachupally",
  "builder_name": "Lakshmi Infra",
  "project_name": "Lakshmi Towers",
- "flat_details": null,
+ "flat_details": "Flat",
  "rera_number": null,
  "rera_registered": null,
  "permission_before_2017": null,
@@ -123,7 +123,7 @@ Yours faithfully,
  "timeline": [],
  "assumptions": [
   "Only the month was given for the promised possession date, so the delay is counted from the last day of that month (31 December 2024).",
-  "Agreement date set to the 1st of January 2022 as only month and year were provided"
+  "\"2022 జనవరి\" taken as 2022-01-01"
  ]
 }
 ```
@@ -150,14 +150,13 @@ Yours faithfully,
 - Escalations: none
 - Cautions: none
 - Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'index', 'TS-R34-1': 'case', 'FAQ-8': 'case', 'RERA-71-1': 'keyword'}]
-- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 6, 'unsupported': 0, 'error': None}
-  - [supported] చట్టం ప్రకారం బిల్డర్ గడువులోగా ఫ్లాట్ ఇవ్వకపోతే మీకు హక్కు ఉంటుంది (RERA-18-1)
-  - [supported] మీరు ప్రాజెక్ట్‌లో కొనసాగుతూ ఆలస్యమైన ప్రతి నెలకు వడ్డీని పొందవచ్చు (RERA-18-1)
-  - [supported] ప్రాజెక్ట్ నుండి వైదొలగి, వడ్డీ మరియు పరిహారంతో రిఫండ్ తీసుకోవడం (RERA-18-1)
-  - [supported] SBI MCLR + 2% చొప్పున వడ్డీ (TS-R15)
-  - [supported] ప్రాజెక్ట్ TG-RERA పోర్టల్‌లో రిజిస్టర్ అయిందో లేదో తనిఖీ చేయండి (FAQ-3)
-  - [supported] TG-RERA నిబంధనల ప్రకారం ఫిర్యాదు చేయండి (TS-R34-1)
-- Other log: [{'type': 'index_tags_added', 'ids': ['FAQ-3']}]
+- Answer check: citations removed none; quotes not exact: 1; amounts unverified: 0; grounding: {'claims': 5, 'unsupported': 0, 'error': None}
+  - [supported] A buyer has the right to claim a refund with interest and compensation if the builder fails to give possession as agreed. (RERA-19-4)
+  - [supported] An allottee who does not wish to withdraw shall be paid interest for every month of delay till handing over possession. (RERA-18-1)
+  - [supported] In Telangana, the interest rate is SBI's highest MCLR plus 2%. (TS-R15)
+  - [supported] Form M or N and its procedure should be confirmed with a lawyer or portal. (TS-R34-1)
+  - [supported] The final interest rate, period, and compensation are decided by the authority or adjudicating officer. (RERA-71-1)
+- Other log: none
 ## ✅ Checks
 - PASS no_false_escalation
 - PASS reached_advice

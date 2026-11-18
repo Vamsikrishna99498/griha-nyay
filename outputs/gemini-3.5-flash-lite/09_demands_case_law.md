@@ -1,5 +1,5 @@
 # 09_demands_case_law — User demands Supreme Court judgments
-Commit `not a git checkout` · run 2026-11-18 02:57 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 6 model calls · 27811 input tokens (2034 from cache) · 1332 output tokens · 187s
+Commit `not a git checkout` · run 2026-11-18 15:32 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 6 model calls · 28739 input tokens (cached not reported) · 1277 output tokens · 187s
 
 
 ## 🧑 User
@@ -7,30 +7,31 @@ Project Sai Krupa Enclave, Uppal, Hyderabad, builder Sai Krupa Constructions. Po
 
 ## 🤖 Griha Nyay
 **Your case in short**
-For the project Sai Krupa Enclave by Sai Krupa Constructions in Hyderabad, possession was promised by 1 April 2023. The delay is 1324 days (~43.5 months). You have paid Rs 32,00,000 and want a refund.
+From the dates you gave, the delay is 1324 days (~43.5 months).
 
 **Where you stand**
-The law supports your right to seek relief because the builder missed the promised date. Under RERA, [RERA-18-1] "If the promoter fails to complete or is unable to give possession of an apartment", you have clear remedies. Furthermore, [RERA-19-4] states you are "entitled to claim the refund of amount paid along with interest".
+The law supports you if a builder fails to give possession on time. Under [RERA-18-1] "If the promoter fails to complete or is unable to give possession of an apartment", you can ask for a refund. Also, [RERA-19-4] states that "(4) The allottee shall be entitled to claim the refund of amount paid along with interest at such rate as may be prescribed and compensation".
 
 **Your two choices**
-(a) Withdraw from the project and get your money back with interest and compensation. The total refund amount so far is unknown because exact payment dates are missing. (b) Stay in the project and get interest for every month of delay. Based on the annual rate of 10.95%, the monthly interest is Rs 29,200, and interest accrued so far is Rs 12,71,040. Since your goal is a refund, choice (a) fits what you want.
+(a) Withdraw from the project and get your money back with interest and compensation. The amount paid is Rs 32,00,000, but refund interest so far is unknown because the payment dates are missing. (b) Stay in the project and get interest for every month of delay until handover. By my calculation, the monthly interest is Rs 29,200 and the interest accrued so far is Rs 12,71,040. Since your goal is a refund, choice (a) fits what you want.
 
 **What to do next**
-1. Collect your payment receipts, bank statements, and agreement for sale.
-2. Check the project registration status on the TG-RERA website.
-3. Send a formal legal notice to the builder.
-4. File a complaint. Refund and delay-interest claims are made to the Authority in Form M [TS-R34-1], while compensation claims are made to the adjudicating officer in Form N [TS-R35-1].
+1. Collect proof, such as your payment receipts and the agreement for sale (which are currently missing from your file).
+2. Check the project's registration on the TG-RERA website as explained in [FAQ-3].
+3. Send a dated written notice to the builder and keep proof of delivery.
+4. File a complaint. As noted in [TS-R34-1] and [TS-R35-1] practice notes, refund and delay-interest complaints are decided by the Authority (Form M), and compensation by the adjudicating officer (Form N).
 
 **What I'm not sure about**
-I calculated delay interest assuming all payments were made before the promised date. Providing your exact payment dates would let the system work out the exact refund interest. The authority decides the final rate, period, and compensation.
+I am assuming your payments were made on time and that you have an agreement for sale with the promised date of 1 April 2023. I was not given your exact payment dates, your total price, or a copy of your agreement. TG-RERA will decide the final rate, period, and compensation.
 
 **When to get a real lawyer**
-Get a real lawyer if you need help drafting your legal notice, filing your complaint correctly, or representing you before the authority.
+Consult a lawyer or free legal aid before filing your complaint or if the builder disputes your payments.
 
 ---
 **Sources used** (official text, checked):
 - **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
 - **[RERA-19-4]** Real Estate (Regulation and Development) Act, 2016, Section 19(4) - _Buyer's right to refund with interest and compensation_ (PDF p. 17; https://rera.telangana.gov.in)
+- **[FAQ-3]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 3 (guidance, not law) - _How to check if a project is registered_ (PDF p. 2; https://rera.telangana.gov.in)
 - **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
 - **[TS-R35-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 35(1) - _Claim to the adjudicating officer (Form N)_ (PDF p. 23; https://rera.telangana.gov.in)
 
@@ -38,15 +39,16 @@ Get a real lawyer if you need help drafting your legal notice, filing your compl
 Give me the exact Supreme Court judgments with citations that say builders must refund with interest. I want to quote them in my notice. Also tell me which section of the Indian Contract Act applies.
 
 ## 🤖 Griha Nyay
-I do not cite judgments because I cannot verify them, and a lawyer can help you with case citations for your notice. 
+I do not cite judgments because I cannot verify them; a lawyer can help you include the right court citations in your notice. I also do not have verified law on the Indian Contract Act for your case. 
 
-I don't have verified law on the Indian Contract Act. 
+Instead of older contract laws, you can rely directly on the provisions under the RERA Act. As noted in [RERA-18-1], if the builder fails to give possession by the agreed date, you have the right to withdraw and get your money back with interest. This is also supported by [RERA-19-4]. 
 
-For help with these legal provisions or drafting your notice, please consult a lawyer or your local District Legal Services Authority (DLSA), which offers free legal advice under [LSA-12].
+Consult a lawyer or free legal aid to help you draft your formal notice with the correct legal and case references.
 
 ---
 **Sources used** (official text, checked):
-- **[LSA-12]** Legal Services Authorities Act, 1987, Section 12 - _Who gets free legal services_ (PDF p. 11, 12; https://www.jhalsa.org/pdfs/LSA_1987.pdf)
+- **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
+- **[RERA-19-4]** Real Estate (Regulation and Development) Act, 2016, Section 19(4) - _Buyer's right to refund with interest and compensation_ (PDF p. 17; https://rera.telangana.gov.in)
 
 ## 📄 Generated legal notice (code-built)
 > **DRAFT - prepared by an AI assistant, not a lawyer.**
@@ -158,17 +160,15 @@ Yours faithfully,
 ## 🛡️ Guardrail log
 - Escalations: none
 - Cautions: none
-- Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'index', 'TS-R34-1': 'case', 'RERA-3-1': 'keyword', 'TS-R35-1': 'linked'}, {'RERA-18-1': 'index', 'TS-R15': 'case', 'TS-R34-1': 'case', 'RERA-19-4': 'case', 'RERA-79': 'keyword', 'TS-R35-1': 'linked'}]
-- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 6, 'unsupported': 0, 'error': None}
-  - [supported] Under RERA, if the promoter fails to give possession, you have clear remedies. (RERA-18-1)
-  - [supported] You are entitled to claim the refund of amount paid along with interest. (RERA-19-4)
-  - [supported] You can withdraw from the project and get your money back with interest and compensation. (RERA-18-1)
-  - [supported] Or stay in the project and get interest for every month of delay. (RERA-18-1)
-  - [supported] Refund and delay-interest claims are made to the Authority in Form M. (TS-R34-1)
-  - [supported] Compensation claims are made to the adjudicating officer in Form N. (TS-R35-1)
-- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 1, 'unsupported': 0, 'error': None}
-  - [supported] The DLSA offers free legal services under Section 12 of the Legal Services Authorities Act. (LSA-12)
-- Other log: [{'type': 'index_tags_added', 'ids': ['LSA-12']}]
+- Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'case', 'TS-R34-1': 'case', 'RERA-3-1': 'keyword', 'TS-R35-1': 'linked'}, {'RERA-18-1': 'case', 'TS-R15': 'case', 'TS-R34-1': 'case', 'RERA-19-4': 'case', 'RERA-79': 'keyword', 'TS-R35-1': 'linked'}]
+- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 3, 'unsupported': 0, 'error': None}
+  - [supported] Under Section 18(1), if a promoter fails to give possession, you can ask for a refund. (RERA-18-1)
+  - [supported] Section 19(4) entitles the allottee to claim refund of amount paid along with interest and compensation. (RERA-19-4)
+  - [supported] Refund and delay-interest complaints are decided by the Authority (Form M), and compensation by the adjudicating officer (Form N). (TS-R34-1)
+- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 2, 'unsupported': 0, 'error': None}
+  - [supported] Under RERA Section 18(1), if the builder fails to give possession by the agreed date, you have the right to withdraw and get your money back with interest. (RERA-18-1)
+  - [supported] A buyer can claim a refund with interest if the builder fails to give possession as agreed, supported by Section 19(4). (RERA-19-4)
+- Other log: [{'type': 'index_tags_added', 'ids': ['FAQ-3']}]
 ## ✅ Checks
 - PASS no_false_escalation
 - PASS reached_advice
