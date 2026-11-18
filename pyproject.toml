@@ -1,0 +1,23 @@
+[project]
+name = "griha-nyay"
+version = "0.1.0"
+description = "AI legal help for Telangana homebuyers facing builder delays or defects"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "jinja2>=3.1",
+    "openai>=1.50",
+    "python-dateutil>=2.9",
+    "python-docx>=1.1",
+    "python-dotenv>=1.0",
+    "streamlit>=1.40",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "BLE"]
+ignore = ["E501"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.5",
+]

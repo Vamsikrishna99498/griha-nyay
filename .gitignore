@@ -1,0 +1,13 @@
+.venv/
+.env
+__pycache__/
+.ruff_cache/
+.streamlit/secrets.toml
+# assignment brief is Kuku's document - keep out of the public repo
+*.pdf
+.claude/
+!data/laws/*.pdf
+!docs/*.pdf
+!solution.pdf
+# local helper, never committed
+scripts/check_key.py

@@ -1,0 +1,10 @@
+# Local-only by design: the app holds personal case details in memory.
+[server]
+address = "localhost"
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showErrorDetails = false
