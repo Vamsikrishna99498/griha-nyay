@@ -92,7 +92,7 @@ instructions name the reply language.
 | Quote check (code) | text in quotes next to a tag must appear verbatim in that entry, else marked "⚠ not exact law text" | `core/guardrails.py` |
 | Amount check (code) | rupee figures (incl. lakh/crore, Hindi/Telugu) not produced by the calculator are marked "⚠ unverified" | `core/guardrails.py` |
 | Grounding check (1 extra model call) | lists each legal claim and judges it against the exact text; unsupported claims are flagged, never deleted (switch off: `GROUNDING_CHECK=0`) | `core/grounding.py` |
-| Fixed legal text in drafts | notices/complaints are built by code from the case file; legal paragraphs quote the verified entries | `core/drafts.py`, `templates/` |
+| Fixed legal text in drafts | notices/complaints are built by code from the case file; legal paragraphs quote the verified entries. They download as Word files with the same words (only formatting changes) and every [bracket] to fill highlighted | `core/drafts.py`, `templates/`, `core/docx_export.py` |
 | Escalation (code + flags) | keyword stems in en/hi/te + structured case rules; intake flags can only escalate, never unlock. A denial ("no case pending") or a question about a possibility ("what if the builder goes bankrupt?") does not escalate. Escalations worked out from case facts (state, amount, registration, defect window) are lifted if the fact is corrected; what the person said in words stays | `knowledge/escalation.json` |
 
 ## What is AI vs code
