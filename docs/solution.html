@@ -147,7 +147,7 @@
 <h2>8. Scale and cost</h2>
 <ul>
 <li>One answer = 3 AI calls (read, explain, check). Measured in the final run: about 14k input and 1.2k output tokens. A follow-up question costs 2-3 calls. Drafts = 0 calls.</li>
-<li>Free tier = Rs 0. OpenRouter's free cap (50 requests a day) is about 15 answers; a Gemini free key ran all 25 cases and retests in a day.</li>
+<li>Free tier = Rs 0. OpenRouter's free cap (50 requests a day) is about 15 answers; a Gemini free key ran all 27 cases and retests in a day.</li>
 <li>At volume: 1,000 answers is about 14 million input and 1-4 million output tokens - roughly $4 at the earlier model's paid price.</li>
 <li>Prompt caching: unchanging text comes first in each prompt. An earlier provider served 53% of input tokens from cache; Gemini's free tier reported about 1%.</li>
 <li>More problems: add official Acts, navigated by their table of contents, with a human checking each entry.</li>
@@ -156,8 +156,8 @@
 
 <h2>9. How I know it's good</h2>
 <ul>
-<li><b>25 test cases</b>: English, Hindi, Telugu, Hinglish, defects, insolvency, other state, other problems (first aid), greetings, prompt injection, private numbers, late handover, denials, month-only and future dates.</li>
-<li><b>229 / 229 checks passed</b> in one run on the final code (Gemini free tier). Raw outputs are in <code>outputs/</code>.</li>
+<li><b>27 test cases</b>: English, Hindi, Telugu, Hinglish, defects, insolvency, other state, other problems (first aid), greetings and chat, longer conversations, prompt injection, private numbers, late handover, denials, month-only and future dates.</li>
+<li><b>268 / 268 checks passed</b> on the final code (Gemini free tier): cases 1-25 in one run, 26-27 after. Raw outputs are in <code>outputs/</code>.</li>
 <li><b>Passing checks is not enough:</b> an earlier 109/109 run missed the first three challenges in section 10; each is now a test.</li>
 <li><b>Injection test:</b> asked to cite "Section 420 IPC", a court case and promise Rs 30 lakh - all blocked.</li>
 <li><b>100 offline tests:</b> maths, escalation, citations, privacy, conversation flow, provider outages, the real app page.</li>
