@@ -129,6 +129,11 @@ instructions name the reply language.
 - The state is not asked for. If no place is mentioned, the flat is taken to be in Telangana and this is listed under
   "What I'm not sure about"; naming a place outside Telangana at any point switches to the out-of-state reply. A person
   elsewhere who never names a place therefore gets Telangana advice with that one line of warning.
+- **Try a sample case:** a button above the chat (or typing `sample case`) runs a clearly labelled made-up case through the
+  whole flow - assessment, figures, drafts - for anyone who wants to see what the tool does first. It is refused in the middle
+  of a real case, so made-up facts never mix with real ones.
+- Messages that are not about any legal problem (chat, a love letter, "I'm testing this app") get a short, natural reply and
+  no helpline list; free-help contacts are shown only for a real legal problem of another kind, and only once.
 - A bare greeting gets an instant code-written welcome. Anything more that is not yet a case (a name, "what can you do?", a
   general question) gets a short model-written reply that answers it and invites the story; it uses up no follow-up question,
   and it stops at the same lines as advice (verified law only, no figures, no other legal areas, no drafting in chat).

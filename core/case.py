@@ -30,7 +30,7 @@ LIST_FIELDS = ["evidence", "builder_excuses", "defects", "assumptions"]
 BOOL_FIELDS = ["rera_registered", "permission_before_2017"]
 CATEGORIES = {"delay", "defects"}
 GOALS = {"refund", "possession", "unsure", "repair", "compensation"}
-MESSAGE_KINDS = {"facts", "correction", "question", "hypothetical", "remove", "other"}
+MESSAGE_KINDS = {"facts", "correction", "question", "hypothetical", "remove", "chat", "other"}
 FLAG_KEYS = {"insolvency", "court_case_pending", "criminal_or_threat", "title_dispute"}
 REMOVABLE = (set(STR_FIELDS) | set(DATE_FIELDS) | set(AMOUNT_FIELDS) | set(BOOL_FIELDS) | {"goal", "payments", "categories"}
              | set(LIST_FIELDS))

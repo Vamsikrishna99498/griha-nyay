@@ -49,9 +49,10 @@ About the message itself
   - "question": asks something and adds no facts.
   - "hypothetical": a "what if" ("what if I had paid 10 lakh?"). Do not put hypothetical values in any field.
   - "remove": says an earlier fact is wrong or unknown; list the field names in "remove_fields".
+  - "chat": not about any legal problem - a greeting, thanks, small talk, a question about this assistant, a request to see an example of what it can do, someone saying they are testing it, or a request for something unrelated to law (a poem, a love letter). Use <last_question> to understand short replies.
   - "other": anything else.
 - "language": the language of the newest message - "English", "Hindi", "Telugu", "Hinglish" (Hindi in English letters) or "Tenglish" (Telugu in English letters).
-- "in_scope": true if the message is about a flat, house, villa or plot booked or bought from a builder or developer (delay, refund, possession, interest, defects). false if it is clearly something else (rent or a landlord, salary, a product, family property, someone else occupying or grabbing their house or land). Leave it out if unclear.
+- "in_scope": true if the message is about a flat, house, villa or plot booked or bought from a builder or developer (delay, refund, possession, interest, defects). false if it is clearly a different legal problem (rent or a landlord, salary, a product, family property, someone else occupying or grabbing their house or land). Leave it out if unclear, and for "chat" messages.
 - "topic": three to six English words naming the problem.
 - "law_ids": up to four tags from <law_index> most relevant to this message. Empty list if none fit.
 

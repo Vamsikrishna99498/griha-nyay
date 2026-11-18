@@ -127,6 +127,11 @@ STRINGS = {
         "hi": "कब्ज़े के बाद की ख़राबियों पर केंद्रीय RERA क़ानून क्या कहता है (यह हर राज्य में लागू है):",
         "te": "స్వాధీనం తర్వాత లోపాల గురించి కేంద్ర RERA చట్టం ఏమి చెబుతుంది (ఇది ప్రతి రాష్ట్రంలో వర్తిస్తుంది):",
     },
+    "sample_busy": {
+        "en": "A sample case would mix made-up facts into your own case. Click **Start a new case** in the sidebar first, then try the sample.",
+        "hi": "सैंपल केस आपके अपने केस में बनावटी तथ्य मिला देगा। पहले साइडबार में **Start a new case** पर क्लिक करें, फिर सैंपल आज़माएँ।",
+        "te": "నమూనా కేసు మీ కేసులో కల్పిత వివరాలను కలిపేస్తుంది. ముందు సైడ్‌బార్‌లో **Start a new case** నొక్కి, తర్వాత నమూనా ప్రయత్నించండి.",
+    },
     "unverified_amount": {"en": "⚠ unverified - not from my calculator", "hi": "⚠ असत्यापित - मेरे कैलकुलेटर से नहीं", "te": "⚠ ధృవీకరించలేదు - నా కాలిక్యులేటర్ నుండి కాదు"},
     "not_exact_law": {"en": "⚠ not exact law text", "hi": "⚠ यह क़ानून का सटीक पाठ नहीं", "te": "⚠ ఇది చట్టం యొక్క ఖచ్చిత పాఠం కాదు"},
     "unsupported_claim": {"en": "⚠ I couldn't confirm this against the law text", "hi": "⚠ मैं इसे क़ानून के पाठ से पुष्ट नहीं कर सका", "te": "⚠ దీన్ని చట్టం పాఠంతో నిర్ధారించలేకపోయాను"},
