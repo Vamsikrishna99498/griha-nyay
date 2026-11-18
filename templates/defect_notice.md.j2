@@ -1,0 +1,46 @@
+> **DRAFT - prepared by an AI assistant, not a lawyer.**
+> - **What it is:** a dated list of the defects. The builder's 30 days to repair run from the day they receive it.
+> - **Where it comes from:** your facts, filled in by code, and the official law text, quoted.
+> - **Before sending:** list EVERY defect with its location · attach dated photos · fill the [brackets].
+> - **How to send:** Registered Post A.D. or email, so you have proof of the date.{% if non_english %}
+> - **Translate:** some details below are in the language you typed them in - translate them into English before sending.{% endif %}
+
+**NOTICE OF DEFECTS UNDER SECTION 14(3) OF THE REAL ESTATE (REGULATION AND DEVELOPMENT) ACT, 2016**
+
+Date: {{ today }}
+
+**To:**
+{{ builder or "[Builder / Promoter company name]" }}
+{{ builder_address or "[Registered office address]" }}
+
+**From:**
+{{ buyer or "[Your full name]" }}
+{{ buyer_address or "[Your address]" }}
+{{ buyer_contact or "[Your phone / email]" }}
+
+**Subject:** Defects in {{ flat or "[flat number]" }}, project "{{ project or "[project name]" }}"{% if rera %} (TG-RERA Registration No. {{ rera }}){% endif %} - demand to rectify within 30 days
+
+Sir/Madam,
+
+{% for f in facts %}{{ loop.index }}. {{ f }}
+{% endfor %}
+{% set n = facts|length %}{{ n + 1 }}. The defects are:
+{% if defects %}{% for d in defects %}   - {{ d }} [location in the flat, since when]
+{% endfor %}{% else %}   - [describe each defect and where it is]
+{% endif %}
+{{ n + 2 }}. Section 14(3) of the Real Estate (Regulation and Development) Act, 2016 provides: "{{ law["RERA-14-3"].quote_text }}"
+
+{{ n + 3 }}. {% if possession %}Possession was handed over on {{ possession }}, so the five-year period runs till {{ window_end }}. These defects are brought to your notice within that period by this letter.{% else %}These defects are brought to your notice by this letter, within five years of the date on which possession was handed over.{% endif %}
+
+{{ n + 4 }}. I call upon you to rectify all the above defects without any charge within 30 (thirty) days of receipt of this notice, and to inform me in writing of the dates on which your team will visit.
+
+{{ n + 5 }}. If you fail to do so, I shall be constrained to approach the Telangana Real Estate Regulatory Authority and the Adjudicating Officer for directions and appropriate compensation, entirely at your risk as to costs and consequences.
+
+{{ n + 6 }}. Nothing in this notice waives any of my other rights and remedies under law.
+
+Yours faithfully,
+
+{{ buyer or "[Your name]" }}
+[Signature]
+
+**Enclosures (copies):** dated photos/videos of each defect; possession letter; {{ enclosures }}

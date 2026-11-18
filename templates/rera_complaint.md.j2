@@ -1,0 +1,50 @@
+> **DRAFT CONTENT for a TG-RERA complaint - not the official form.**
+> - **How to use it:** file online at {{ portal }} and copy each section below into the matching field of the official form.
+> - **Which form (TS Rules):** a complaint to the Authority is Form 'M' (Rule 34); a claim for interest or compensation to the Adjudicating Officer is Form 'N' (Rule 35).
+> - **In current practice:** the Authority decides refund and delay-interest complaints; the Adjudicating Officer decides compensation. **A lawyer or the TG-RERA complaint page can confirm the route for your case.**
+> - **Before filing:** check every fact and amount.{% if non_english %}
+> - **Translate:** some details below are in the language you typed them in - translate them into English before sending.{% endif %}
+{% if "defects" in categories and not defect_overdue %}
+> **The defects part is not ready to file yet.**
+> - {% if defect_reported %}You told the builder in writing on {{ defect_reported }}; the builder has till {{ defect_fix_deadline }} to fix the defects.{% else %}First send the builder a dated, written defect notice (see the defect notice draft) and keep proof of delivery.{% endif %}
+> - Add the defects ground and relief below only if the defects are still not fixed 30 days after that notice.
+{% endif %}
+# Complaint before the Telangana Real Estate Regulatory Authority
+**Under Section 31 of the Real Estate (Regulation and Development) Act, 2016**
+
+## 1. Complainant
+- Name: {{ buyer or "[your full name]" }}
+- Address / phone / email: {{ buyer_address or "[address]" }} / {{ buyer_contact or "[phone / email]" }}
+
+## 2. Respondent (Promoter)
+- Name: {{ builder or "[builder company name]" }}
+- Registered address: {{ builder_address or "[address]" }}
+
+## 3. Project
+- Project: {{ project or "[project name]" }}, {{ city or "[location]" }}
+- TG-RERA Registration No.: {{ rera or "[check on the TG-RERA portal]" }}
+- Unit: {{ flat or "[flat no., block, area]" }}
+
+## 4. Facts of the case
+{% for f in facts %}{{ loop.index }}. {{ f }}
+{% endfor %}
+## 5. Grounds
+{% set g = namespace(i=0) %}{% set letters = "abcdef" %}{% if "delay" in categories %}{{ letters[g.i] }}{% set g.i = g.i + 1 %}. The Respondent failed to hand over possession by the date agreed in the agreement for sale ({{ promised or "[date]" }}){% if possession %} and handed it over only on {{ possession }}, a delay of {{ delay_days }} days{% else %}, a delay of {{ delay_days }} days as on {{ as_of }}{% endif %}. Section 18(1) of the Act provides: "{{ law["RERA-18-1"].quote_text }}"
+{% endif %}{% if "defects" in categories %}{{ letters[g.i] }}{% set g.i = g.i + 1 %}. {% if defect_reported and defect_overdue %}The defects listed above were brought to the Respondent's notice in writing on {{ defect_reported }}, within five years of possession, and were not rectified within 30 days.{% elif defect_reported %}The defects listed above were brought to the Respondent's notice in writing on {{ defect_reported }}, within five years of possession. [The Respondent's 30 days run till {{ defect_fix_deadline }} - keep this ground only if the defects are still not rectified after that date.]{% else %}The defects listed above were brought to the Respondent's notice by a written notice dated [date of your defect notice], within five years of possession, and were not rectified within 30 days. [Keep this ground only after you have sent that notice and 30 days have passed.]{% endif %} Section 14(3) of the Act provides: "{{ law["RERA-14-3"].quote_text }}"
+{% endif %}{{ letters[g.i] }}{% set g.i = g.i + 1 %}. Under Section 11(4)(a) the Respondent is responsible for all obligations under the agreement for sale till conveyance.
+{{ letters[g.i] }}{% set g.i = g.i + 1 %}. A legal notice dated [date] was sent; the Respondent [did not reply / replied without remedy].
+
+## 6. Relief sought
+{% set r = namespace(i=1) %}{% if "delay" in categories %}{% if demand == "interest_only" %}{{ r.i }}. Direct the Respondent to pay interest at the rate prescribed in Rule 15 of the TS Rules on {{ paid }} for every month of delay from {{ promised or "[date]" }} to {{ possession }}{% if stay_interest %} (estimated at {{ stay_interest }}){% endif %}.
+{% elif demand == "refund" %}{{ r.i }}. Direct the Respondent to refund {{ paid }} with interest at the rate prescribed in Rule 15 of the TS Rules from the dates of payment till actual refund.
+{% else %}{{ r.i }}. Direct the Respondent to hand over possession with the occupancy certificate by a fixed date, and to pay interest at the rate prescribed in Rule 15 on {{ paid }} for every month of delay from {{ promised or "[date]" }} till possession{% if monthly %} (about {{ monthly }} per month){% endif %}.
+{% endif %}{% set r.i = r.i + 1 %}{% endif %}{% if "defects" in categories %}{{ r.i }}. Direct the Respondent to rectify the defects listed above without charge within a fixed time.
+{% set r.i = r.i + 1 %}{% endif %}{{ r.i }}. Liberty to claim compensation before the Adjudicating Officer; costs of this complaint; any other relief the Authority thinks fit.
+
+## 7. Documents to attach
+{{ enclosures }}
+
+## 8. Declaration
+I declare that the facts above are true to my knowledge, and that no other case on the same matter is pending before any court, tribunal or consumer commission.
+
+{{ buyer or "[name]" }} - Date: {{ today }}
