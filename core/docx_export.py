@@ -12,7 +12,7 @@ import json
 import re
 
 from docx import Document
-from docx.enum.text import WD_COLOR_INDEX
+from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_COLOR_INDEX
 from docx.shared import Pt, RGBColor
 
 DOCX_MIME = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -102,8 +102,12 @@ def markdown_to_docx(text: str) -> bytes:
             block.clear()
 
     fence: list | None = None   # lines inside a ``` block
+    in_note = False             # inside the grey DRAFT note at the top
     for raw in text.splitlines():
         line = raw.rstrip()
+        if in_note and line.strip() and not line.startswith("> "):
+            in_note = False         # a clear gap between the guidance note and the document itself
+            doc.add_paragraph().paragraph_format.space_after = Pt(10)
         if line.startswith("```"):
             flush()
             if fence is None:
@@ -118,8 +122,18 @@ def markdown_to_docx(text: str) -> bytes:
         if not line.strip():
             flush()
             continue
+        title = re.fullmatch(r"\*\*([^*]+)\*\*", line.strip())
+        if title and re.search(r"[A-Z]", title.group(1)) and title.group(1) == title.group(1).upper():
+            flush()                          # a letter's title (all capitals): centred, a little larger
+            p = doc.add_paragraph()
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            p.paragraph_format.space_before, p.paragraph_format.space_after = Pt(4), Pt(10)
+            run = p.add_run(title.group(1))
+            run.bold, run.font.size = True, Pt(13)
+            continue
         if line.startswith("> "):            # the DRAFT note at the top: grey, smaller, set apart
             flush()
+            in_note = True
             note = line[2:]
             p = doc.add_paragraph(style="List Bullet" if note.startswith("- ") else None)
             p.paragraph_format.space_after = Pt(2)
