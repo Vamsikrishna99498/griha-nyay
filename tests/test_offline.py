@@ -1359,6 +1359,48 @@ def test_app_shows_current_drafts_and_guards_its_inputs():
                 os.environ[k] = v
 
 
+
+def test_drafts_download_as_word_with_exactly_the_same_words():
+    import io
+
+    from docx import Document
+
+    from core.docx_export import markdown_to_docx
+    s = _advised(as_of=date(2026, 11, 18), state="Telangana", categories=["delay", "defects"], amount_paid_rupees=4800000,
+                 promised_possession_date=date(2023, 12, 31), possession_handed_over_date=date(2025, 8, 1),
+                 defects=["bathroom ceiling leaks", "plaster cracking"], project_name="Skyline Heights")
+    s.party = {"name": "Asha Rao"}
+    for build in (drafts.legal_notice, drafts.defect_notice, drafts.rera_complaint):
+        md = build(s)
+        doc = Document(io.BytesIO(markdown_to_docx(md)))
+        text = "\n".join(p.text for p in doc.paragraphs)
+        on_screen = re.sub(r"\*\*|(?<![\w\[])_|_(?![\w\]])|^> (- )?|^#+ |^\s*- ", "", md, flags=re.M)
+        assert re.findall(r"\S+", text) == re.findall(r"\S+", on_screen), build.__name__   # wording unchanged
+        assert "**" not in text and "\n> " not in text and not text.startswith("> "), build.__name__
+        highlighted = [r.text for p in doc.paragraphs for r in p.runs if r.font.highlight_color]
+        assert highlighted and all(h.startswith("[") and h.endswith("]") for h in highlighted), build.__name__
+        assert "Asha Rao" in text and "Rs 48,00,000" in text
+    assert "Heading 1" in {p.style.name for p in Document(io.BytesIO(markdown_to_docx(drafts.rera_complaint(s)))).paragraphs}
+
+
+
+def test_case_summary_downloads_as_a_readable_word_file():
+    import io
+
+    from docx import Document
+
+    from core.docx_export import markdown_to_docx
+    s = _advised(as_of=date(2026, 11, 18), state="Telangana", categories=["delay", "defects"], amount_paid_rupees=4800000,
+                 promised_possession_date=date(2023, 12, 31), possession_handed_over_date=date(2025, 8, 1), defects=["leak"])
+    doc = Document(io.BytesIO(markdown_to_docx(s.download_md())))
+    text = "\n".join(p.text for p in doc.paragraphs)
+    assert "```" not in text and '"as_of"' not in text and "**" not in text            # no raw data or marks
+    figures = s.calc().figures()
+    assert all(str(v) in text for v in figures.values() if not isinstance(v, list))    # every figure, exactly as computed
+    assert all(n in text for n in figures["notes"]) and "Delay interest per month: Rs 43,800" in text
+    assert "Five-year defect period ends: 2030-08-01" in text and "15100" in text
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

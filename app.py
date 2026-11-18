@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 
 from core import drafts, llm, roleplay
 from core.calculator import TG, default_rate_pct, inr
+from core.docx_export import DOCX_MIME, markdown_to_docx
 from core.engine import MAX_USER_CHARS, Session
 from core.i18n import ESC_LABELS, T
 from core.privacy import scrub
@@ -38,6 +39,8 @@ def intro(what: str, when: str, get: str) -> None:
         for col, (head, line) in zip(st.columns(3), [("What this is", what), ("Use it when", when), ("You get", get)]):
             col.markdown(f"**{head}**  \n{line}")
 
+
+WORD_NAMES = {"notice": "legal_notice_delay.docx", "defect": "defect_notice.docx", "complaint": "tg_rera_complaint_content.docx"}
 
 st.set_page_config(page_title="Griha Nyay - homebuyer legal help", page_icon="🏠", layout="wide")
 
@@ -74,7 +77,8 @@ with st.sidebar:
         tips = c.missing_proof()
         if tips:
             st.markdown("**Proof to collect**\n" + "\n".join(f"- [ ] {t}" for t in tips))
-        st.download_button("⬇️ Download my case summary", s.download_md(), file_name="my_case_summary.md")
+        st.download_button("⬇️ Download my case summary (Word)", markdown_to_docx(s.download_md()),
+                           file_name="my_case_summary.docx", mime=DOCX_MIME)
     with st.expander("Interest rate"):
         i = TG["interest"]
         st.caption(f"{i['rule']}. Base rate {i['base_rate_pct']}% effective {i['base_rate_effective']} ({i['base_rate_source']}). {i['_note']}")
@@ -173,7 +177,9 @@ elif mode == "📄 Drafts":
                 label, _, _, build = DOCS[key]
                 text = build(s)   # rebuilt now, so a corrected fact, saved name or changed rate shows at once
                 st.subheader(label)
-                st.download_button(f"⬇️ Download: {label}", text, file_name=f"{key}.md", key=f"dl_{key}")
+                st.download_button(f"⬇️ Download as Word: {label}", markdown_to_docx(text), file_name=WORD_NAMES[key],
+                                   mime=DOCX_MIME, key=f"dl_{key}")
+                st.caption("Opens in Word or Google Docs. Fill in the highlighted [brackets], then print or send it.")
                 with st.container(border=True):
                     st.markdown(text)
 
