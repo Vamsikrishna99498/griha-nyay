@@ -57,13 +57,13 @@ Tests (no key needed unless stated):
 3. Open the app: `streamlit run app.py`. If the key or the model name is wrong, the app and `run_tests.py` say which one
    (missing key, key rejected, model not found) instead of a general error.
 4. Try a new input: `python run_tests.py --text "your story"` (add more `--text` for follow-up messages).
-5. Add a test case: save a file in `tests/cases/`, e.g. `22_my_case.json`:
+5. Add a test case: save a file in `tests/cases/`, e.g. `99_my_case.json`:
    ```json
-   {"id": "22_my_case", "title": "My case",
+   {"id": "99_my_case", "title": "My case",
     "turns": ["first message", "follow-up"],
     "expect": {"reaches_advice": true}}
    ```
-   (put your own messages in `turns`), then run `python run_tests.py 22`. Other checks you can put in `expect`: `escalate` (e.g. `"insolvency"`),
+   (put your own messages in `turns`), then run `python run_tests.py 99`. Other checks you can put in `expect`: `escalate` (e.g. `"insolvency"`),
    `final_reply_contains`, `final_reply_must_not_contain`, `fields` (expected case-file values), `language_hint`,
    `reply_contains` / `reply_must_not_contain` (by turn number, e.g. `{"0": "text"}`), `first_aid`, `general_category`.
 6. See results in `outputs/<model>/` - one file per case and `summary.md`.

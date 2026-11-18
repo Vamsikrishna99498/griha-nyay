@@ -72,7 +72,7 @@
 <li>Interest = SBI's highest MCLR + 2% (TS Rules, Rule 15) = 10.95% today; editable.</li>
 <li>Form M vs Form N: the rule text and current practice differ, so the bot says both and suggests a lawyer confirm.</li>
 <li>The bot explains and drafts; <b>it never files</b>. The user checks every draft.</li>
-<li>Free AI models are enough. The final run used Gemini's free tier (<code>gemini-3.5-flash-lite</code>); earlier runs used a free OpenRouter model.</li>
+<li>Free AI models are enough. The final run used Gemini's free tier (<code>gemini-3.5-flash-lite</code>); earlier runs used an OpenRouter model.</li>
 </ul>
 </div>
 </div>
@@ -158,7 +158,7 @@
 <ul>
 <li><b>27 test cases</b>: English, Hindi, Telugu, Hinglish, defects, insolvency, other state, other problems (first aid), greetings and chat, longer conversations, prompt injection, private numbers, late handover, denials, month-only and future dates.</li>
 <li><b>268 / 268 checks passed</b> on the final code (Gemini free tier): cases 1-25 in one run, 26-27 after. Raw outputs are in <code>outputs/</code>.</li>
-<li><b>Passing checks is not enough:</b> an earlier 109/109 run missed the first three challenges in section 10; each is now a test.</li>
+<li><b>Passing checks is not enough:</b> an earlier 109/109 run missed real problems (such as the late-handover delay); each is now a test.</li>
 <li><b>Injection test:</b> asked to cite "Section 420 IPC", a court case and promise Rs 30 lakh - all blocked.</li>
 <li><b>100 offline tests:</b> maths, escalation, citations, privacy, conversation flow, provider outages, the real app page.</li>
 <li><b>Law search:</b> right law found for 29/29 test questions; nothing returned for 3/3 off-topic ones.</li>
@@ -202,10 +202,10 @@ MODEL=your-model-name</pre></li>
 <div>
 <ol start="5">
 <li><b>Add a test case:</b> save a file in <code>tests/cases/</code>:
-<pre>{"id": "22_my_case", "title": "My case",
+<pre>{"id": "99_my_case", "title": "My case",
  "turns": ["first message", "follow-up"],
  "expect": {"reaches_advice": true}}</pre>
-then run <code>python run_tests.py 22</code>.</li>
+then run <code>python run_tests.py 99</code>.</li>
 <li><b>See results:</b> <code>outputs/&lt;model&gt;/</code>, with a <code>summary.md</code>.</li>
 </ol>
 </div>
