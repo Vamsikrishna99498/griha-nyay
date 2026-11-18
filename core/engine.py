@@ -57,7 +57,8 @@ SAMPLE_CASE = ("Sample case (made-up facts): I booked Flat 504, Tower B in Skyli
                "22 lakh on 15 June 2022. The RERA number is P02400003456. I still don't have the flat and the builder keeps "
                "saying next quarter. I have the agreement and bank statements. I want my money back.")
 CORE_FACTS = ["promised_possession_date", "possession_handed_over_date", "amount_paid_rupees", "payments", "defects"]
-SMALL_TALK_TOPIC = re.compile(r"(?i)greet|introduc|\bname\b|small talk|thank|chit|hello|pleasantr")   # intake's own label for it
+SMALL_TALK_TOPIC = re.compile(r"(?i)greet|introduc|\bname\b|small talk|thank|gratitud|chit|hello|pleasantr|farewell|goodbye|"
+                              r"casual|capabilit|about (?:the |this )?(?:assistant|bot|ai|tool)")   # intake's own label for it
 CHAT_PATIENCE = {"timeout": 30, "rounds": 2}   # a conversational turn gets two quick tries; then the code-written reply
 STORY_ITEMS = "the builder and project, the area or city, the promised date (or the date they got the flat), how much they paid, what they want"
 

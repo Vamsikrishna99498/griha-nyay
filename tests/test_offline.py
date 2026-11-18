@@ -1213,6 +1213,16 @@ def test_bare_references_keep_correct_ones_and_respect_sub_sections():
     assert retrieve.lookup("what does section 18(1) say?")[0] == ["RERA-18-1"]
 
 
+def test_a_year_after_rules_or_act_is_not_a_rule_number():
+    law = [retrieve.KB[i] for i in ("RERA-18-1", "TS-R15")]
+    seen_live = "a rate of 10.95% per year (TS RERA Rules 2017, Rule 15)"           # what the model wrote in the live run
+    assert guardrails.validate_citations(seen_live, law)[0] == "a rate of 10.95% per year (TS RERA Rules 2017, [TS-R15])"
+    for text in ("under the TS RERA Rules 2017 the rate is set", "the RERA Act 2016 applies", "Section 2016 is not a thing"):
+        out = guardrails.validate_citations(text, law)[0]
+        assert "removed]" not in out or text.startswith("Section 2016"), out
+    assert retrieve.lookup("the Telangana Rules 2017 say") == ([], [])
+
+
 def test_comparing_two_choices_is_not_a_court_case():
     for text in ("**Refund vs Possession** - which fits you?", "Option A vs. Option B: think about it.", "Stay vs Withdraw"):
         out, removed = guardrails.validate_citations(text, E)

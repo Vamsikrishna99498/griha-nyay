@@ -69,8 +69,8 @@ def law_index() -> str:
 
 
 # ---------- 1. exact lookup ----------
-REF_RE = re.compile(r"(?i)\b(section|sec\.?|s\.|u/s|rule|r\.)\s*(\d{1,3})(" + SUB_RE + r")"
-                    r"|(धारा|सेक्शन|नियम|నియమం|సెక్షన్|రూల్)\s*(\d{1,3})(" + SUB_RE + r")")
+REF_RE = re.compile(r"(?i)\b(section|sec\.?|s\.|u/s|rule|r\.)\s*(\d{1,3})(?!\d)(" + SUB_RE + r")"
+                    r"|(धारा|सेक्शन|नियम|నియమం|సెక్షన్|రూల్)\s*(\d{1,3})(?!\d)(" + SUB_RE + r")")
 
 
 def lookup(text: str) -> tuple[list, list]:

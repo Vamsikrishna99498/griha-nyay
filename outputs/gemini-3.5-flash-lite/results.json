@@ -354,9 +354,9 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 3,
-  "prompt_tokens": 14557,
+  "prompt_tokens": 14065,
   "cached_tokens": null,
-  "removed": 1,
+  "removed": 0,
   "unsupported": 0
  },
  "18_telugu_insolvency": {
@@ -419,9 +419,9 @@
   "models": "gemini:gemini-3.5-flash-lite",
   "commit": "not a git checkout",
   "calls": 3,
-  "prompt_tokens": 14697,
-  "cached_tokens": null,
-  "removed": 1,
+  "prompt_tokens": 14127,
+  "cached_tokens": 4067,
+  "removed": 0,
   "unsupported": 0
  },
  "21_promised_date_not_passed": {

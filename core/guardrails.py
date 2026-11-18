@@ -154,8 +154,8 @@ def leaked_names(text: str) -> list:
 # ---------- citations ----------
 TAG_RE = re.compile(r"\[([A-Z]{2,6}(?:-[A-Z0-9]+)+)\]")
 REF_RE = re.compile(
-    r"(?i)\b(?P<w>sections?|secs?\.?|u/s\.?|s\.|rules?|r\.|articles?|art\.)\s*(?P<n>\d{1,3}[A-Z]?)(?P<sub>" + SUB_RE + r")"
-    r"|(?P<wi>धाराओं|धारा|अनुच्छेद|नियम|సెక్షన్|నిబంధన|నియమం|ఆర్టికల్)\s*(?P<ni>\d{1,3})(?P<subi>" + SUB_RE + r")"
+    r"(?i)\b(?P<w>sections?|secs?\.?|u/s\.?|s\.|rules?|r\.|articles?|art\.)\s*(?P<n>\d{1,3}[A-Z]?)(?!\d)(?P<sub>" + SUB_RE + r")"
+    r"|(?P<wi>धाराओं|धारा|अनुच्छेद|नियम|సెక్షన్|నిబంధన|నియమం|ఆర్టికల్)\s*(?P<ni>\d{1,3})(?!\d)(?P<subi>" + SUB_RE + r")"
 )
 OTHER_LAW_RE = re.compile(r"(?i)\b(?:IPC|BNS|BNSS|CrPC|CPC)\b(?:\s*(?:s\.|sec\.?|section)?\s*\d+)?")
 ACT_ALIASES = [   # Rules before Acts: the Telangana Rules' full title also contains "Real Estate"

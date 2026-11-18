@@ -159,7 +159,7 @@
 <li><b>176 / 176 checks passed</b> in one run on the final code (Gemini free tier). Raw outputs are in <code>outputs/</code>.</li>
 <li><b>Passing checks is not enough:</b> an earlier 109/109 run missed the first three challenges in section 10; each is now a test.</li>
 <li><b>Injection test:</b> asked to cite "Section 420 IPC", a court case and promise Rs 30 lakh - all blocked.</li>
-<li><b>97 offline tests:</b> maths, escalation, citations, privacy, conversation flow, provider outages, the real app page.</li>
+<li><b>98 offline tests:</b> maths, escalation, citations, privacy, conversation flow, provider outages, the real app page.</li>
 <li><b>Law search:</b> right law found for 29/29 test questions; nothing returned for 3/3 off-topic ones.</li>
 <li><b>Numbers checked by hand:</b> Rs 43,800 per month at 10.95% on Rs 48 lakh - matches.</li>
 </ul>
@@ -171,6 +171,7 @@
 <li><b>False alarms to a lawyer:</b> denials ("no case pending"), questions ("what if the builder goes bankrupt?") and Hinglish "fir" escalated → denials and possibilities no longer count; a corrected fact lifts the flag.</li>
 <li><b>Conversation too stiff:</b> greetings got "which state?" and follow-ups repeated the report → short natural replies, practical help (never as law), safety first.</li>
 <li><b>Relative dates:</b> "6 months ago" was guessed → the model now gets today's date and states the assumption.</li>
+<li><b>Reading answers, not just checks:</b> with every check passing, "Rules 2017" was being removed as "Rule 201" → fixed and tested.</li>
 <li><b>Longer prompts backfired:</b> intake missed "not registered with RERA" → caught by a test and fixed.</li>
 <li><b>Known limits:</b> free models are slow (20-40 s per answer); Hindi/Telugu text needs a native speaker's review; keyword checks can miss indirect wording; my retrieval test set was written by me. Early outputs from before the fixes: <code>outputs/resolved_issues/</code>.</li>
 </ul>
