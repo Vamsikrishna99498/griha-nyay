@@ -1,0 +1,78 @@
+{
+ "_note": "First aid for everyday problems OUTSIDE the verified law (builder delay / defects). No law is stated for these: only a case summary, a practical list of papers to collect, and pointers from helplines.json (so no contact is invented). Hindi/Telugu text was written once and should be reviewed by a fluent speaker.",
+ "categories": {
+  "rent_deposit": {
+   "label": {"en": "rent or deposit dispute with a landlord", "hi": "मकान मालिक से किराये या जमा राशि का विवाद", "te": "ఇంటి యజమానితో అద్దె లేదా డిపాజిట్ వివాదం"},
+   "collect": [
+    {"en": "Rent agreement (or any written terms, even WhatsApp)", "hi": "किरायानामा (या कोई भी लिखित शर्तें, WhatsApp भी)", "te": "అద్దె ఒప్పందం (లేదా రాతపూర్వక షరతులు, WhatsApp అయినా)"},
+    {"en": "Proof you paid the deposit and the rent (receipts, bank or UPI records)", "hi": "जमा राशि और किराया देने का सबूत (रसीदें, बैंक या UPI रिकॉर्ड)", "te": "డిపాజిట్, అద్దె చెల్లించిన రుజువు (రసీదులు, బ్యాంక్ లేదా UPI రికార్డులు)"},
+    {"en": "Proof of the date you moved out and returned the keys", "hi": "घर ख़ाली करने और चाबी लौटाने की तारीख़ का सबूत", "te": "ఇల్లు ఖాళీ చేసి తాళాలు ఇచ్చిన తేదీ రుజువు"},
+    {"en": "Photos or videos of the house when you left", "hi": "घर छोड़ते समय की फ़ोटो या वीडियो", "te": "ఇల్లు వదిలినప్పటి ఫోటోలు లేదా వీడియోలు"},
+    {"en": "Every message, call record or letter with the landlord about the money", "hi": "पैसे को लेकर मकान मालिक से हुए सभी संदेश, कॉल रिकॉर्ड या पत्र", "te": "డబ్బు గురించి యజమానితో జరిగిన అన్ని సందేశాలు, కాల్ రికార్డులు, లేఖలు"}
+   ],
+   "help": ["dlsa"]
+  },
+  "salary": {
+   "label": {"en": "unpaid salary or dues from an employer", "hi": "नियोक्ता से बकाया वेतन", "te": "యజమాని నుండి రావాల్సిన జీతం"},
+   "collect": [
+    {"en": "Appointment or offer letter (or any message that shows your pay)", "hi": "नियुक्ति या ऑफ़र लेटर (या वेतन दिखाने वाला कोई संदेश)", "te": "నియామక లేదా ఆఫర్ లెటర్ (లేదా జీతం చూపే ఏదైనా సందేశం)"},
+    {"en": "Salary slips and bank statements showing what was paid and when it stopped", "hi": "वेतन पर्चियाँ और बैंक स्टेटमेंट - क्या मिला और कब से बंद हुआ", "te": "జీతం స్లిప్పులు, బ్యాంక్ స్టేట్‌మెంట్లు - ఎంత వచ్చింది, ఎప్పటి నుండి ఆగింది"},
+    {"en": "Proof you worked in the unpaid months (attendance, emails, ID card)", "hi": "बकाया महीनों में काम करने का सबूत (हाज़िरी, ईमेल, आईडी कार्ड)", "te": "జీతం రాని నెలల్లో పని చేసిన రుజువు (హాజరు, ఈమెయిళ్లు, ఐడీ కార్డ్)"},
+    {"en": "Any resignation, termination or warning letter", "hi": "इस्तीफ़ा, बर्ख़ास्तगी या चेतावनी का कोई पत्र", "te": "రాజీనామా, తొలగింపు లేదా హెచ్చరిక లేఖ ఏదైనా"},
+    {"en": "Your written requests for the salary and the employer's replies", "hi": "वेतन के लिए आपके लिखित अनुरोध और नियोक्ता के जवाब", "te": "జీతం కోసం మీ రాతపూర్వక అభ్యర్థనలు, యజమాని జవాబులు"}
+   ],
+   "help": ["dlsa"]
+  },
+  "consumer": {
+   "label": {"en": "problem with a product, a service or a refund", "hi": "किसी सामान, सेवा या रिफ़ंड की समस्या", "te": "వస్తువు, సేవ లేదా రీఫండ్ సమస్య"},
+   "collect": [
+    {"en": "Bill, invoice or order confirmation", "hi": "बिल, इनवॉइस या ऑर्डर की पुष्टि", "te": "బిల్లు, ఇన్వాయిస్ లేదా ఆర్డర్ నిర్ధారణ"},
+    {"en": "Proof of payment (bank, card or UPI record)", "hi": "भुगतान का सबूत (बैंक, कार्ड या UPI रिकॉर्ड)", "te": "చెల్లింపు రుజువు (బ్యాంక్, కార్డ్ లేదా UPI రికార్డు)"},
+    {"en": "Warranty card, terms or the advertisement you relied on", "hi": "वारंटी कार्ड, शर्तें या वह विज्ञापन जिस पर आपने भरोसा किया", "te": "వారంటీ కార్డ్, షరతులు లేదా మీరు నమ్మిన ప్రకటన"},
+    {"en": "Photos or videos of the defect, or proof the service was not given", "hi": "ख़राबी की फ़ोटो या वीडियो, या सेवा न मिलने का सबूत", "te": "లోపం ఫోటోలు లేదా వీడియోలు, లేదా సేవ అందలేదనే రుజువు"},
+    {"en": "Your complaints to the company and their replies (emails, ticket numbers, chat screenshots)", "hi": "कंपनी को की गई शिकायतें और उनके जवाब (ईमेल, टिकट नंबर, चैट के स्क्रीनशॉट)", "te": "కంపెనీకి చేసిన ఫిర్యాదులు, వారి జవాబులు (ఈమెయిళ్లు, టికెట్ నంబర్లు, చాట్ స్క్రీన్‌షాట్లు)"}
+   ],
+   "help": ["nch", "dlsa"]
+  },
+  "notice_received": {
+   "label": {"en": "a notice or legal letter you received", "hi": "आपको मिला कोई नोटिस या कानूनी पत्र", "te": "మీకు వచ్చిన నోటీసు లేదా న్యాయ లేఖ"},
+   "collect": [
+    {"en": "The notice itself, every page, and its envelope", "hi": "नोटिस का हर पन्ना और उसका लिफ़ाफ़ा", "te": "నోటీసు ప్రతి పేజీ, దాని కవరు"},
+    {"en": "A note of the date you received it and how (post, email, by hand)", "hi": "किस तारीख़ को और कैसे मिला (डाक, ईमेल, हाथ से) - यह लिख लें", "te": "ఏ తేదీన, ఎలా అందింది (పోస్ట్, ఈమెయిల్, చేతికి) - రాసి పెట్టుకోండి"},
+    {"en": "Any agreement, bill or loan paper the notice talks about", "hi": "नोटिस में जिस एग्रीमेंट, बिल या लोन का ज़िक्र है वे काग़ज़", "te": "నోటీసులో పేర్కొన్న ఒప్పందం, బిల్లు లేదా లోన్ పత్రాలు"},
+    {"en": "Earlier letters, messages and payment records with the sender", "hi": "भेजने वाले के साथ पहले के पत्र, संदेश और भुगतान के रिकॉर्ड", "te": "పంపినవారితో ఇంతకుముందు లేఖలు, సందేశాలు, చెల్లింపు రికార్డులు"}
+   ],
+   "help": ["dlsa"]
+  },
+  "money_owed": {
+   "label": {"en": "money someone owes you or says you owe", "hi": "पैसा जो कोई आपका देनदार है या आपसे माँग रहा है", "te": "ఎవరైనా మీకు ఇవ్వాల్సిన లేదా మీ నుండి అడుగుతున్న డబ్బు"},
+   "collect": [
+    {"en": "Any written agreement, promissory note or message that shows the amount and terms", "hi": "रक़म और शर्तें दिखाने वाला कोई लिखित समझौता, प्रॉमिसरी नोट या संदेश", "te": "మొత్తం, షరతులు చూపే రాతపూర్వక ఒప్పందం, ప్రామిసరీ నోట్ లేదా సందేశం"},
+    {"en": "Proof of every payment made or received (bank or UPI records, receipts)", "hi": "हर भुगतान का सबूत (बैंक या UPI रिकॉर्ड, रसीदें)", "te": "ప్రతి చెల్లింపు రుజువు (బ్యాంక్ లేదా UPI రికార్డులు, రసీదులు)"},
+    {"en": "Messages and letters asking for the money, and the replies", "hi": "पैसे माँगने वाले संदेश और पत्र, और उनके जवाब", "te": "డబ్బు అడిగిన సందేశాలు, లేఖలు, వాటి జవాబులు"},
+    {"en": "Names of people who saw the deal or the payments", "hi": "लेन-देन या भुगतान देखने वाले लोगों के नाम", "te": "లావాదేవీ లేదా చెల్లింపులు చూసిన వారి పేర్లు"}
+   ],
+   "help": ["dlsa"]
+  },
+  "online_fraud": {
+   "label": {"en": "online or bank fraud", "hi": "ऑनलाइन या बैंक धोखाधड़ी", "te": "ఆన్‌లైన్ లేదా బ్యాంక్ మోసం"},
+   "collect": [
+    {"en": "Screenshots of the messages, links, apps or profiles used", "hi": "इस्तेमाल हुए संदेशों, लिंक, ऐप या प्रोफ़ाइल के स्क्रीनशॉट", "te": "వాడిన సందేశాలు, లింకులు, యాప్‌లు లేదా ప్రొఫైళ్ల స్క్రీన్‌షాట్లు"},
+    {"en": "Bank or UPI statement showing the transactions and their times (keep the numbers with you - don't type them here)", "hi": "लेन-देन और उनका समय दिखाने वाला बैंक या UPI स्टेटमेंट (नंबर अपने पास रखें - यहाँ न लिखें)", "te": "లావాదేవీలు, వాటి సమయం చూపే బ్యాంక్ లేదా UPI స్టేట్‌మెంట్ (నంబర్లు మీ దగ్గరే ఉంచండి - ఇక్కడ టైప్ చేయకండి)"},
+    {"en": "A note of when you told your bank, and what they said", "hi": "बैंक को कब बताया और उन्होंने क्या कहा - यह लिख लें", "te": "బ్యాంక్‌కు ఎప్పుడు చెప్పారు, వారు ఏమన్నారు - రాసి పెట్టుకోండి"}
+   ],
+   "help": ["cyber", "dlsa"]
+  },
+  "other": {
+   "label": {"en": "a different kind of legal problem", "hi": "एक अलग तरह की कानूनी समस्या", "te": "వేరే రకమైన న్యాయ సమస్య"},
+   "collect": [
+    {"en": "Any agreement, bill, letter or notice about the matter", "hi": "इस मामले से जुड़ा कोई एग्रीमेंट, बिल, पत्र या नोटिस", "te": "ఈ విషయానికి సంబంధించిన ఒప్పందం, బిల్లు, లేఖ లేదా నోటీసు"},
+    {"en": "Proof of any money paid or received", "hi": "दिए या लिए गए पैसे का सबूत", "te": "ఇచ్చిన లేదా తీసుకున్న డబ్బు రుజువు"},
+    {"en": "Messages, emails and letters with the other side", "hi": "दूसरे पक्ष के साथ संदेश, ईमेल और पत्र", "te": "అవతలి వారితో సందేశాలు, ఈమెయిళ్లు, లేఖలు"},
+    {"en": "A dated list of what happened, in order", "hi": "क्या-क्या हुआ, तारीख़ों के साथ क्रम से सूची", "te": "ఏం జరిగిందో తేదీలతో వరుసగా జాబితా"},
+    {"en": "Photos, videos or names of people who saw it", "hi": "फ़ोटो, वीडियो या देखने वाले लोगों के नाम", "te": "ఫోటోలు, వీడియోలు లేదా చూసిన వారి పేర్లు"}
+   ],
+   "help": ["dlsa", "nch"]
+  }
+ }
+}
