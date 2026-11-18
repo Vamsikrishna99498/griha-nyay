@@ -1,0 +1,15 @@
+{
+ "state": "Telangana",
+ "authority": "Telangana Real Estate Regulatory Authority (TG-RERA)",
+ "portal": "https://rera.telangana.gov.in",
+ "interest": {
+  "rule_id": "TS-R15",
+  "rule": "highest SBI Marginal Cost of Lending Rate (MCLR) + 2% per year (TS RERA Rules 2017, Rule 15)",
+  "base_rate_label": "SBI highest MCLR (3-year tenor)",
+  "base_rate_pct": 8.95,
+  "base_rate_effective": "2026-11-15",
+  "base_rate_source": "https://sbi.co.in/web/interest-rates/interest-rates/mclr (checked 2026-11-17)",
+  "markup_pct": 2.0,
+  "_note": "The base rate changes over time and is editable in the app. The order in your case decides the final rate and period."
+ }
+}
