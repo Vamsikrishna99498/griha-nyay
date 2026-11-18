@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Griha Nyay - Solution</title>
+<style>
+  @page { size: A4; margin: 11mm 12mm 10mm 12mm; }
+  :root { --ink:#1d2430; --mute:#5b6573; --line:#d5dbe3;
+          --you:#eef2f6; --youb:#5f6b7a; --code:#e6f4ea; --codeb:#3b7d4f;
+          --ai:#f3e8f7; --aib:#7a3b8f; --law:#fbf3dc; --lawb:#8a6d1f; --stop:#fdecea; --stopb:#a33a2f; }
+  * { box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 9pt; line-height: 1.32; color: var(--ink); margin: 0; background: #fff; }
+  h1 { font-size: 14pt; margin: 0 0 1px; }
+  .sub { color: var(--mute); font-size: 8.6pt; margin-bottom: 3px; }
+  h2 { font-size: 10.2pt; margin: 7px 0 2px; padding-bottom: 1px; border-bottom: 1px solid var(--line); }
+  ul, ol { margin: 1px 0 2px; padding-left: 15px; }
+  li { margin: 0.8px 0; }
+  b { font-weight: 650; }
+  code { font-family: "DejaVu Sans Mono", Menlo, monospace; font-size: 8pt; background: #f2f4f7; padding: 0 2px; border-radius: 2px; }
+  pre { font-family: "DejaVu Sans Mono", Menlo, monospace; font-size: 7.8pt; background: #f2f4f7; border-radius: 5px; padding: 4px 6px; margin: 2px 0 3px; white-space: pre-wrap; line-height: 1.3; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+  .page2 { break-before: page; }
+  /* page 2: sections flow into two balanced columns, so neither side runs long */
+  .flow { column-count: 2; column-gap: 16px; }
+  .flow h2 { break-after: avoid; }
+  .flow h2:first-child { margin-top: 0; }
+  .flow li { break-inside: avoid; }
+
+  /* diagrams */
+  .fig { border: 1px solid var(--line); border-radius: 7px; padding: 7px 8px 6px; margin: 4px 0 2px; }
+  .cap { font-size: 8.3pt; color: var(--mute); margin-top: 5px; }
+  .line { display: flex; align-items: center; justify-content: center; }
+  .box { border: 1.5px solid; border-radius: 7px; padding: 5px 7px; text-align: center; font-size: 8.7pt; line-height: 1.25; }
+  .box b { display: block; font-size: 9.5pt; margin-bottom: 1px; }
+  .you { background: var(--you); border-color: var(--youb); }
+  .code { background: var(--code); border-color: var(--codeb); }
+  .ai { background: var(--ai); border-color: var(--aib); }
+  .law { background: var(--law); border-color: var(--lawb); }
+  .stop { background: var(--stop); border-color: var(--stopb); }
+  .arr { color: var(--mute); font-size: 15pt; padding: 0 5px; line-height: 1; }
+  .varr { text-align: center; color: var(--mute); font-size: 13pt; line-height: 1; margin: 2px 0; }
+  .n { display: inline-block; width: 15px; height: 15px; line-height: 15px; border-radius: 8px; background: var(--ink); color: #fff; font-size: 8pt; font-weight: 700; margin-right: 3px; text-align: center; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px 16px; }
+  .steps .box { position: relative; }
+  .steps .box:not(.last)::after { content: "→"; position: absolute; right: -14px; top: 50%; transform: translateY(-50%); color: var(--mute); font-size: 12pt; }
+  .legend { display: flex; gap: 14px; justify-content: center; font-size: 8.2pt; color: var(--mute); margin-top: 6px; }
+  .sw { display: inline-block; width: 10px; height: 10px; border: 1.5px solid; border-radius: 3px; vertical-align: -1px; margin-right: 3px; }
+</style>
+</head>
+<body>
+
+<h1>Griha Nyay - an honest AI legal helper for Hyderabad homebuyers</h1>
+<div class="sub">Kuku AI Generalist assignment · Problem 2 (AI lawyer) · Vangapandu Vamsi Krishna · B231316ME · Mechanical Engineering</div>
+
+<div class="cols">
+<div>
+<h2>1. Problem I picked and why</h2>
+<ul>
+<li><b>Who:</b> a homebuyer in Hyderabad / Telangana.</li>
+<li><b>Two problems:</b> the builder <b>delayed handing over</b> the flat, or the flat has <b>defects</b> after handover.</li>
+<li><b>Why it matters:</b> a flat is a family's biggest purchase; lakhs are paid before getting the keys.</li>
+<li><b>Why people give up:</b> RERA gives a clear remedy, but the forms, the interest rule and where to complain are confusing.</li>
+<li><b>How I found it:</b> while looking for real cases, a friend who went through a builder delay suggested it.</li>
+<li><b>Depth over breadth:</b> one area done properly means every legal line can be checked against official text.</li>
+</ul>
+</div>
+<div>
+<h2>2. Assumptions</h2>
+<ul>
+<li>Telangana, RERA-registered projects only.</li>
+<li>Text chat in English, Hindi, Telugu or mixed (Hinglish / Tenglish). No voice.</li>
+<li>Interest = SBI's highest MCLR + 2% (TS Rules, Rule 15) = 10.95% today; editable.</li>
+<li>Form M vs Form N: the rule text and current practice differ, so the bot says both and suggests a lawyer confirm.</li>
+<li>The bot explains and drafts; <b>it never files</b>. The user checks every draft.</li>
+<li>Free AI models are enough. The final run used Gemini's free tier (<code>gemini-3.5-flash-lite</code>); earlier runs used a free OpenRouter model.</li>
+</ul>
+</div>
+</div>
+
+<h2>3. What the user gets</h2>
+<ul>
+<li><b>Case file:</b> a messy story turned into facts, dates, amounts and a list of proof to collect.</li>
+<li><b>Options explained:</b> refund with interest, or monthly interest for the delay; free repair for defects - with real numbers.</li>
+<li><b>Drafts:</b> legal notice, defect notice and TG-RERA complaint content - as Word files, ready to fill and send.</li>
+<li><b>Practice:</b> the AI plays the builder so the user can practise, then gets coaching.</li>
+<li><b>Sample case:</b> one click runs a made-up case through everything, to see what it does first.</li>
+<li><b>Honest limits:</b> if it's outside scope or risky, it says so and gives the right free help (DLSA 15100, consumer helpline 1915, police 112).</li>
+<li><b>First aid for other problems:</b> for a landlord's deposit, unpaid salary or a refund it states no law (none was checked) - it builds a case note, lists the papers to collect and points to free help.</li>
+</ul>
+
+<h2>4. Architecture (simple view)</h2>
+<div class="fig">
+  <div class="line">
+    <div class="box you" style="width:16%"><b>User</b>types the problem</div>
+    <div class="arr">→</div>
+    <div class="box you" style="width:18%"><b>App</b>chat · drafts · practice</div>
+    <div class="arr">→</div>
+    <div class="box code" style="width:28%"><b>Code (the rules)</b>decides the flow, does the maths, checks quotes, numbers and citations, builds drafts</div>
+    <div class="arr">⇄</div>
+    <div class="box ai" style="width:24%"><b>AI model</b>reads the story, picks relevant law, explains in plain words, double-checks legal claims</div>
+  </div>
+  <div class="varr">↑</div>
+  <div class="line">
+    <div class="box law" style="width:60%"><b>Verified law</b>6 official PDFs → 32 entries cut out by code, with page numbers (3 are TG-RERA's FAQ: guidance, not law)</div>
+  </div>
+  <div class="legend"><span><span class="sw" style="background:var(--code);border-color:var(--codeb)"></span>code = fixed rules</span><span><span class="sw" style="background:var(--ai);border-color:var(--aib)"></span>AI = reading and writing</span><span><span class="sw" style="background:var(--law);border-color:var(--lawb)"></span>official law text</span></div>
+  <div class="cap"><b>Key idea:</b> the AI never decides the law or the numbers - code does. The AI model can be swapped by changing a few settings.</div>
+</div>
+
+<h2>5. Inference - what happens to one message</h2>
+<div class="fig">
+  <div class="steps">
+    <div class="box you"><span class="n">1</span><b style="display:inline">Message</b><br>user writes in any language</div>
+    <div class="box code"><span class="n">2</span><b style="display:inline">Privacy</b><br>remove Aadhaar, PAN, phone</div>
+    <div class="box ai"><span class="n">3</span><b style="display:inline">AI reads</b><br>updates the case file</div>
+    <div class="box code last"><span class="n">4</span><b style="display:inline">Code decides</b><br>OK to advise?</div>
+    <div class="box code"><span class="n">5</span><b style="display:inline">Find law + maths</b><br>verified quotes, interest</div>
+    <div class="box ai"><span class="n">6</span><b style="display:inline">AI explains</b><br>in the user's language</div>
+    <div class="box code"><span class="n">7</span><b style="display:inline">Code + AI check</b><br>quotes, numbers, citations; AI checks legal claims</div>
+    <div class="box you last"><span class="n">8</span><b style="display:inline">Reply</b><br>with sources (PDF page)</div>
+  </div>
+  <div class="line" style="margin-top:7px">
+    <div class="box stop" style="width:100%; text-align:left"><b style="display:inline">At step 4 the bot stops instead of advising when:</b> it is a different problem (first aid only: case note, papers to collect, free help - no law) · it needs a real lawyer (builder bankrupt, case in court, crime, land dispute, over Rs 2 crore) · the flat is in another state · facts are missing (it asks a question). Each stop gives the right free help. It does not ask for the state: with no place named it assumes Telangana and says so. A greeting, a worry or a general question gets a short reply first.</div>
+  </div>
+</div>
+
+<div class="page2"></div>
+<div class="flow">
+<h2>6. How it avoids made-up law</h2>
+<ul>
+<li><b>No typed quotes:</b> every law quote is cut from the official PDF by code; a test checks each one.</li>
+<li><b>Only verified citations:</b> the AI can cite only tags like [RERA-18-1]; other sections, Acts and court cases are removed by code.</li>
+<li><b>Exact quotes:</b> a quote that isn't word-for-word loses its quotation marks, so it can't pass as the law's words.</li>
+<li><b>Real numbers:</b> all amounts come from the calculator; any other amount is marked "⚠ unverified".</li>
+<li><b>Second check:</b> another AI call checks each legal claim and flags anything unsupported.</li>
+<li><b>Says "I don't know":</b> no matching law → it says so and points to free help. Never cites judgments.</li>
+</ul>
+
+<h2>7. Privacy and safety</h2>
+<ul>
+<li>Aadhaar, PAN, phone, email and bank numbers are removed <b>before</b> the AI sees anything.</li>
+<li>Name and address for drafts stay in a local form - never sent to the AI.</li>
+<li>Nothing is saved; the app runs only on the user's own computer.</li>
+<li>Tricks like "ignore your rules" are treated as plain text, not instructions.</li>
+</ul>
+
+<h2>8. Scale and cost</h2>
+<ul>
+<li>One answer = 3 AI calls (read, explain, check). Measured in the final run: about 14k input and 1.2k output tokens. A follow-up question costs 2-3 calls. Drafts = 0 calls.</li>
+<li>Free tier = Rs 0. OpenRouter's free cap (50 requests a day) is about 15 answers; a Gemini free key ran all 25 cases and retests in a day.</li>
+<li>At volume: 1,000 answers is about 14 million input and 1-4 million output tokens - roughly $4 at the earlier model's paid price.</li>
+<li>Prompt caching: unchanging text comes first in each prompt. An earlier provider served 53% of input tokens from cache; Gemini's free tier reported about 1%.</li>
+<li>More problems: add official Acts, navigated by their table of contents, with a human checking each entry.</li>
+<li>More states: one small settings file per state.</li>
+</ul>
+
+<h2>9. How I know it's good</h2>
+<ul>
+<li><b>25 test cases</b>: English, Hindi, Telugu, Hinglish, defects, insolvency, other state, other problems (first aid), greetings, prompt injection, private numbers, late handover, denials, month-only and future dates.</li>
+<li><b>229 / 229 checks passed</b> in one run on the final code (Gemini free tier). Raw outputs are in <code>outputs/</code>.</li>
+<li><b>Passing checks is not enough:</b> an earlier 109/109 run missed the first three challenges in section 10; each is now a test.</li>
+<li><b>Injection test:</b> asked to cite "Section 420 IPC", a court case and promise Rs 30 lakh - all blocked.</li>
+<li><b>100 offline tests:</b> maths, escalation, citations, privacy, conversation flow, provider outages, the real app page.</li>
+<li><b>Law search:</b> right law found for 29/29 test questions; nothing returned for 3/3 off-topic ones.</li>
+<li><b>Numbers checked by hand:</b> Rs 43,800 per month at 10.95% on Rs 48 lakh - matches.</li>
+</ul>
+
+<h2>10. Challenges and how we resolved them</h2>
+<ul>
+<li><b>Delay after a late handover:</b> counted to today (1050 days, not 579) → now ends at the handover date; a test pins 579.</li>
+<li><b>Replies cut off:</b> hidden reasoning used up the room (4 of 21) → detected and retried with more room: 0 of 21.</li>
+<li><b>False alarms to a lawyer:</b> denials ("no case pending"), questions ("what if the builder goes bankrupt?") and Hinglish "fir" escalated → denials and possibilities no longer count; a corrected fact lifts the flag.</li>
+<li><b>Conversation too stiff:</b> greetings got "which state?" and follow-ups repeated the report → short natural replies, practical help (never as law), safety first.</li>
+<li><b>Relative dates:</b> "6 months ago" was guessed → the model now gets today's date and states the assumption.</li>
+<li><b>Reading answers, not just checks:</b> with 229/229 passing, "Rules 2017" was being removed as "Rule 201" → fixed and tested.</li>
+<li><b>Longer prompts backfired:</b> intake missed "not registered with RERA" → caught by a test and fixed.</li>
+<li><b>Known limits:</b> free models are slow (20-40 s per answer); Hindi/Telugu text needs a native speaker's review; keyword checks can miss indirect wording; my retrieval test set was written by me. Early outputs from before the fixes: <code>outputs/resolved_issues/</code>.</li>
+</ul>
+
+<h2>11. AI tool used, and where it got it wrong</h2>
+<ul>
+<li><b>Tool:</b> only Claude Code (design, code, tests, review).</li>
+<li><b>Wrong:</b> its first law notes, written from memory, said claim delay interest in <b>Form M</b>. The official TS Rules (Rule 35) say <b>Form N</b>.</li>
+<li><b>Lesson:</b> no law quote is typed any more - each is cut from the official PDF and tested.</li>
+<li><b>Wrong again:</b> its scripted tests assumed how the model labels "hi", so they passed while the real app answered "hi" wrongly. Flow changes are now tried on a real model.</li>
+</ul>
+</div>
+
+<h2>12. Run it with your own model and your own test cases</h2>
+<div class="cols">
+<div>
+<ol>
+<li><b>Install:</b> <code>pip install -r requirements.txt</code></li>
+<li><b>Set the model</b> in <code>.env</code> (any OpenAI-compatible API):
+<pre>BASE_URL=https://your-api/v1
+LLM_API_KEY=your-key
+MODEL=your-model-name</pre></li>
+<li><b>Open the app:</b> <code>streamlit run app.py</code></li>
+<li><b>Try a new input:</b> <code>python run_tests.py --text "your story"</code> (add more <code>--text</code> for follow-ups).</li>
+</ol>
+</div>
+<div>
+<ol start="5">
+<li><b>Add a test case:</b> save a file in <code>tests/cases/</code>:
+<pre>{"id": "22_my_case", "title": "My case",
+ "turns": ["first message", "follow-up"],
+ "expect": {"reaches_advice": true}}</pre>
+then run <code>python run_tests.py 22</code>.</li>
+<li><b>See results:</b> <code>outputs/&lt;model&gt;/</code>, with a <code>summary.md</code>.</li>
+</ol>
+</div>
+</div>
+
+</body>
+</html>
