@@ -57,7 +57,8 @@ SAMPLE_CASE = ("Sample case (made-up facts): I booked Flat 504, Tower B in Skyli
                "22 lakh on 15 June 2022. The RERA number is P02400003456. I still don't have the flat and the builder keeps "
                "saying next quarter. I have the agreement and bank statements. I want my money back.")
 CORE_FACTS = ["promised_possession_date", "possession_handed_over_date", "amount_paid_rupees", "payments", "defects"]
-SMALL_TALK_TOPIC = re.compile(r"(?i)greet|introduc|\bname\b|small talk|thank|chit|hello|pleasantr")   # intake's own label for it
+SMALL_TALK_TOPIC = re.compile(r"(?i)greet|introduc|\bname\b|small talk|thank|gratitud|chit|hello|pleasantr|farewell|goodbye|"
+                              r"casual|capabilit|about (?:the |this )?(?:assistant|bot|ai|tool)")   # intake's own label for it
 CHAT_PATIENCE = {"timeout": 30, "rounds": 2}   # a conversational turn gets two quick tries; then the code-written reply
 STORY_ITEMS = "the builder and project, the area or city, the promised date (or the date they got the flat), how much they paid, what they want"
 
@@ -212,7 +213,8 @@ class Session:
         missing = ", ".join(self.case.missing_required()) or "nothing"
         self._step("reading")
         fixed = f"<law_index>\n{retrieve.law_index()}\n</law_index>\n"
-        data_msg = (f"<case_file>\n{json.dumps(self.case.to_dict(), ensure_ascii=False)}\n</case_file>\n"
+        today = (self.as_of or date.today()).isoformat()
+        data_msg = (f"<today>{today}</today>\n<case_file>\n{json.dumps(self.case.to_dict(), ensure_ascii=False)}\n</case_file>\n"
                     f"<missing>{missing}</missing>\n<last_question>\n{last_q}\n</last_question>\n\n" + wrap_user(text))
         raw = llm.chat_json([{"role": "system", "content": _p("intake.txt")}, llm.user_message(fixed, data_msg)],
                             temperature=0.0, task="intake", language=self.language)
@@ -411,6 +413,11 @@ class Session:
             return T("no_law", self.language) + "\n\n" + T("where_help", self.language) + "\n" + help_block(["off_topic"], self.language)
         _, unknown_refs = retrieve.lookup(text)
         notes = []
+        if not first:
+            notes.append("This is a follow-up after the first assessment. Answer this question directly, in a few short paragraphs, "
+                         "with no headings. Do not retell their story or repeat the earlier assessment, and do not quote again law "
+                         "you already quoted earlier in the conversation - refer to it by its tag. Mention a lawyer only if it is "
+                         "newly relevant.")
         if x.get("message_kind") == "hypothetical" and WHAT_IF_FIGURES.search(text):
             # only a what-if about amounts or dates ("what if I had paid 10 lakh?"); "what if the builder
             # blames covid?" is an ordinary question and is simply answered

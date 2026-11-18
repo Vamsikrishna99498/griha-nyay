@@ -1,5 +1,5 @@
 # 03_hinglish_messy — Messy Hinglish story
-Commit `not a git checkout` · run 2026-11-18 02:50 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 13845 input tokens (cached not reported) · 1217 output tokens · 29s
+Commit `not a git checkout` · run 2026-11-18 15:27 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 14274 input tokens (cached not reported) · 1165 output tokens · 304s
 
 
 ## 🧑 User
@@ -7,29 +7,27 @@ bhai mera flat ka bahut problem hai. 2020 me book kiya tha Miyapur me, builder k
 
 ## 🤖 Griha Nyay
 **Aapka case short mein**
-Aapne Miyapur ke Balaji Residency project mein Shree Balaji Developers ko Rs 30,00,000 diye hain. Builder ne March 2023 tak possession dene ka bola tha, lekin abhi tak nahi diya. Delay lagbhag 1325 days (~43.5 months) ho chuka hai.
+Aapka possession 1325 days (~43.5 months) late ho chuka hai.
 
-**Aapki sthiti**
-Kanoon aapke sath hai kyunki builder waade par flat dene mein fail raha hai. [RERA-18-1] "If the promoter fails to complete or is unable to give possession of an apartment, plot or building" kehta hai ki agar builder time par possession na de, toh aapke paas poore haq hain. [RERA-19-4] "The allottee shall be entitled to claim the refund of amount paid along with interest at such rate as may be prescribed" ke mutabik aap refund aur interest maang sakte hain. Telangana mein interest ki rate highest SBI MCLR + 2% hai [TS-R15].
+**Aapki position kya hai**
+Law aapko poora support karta hai. [RERA-18-1] kehta hai ki agar builder time par flat na de, toh allottee ko haq hai ki he shall be liable on demand to the allottees, in case the allottee wishes to withdraw from the project... to return the amount received by him... with interest. Aur [RERA-19-4] ke mutabiq aap "entitled to claim the refund of amount paid along with interest".
 
-**Aapke do vikalp**
-Aapka goal paisa wapas lene ka hai, isliye pehla vikalp aapke liye sabse accha hai:
-(a) Project se withdraw karein aur apna paisa interest ke sath wapas lein [RERA-18-1]. Iske liye refund interest abhi unknown hai kyunki payment ki exact dates nahi hain.
-(b) Project mein bane rahein aur possession milne tak har mahine delay interest lein [RERA-18-1]. Iska abhi tak ka calculated interest Rs 11,92,500 hai, aur har mahine ka interest Rs 27,375 banta hai.
+**Aapke paas do options hain**
+Kyunki aapka goal refund lena hai, pehla option aap par fit baithta hai:
+(a) Project se withdraw karna aur Rs 30,00,000 ka refund, interest aur compensation lena (refund interest abhi unknown hai kyunki exact payment dates nahi di gayi hain). 
+(b) Project mein rukna aur delay interest lena, jiska ab tak ka estimated interest Rs 11,92,500 hai (aur monthly interest Rs 27,375 hai, jo highest SBI MCLR + 2% yaani 10.95% per year ke rate se calculate hua hai [TS-R15]).
 
-**Aage kya karein**
-1. Apne saare payment receipts, agreement aur builder ki baatcheet ke saboot ikatha karein.
-2. TG-RERA portal par project ka registration check karein.
-3. Builder ko legal notice bhejein.
-4. Complaint file karein. RERA rules ke hisab se Form M ya Form N aur Rs 1,000 fees lagti hai [TS-R34-1] [TS-R35-1]. (Note: 2021 ke Supreme Court ruling ke baad refund aur delay-interest Authority dekhti hai, aur compensation adjudicating officer dekhta hai).
+**Aage kya karna chahiye**
+1. Apni saari payment receipts aur agreement ki copy ikattha karein.
+2. TG-RERA portal par jaakar check karein ki builder ka project registered hai ya nahi.
+3. Builder ko ek written legal notice bhejein (iska draft main taiyyar kar sakta hu).
+4. Complaint file karein. Rules ke mutabiq Authority ke paas Form 'M' mein [TS-R34-1] ya Adjudicating Officer ke paas Form 'N' mein [TS-R35-1] case file kiya jata hai (ek lawyer ya RERA portal ise confirm kar sakta hai).
 
-**Mujhe kya pakka nahi pata**
-- Humne delay 31 March 2023 se maana hai kyunki sirf mahina diya gaya tha.
-- Refund interest ki exact amount unknown hai kyunki payment dates nahi di gayi hain.
-- Builder ka koi valid excuse hai ya nahi, aur final decision authority ka hoga.
+**Mujhe kya confirm nahi hai**
+Maine delay 31 March 2023 se count kiya hai kyunki aapne sirf month bataya tha. Maine sirf Rs 30,00,000 aur ek hi amount maana hai, isliye refund par kitna interest banega yeh unknown hai. Builder ka RERA number aur agreement date mere paas nahi hai. RERA authority hi sabhi facts dekh kar final decision legi.
 
-**Asli vakil ke paas kab jayein**
-Legal notice bhejne ya RERA mein formal complaint file karne se pehle kisi licensed lawyer ya DLSA se zaroor milein, kyunki main ek AI assistant hoon aur aapka vakil nahi hoon.
+**Asli lawyer kab karna chahiye**
+Jab aapko builder ko legal notice bhejna ho ya RERA mein formal complaint file karni ho, tab ek vakil ya District Legal Services Authority (DLSA) ki madad zaroor lein.
 
 ---
 **Sources used** (official text, checked):
@@ -69,7 +67,7 @@ Sir/Madam,
 2. In all, I have paid you Rs 30,00,000 so far.
 3. Under the agreement, you were to hand over possession of the flat by 31 March 2023.
 4. As on date, you have not handed over possession of the flat to me.
-5. The reasons you have given for the delay are: agle mahine.
+5. The reasons you have given for the delay are: har baar bolte hai agle mahine.
 
 **Legal position**
 
@@ -124,7 +122,7 @@ Yours faithfully,
  "builder_response": null,
  "evidence": [],
  "builder_excuses": [
-  "agle mahine"
+  "har baar bolte hai agle mahine"
  ],
  "timeline": [],
  "assumptions": [
@@ -155,13 +153,12 @@ Yours faithfully,
 - Escalations: none
 - Cautions: none
 - Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'case', 'TS-R34-1': 'case', 'TS-R35-1': 'linked'}]
-- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 6, 'unsupported': 0, 'error': None}
-  - [supported] If the builder fails to give possession on time, you have full rights. (RERA-18-1)
-  - [supported] The allottee is entitled to claim refund of the amount paid along with prescribed interest. (RERA-19-4)
-  - [supported] In Telangana, the interest rate is the highest SBI MCLR + 2%. (TS-R15)
-  - [supported] You can withdraw from the project and get your money back with interest. (RERA-18-1)
-  - [supported] You can stay in the project and receive monthly delay interest until possession. (RERA-18-1)
-  - [supported] Filing a complaint involves Form M or Form N and a fee of Rs 1,000. (TS-R34-1)
+- Answer check: citations removed none; quotes not exact: 1; amounts unverified: 0; grounding: {'claims': 5, 'unsupported': 0, 'error': None}
+  - [] Section 18(1) of RERA requires the promoter to return the amount with interest if the allottee wishes to withdraw. (RERA-18-1)
+  - [] Section 19(4) entitles the allottee to claim a refund of the amount paid along with interest and compensation. (RERA-19-4)
+  - [] The interest rate is determined by the highest SBI MCLR plus 2 percent per year. (TS-R15)
+  - [] Complaints to the Authority are filed in Form 'M'. (TS-R34-1)
+  - [] Claims to the adjudicating officer are filed in Form 'N'. (TS-R35-1)
 - Other log: none
 ## ✅ Checks
 - PASS no_false_escalation

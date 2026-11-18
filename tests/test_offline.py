@@ -265,7 +265,7 @@ def test_check_quotes():
     out, bad = guardrails.check_quotes(ok, E)
     assert out == ok and not bad
     out, bad = guardrails.check_quotes('[RERA-18-1] "the builder must pay double interest"', E)
-    assert bad and "⚠" in out
+    assert bad and out == "[RERA-18-1] the builder must pay double interest"   # quotation marks dropped, no visible mark
     out, bad = guardrails.check_quotes('[TS-R15] "interest for every month of delay"', E)  # right words, wrong tag
     assert bad
     out, bad = guardrails.check_quotes('You said "possession in six more months" to me', E)  # not near a tag
@@ -1213,6 +1213,16 @@ def test_bare_references_keep_correct_ones_and_respect_sub_sections():
     assert retrieve.lookup("what does section 18(1) say?")[0] == ["RERA-18-1"]
 
 
+def test_a_year_after_rules_or_act_is_not_a_rule_number():
+    law = [retrieve.KB[i] for i in ("RERA-18-1", "TS-R15")]
+    seen_live = "a rate of 10.95% per year (TS RERA Rules 2017, Rule 15)"           # what the model wrote in the live run
+    assert guardrails.validate_citations(seen_live, law)[0] == "a rate of 10.95% per year (TS RERA Rules 2017, [TS-R15])"
+    for text in ("under the TS RERA Rules 2017 the rate is set", "the RERA Act 2016 applies", "Section 2016 is not a thing"):
+        out = guardrails.validate_citations(text, law)[0]
+        assert "removed]" not in out or text.startswith("Section 2016"), out
+    assert retrieve.lookup("the Telangana Rules 2017 say") == ([], [])
+
+
 def test_comparing_two_choices_is_not_a_court_case():
     for text in ("**Refund vs Possession** - which fits you?", "Option A vs. Option B: think about it.", "Stay vs Withdraw"):
         out, removed = guardrails.validate_citations(text, E)
@@ -1475,6 +1485,27 @@ def test_a_sample_case_runs_the_whole_flow_on_made_up_facts():
     s, replies, _ = _talk([("my builder has not given my flat", {"categories": ["delay"], "state": "Telangana"}), ("sample case", {})])
     assert "Start a new case" in replies[1] and s.case.amount_paid_rupees is None
     assert "Try a sample case" in _prompt("chat.txt")
+
+
+
+def test_strict_on_law_free_on_practical_help():
+    # the reading step is told today's date, so "6 months ago" is worked out instead of guessed
+    s, _, sent = _talk([("I think 6 months ago", {"message_kind": "facts"})])
+    intake = next(m for m in sent if "<missing>" in m)
+    assert "<today>2026-11-18</today>" in intake and "Relative dates" in _prompt("intake.txt")
+    # follow-ups answer the question - no headings, no retelling, no re-quoting
+    _, _, sent = _talk([("my story", FULL_DELAY), ("he is not answering my calls, what can I do?", {"message_kind": "question"})])
+    follow = [m for m in sent if "<verified_law>" in m and "<missing>" not in m and "<answer>" not in m][-1]
+    assert "This is a follow-up after the first assessment" in follow and "no headings" in follow
+    first = [m for m in sent if "<verified_law>" in m and "<missing>" not in m and "<answer>" not in m][0]
+    assert "This is a follow-up" not in first
+    # the advice rules: law stays strict, practical help + applying the law + safety are allowed
+    advisor = _prompt("advisor.txt")
+    for rule in ("Practical help is welcome", "never present it as law", "Apply the law to their facts", "Safety first", "call 112",
+                 "Use only <verified_law>", "No court cases", "Numbers come from code", "Do not retell their story"):
+        assert rule in advisor, rule
+    assert "Safety first" in _prompt("chat.txt") and "practical guidance" in _prompt("grounding.txt")
+    assert "Do not retell their story" in _prompt("first_advice.txt") and "Do not retell their story" in _prompt("first_advice_defects.txt")
 
 
 if __name__ == "__main__":

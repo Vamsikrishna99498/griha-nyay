@@ -154,8 +154,8 @@ def leaked_names(text: str) -> list:
 # ---------- citations ----------
 TAG_RE = re.compile(r"\[([A-Z]{2,6}(?:-[A-Z0-9]+)+)\]")
 REF_RE = re.compile(
-    r"(?i)\b(?P<w>sections?|secs?\.?|u/s\.?|s\.|rules?|r\.|articles?|art\.)\s*(?P<n>\d{1,3}[A-Z]?)(?P<sub>" + SUB_RE + r")"
-    r"|(?P<wi>धाराओं|धारा|अनुच्छेद|नियम|సెక్షన్|నిబంధన|నియమం|ఆర్టికల్)\s*(?P<ni>\d{1,3})(?P<subi>" + SUB_RE + r")"
+    r"(?i)\b(?P<w>sections?|secs?\.?|u/s\.?|s\.|rules?|r\.|articles?|art\.)\s*(?P<n>\d{1,3}[A-Z]?)(?!\d)(?P<sub>" + SUB_RE + r")"
+    r"|(?P<wi>धाराओं|धारा|अनुच्छेद|नियम|సెక్షన్|నిబంధన|నియమం|ఆర్టికల్)\s*(?P<ni>\d{1,3})(?!\d)(?P<subi>" + SUB_RE + r")"
 )
 OTHER_LAW_RE = re.compile(r"(?i)\b(?:IPC|BNS|BNSS|CrPC|CPC)\b(?:\s*(?:s\.|sec\.?|section)?\s*\d+)?")
 ACT_ALIASES = [   # Rules before Acts: the Telangana Rules' full title also contains "Real Estate"
@@ -329,7 +329,8 @@ QUOTE_RE = re.compile(r"[\"“”]([^\"“”]{12,600})[\"“”]")
 
 def check_quotes(text: str, entries: list, language: str = "English") -> tuple[str, list]:
     """A quoted span within 60 chars of a tag must appear verbatim (after norm) in that tag's
-    exact text. Otherwise its quotation marks are dropped and it's marked 'not exact law text'."""
+    exact text. Otherwise its quotation marks are dropped, so it reads as a paraphrase rather than as the law's
+    own words (logged, not shown to the person - the grounding check still judges the claim)."""
     by_id = {e["id"]: norm(e["quote_text"]).lower() for e in entries}
     bad = []
 
@@ -344,6 +345,6 @@ def check_quotes(text: str, entries: list, language: str = "English") -> tuple[s
         if parts and all(any(p in by_id[t] for t in tags) for p in parts):
             return m.group(0)
         bad.append(span[:80])
-        return f"{span} ({T('not_exact_law', language)})"
+        return span
 
     return QUOTE_RE.sub(sub, text), bad

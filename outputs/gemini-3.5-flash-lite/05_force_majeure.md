@@ -1,5 +1,5 @@
 # 05_force_majeure — Builder claims COVID force majeure
-Commit `not a git checkout` · run 2026-11-18 02:53 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 14109 input tokens (cached not reported) · 1354 output tokens · 40s
+Commit `not a git checkout` · run 2026-11-18 15:28 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 14528 input tokens (cached not reported) · 1104 output tokens · 48s
 
 
 ## 🧑 User
@@ -7,35 +7,34 @@ Bought a flat in Prestige Vista, Narsingi (builder: Vista Realty LLP, TG RERA P0
 
 ## 🤖 Griha Nyay
 **Your case in short**
-You bought a flat in Prestige Vista, Narsingi from Vista Realty LLP by paying Rs 55,00,000. The promised possession date was 30 September 2022, resulting in a delay of 1507 days (~49.5 months).
+Your possession is delayed by 1507 days (~49.5 months) past the promised date of 30 September 2022.
 
 **Where you stand**
-The law protects you when a builder misses the delivery date [RERA-18-1] "Provided that where an allottee does not intend to withdraw from the project, he shall be paid, by the promoter, interest for every month of delay, till the handing over of the possession, at such rate as may be prescribed." Regarding the builder's excuse, [RERA-6-FM] "Explanation.- For the purpose of this section, the expression "force majeure" shall mean a case of war, flood, drought, fire, cyclone, earthquake or any other calamity caused by nature affecting the regular development of the real estate project." Whether the builder's excuse counts is for TG-RERA to decide.
+The law protects your right to timely possession. If you stay in the project, [RERA-18-1] states you shall be paid "interest for every month of delay". Regarding the builder's excuse of COVID and labour shortages, [RERA-6-FM] defines force majeure as a "war, flood, drought, fire, cyclone, earthquake or any other calamity caused by nature affecting the regular development". Whether their excuse counts is for TG-RERA to decide. You can check the TG-RERA portal to see if the builder received any official extension.
 
 **Your two choices**
-Since you want to keep the flat, staying fits your goal:
-1. Stay in the project and get interest for every month of delay until handover [RERA-18-1]. By my calculation at 10.95% per year [TS-R15] highest SBI Marginal Cost of Lending Rate plus 2% a year, your monthly delay interest is Rs 50,187, and the interest accrued so far is Rs 24,86,550. TG-RERA's FAQ says [FAQ-8] "Ans: The interest payment is in accordance with the agreement and hence should be automatically paid. The buyer may have to file a complaint to TG RERA if there is a grievance/ fail to comply."
-2. Withdraw and get your money back with interest (plus compensation) [RERA-18-1]. Refund interest and total are unknown because payment dates are missing.
+(a) Withdraw from the project and get your money back: amount paid is Rs 55,00,000. Refund interest so far is unknown because exact payment dates are missing. 
+(b) Stay in the project and claim delay interest: monthly interest is Rs 50,187, and interest accrued so far is Rs 24,86,550 (calculated at 10.95% per year, which is the highest SBI MCLR + 2% per year [TS-R15]). Since your goal is to keep the flat, choice (b) fits best.
 
 **What to do next**
-1. Check the TG-RERA portal to see if the project has an official extension [FAQ-3].
-2. Gather your payment proofs, allotment letter, and agreement for sale.
-3. File a complaint if the builder does not pay [FAQ-8], using Form M for the Authority [TS-R34-1] or Form N for the adjudicating officer [TS-R35-1].
+1. Gather your agreement copies and payment receipts.
+2. Check the project's page on the TG-RERA portal to verify its registration [FAQ-3] and check for any extensions.
+3. Send a dated written notice to the builder demanding your delay interest and keep proof of delivery.
+4. If the builder fails to comply [FAQ-8], file a complaint. Note that refund and delay-interest claims are decided by the Authority in Form 'M' [TS-R34-1, TS-R35-1 Practice note], while compensation claims go to the adjudicating officer in Form 'N' [TS-R35-1].
 
 **What I'm not sure about**
-I calculate only on the facts you gave. I do not know your exact agreement date, individual payment dates, or total price. TG-RERA decides the final rate, period, force majeure validity, and compensation.
+My calculations assume all payments were made before the promised date. Exact payment dates are missing to calculate refund interest. I am also not a lawyer, and whether the builder's force majeure defense is accepted is entirely up to the authority.
 
 **When to get a real lawyer**
-Consult a qualified advocate before filing a formal complaint or if you need help drafting notices.
+Consult a lawyer or your local legal services authority before filing a formal complaint to ensure your documents and notices are properly prepared.
 
 ---
 **Sources used** (official text, checked):
 - **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
 - **[RERA-6-FM]** Real Estate (Regulation and Development) Act, 2016, Section 6, Explanation - _Meaning of force majeure_ (PDF p. 9; https://rera.telangana.gov.in)
 - **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
-- **[FAQ-8]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 8(ii) (guidance, not law) - _Delay interest should be paid automatically_ (PDF p. 2; https://rera.telangana.gov.in)
 - **[FAQ-3]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 3 (guidance, not law) - _How to check if a project is registered_ (PDF p. 2; https://rera.telangana.gov.in)
-- **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
+- **[FAQ-8]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 8(ii) (guidance, not law) - _Delay interest should be paid automatically_ (PDF p. 2; https://rera.telangana.gov.in)
 - **[TS-R35-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 35(1) - _Claim to the adjudicating officer (Form N)_ (PDF p. 23; https://rera.telangana.gov.in)
 
 ## 📄 Generated legal notice (code-built)
@@ -58,14 +57,14 @@ Vista Realty LLP
 [Test address]
 [Your phone / email]
 
-**Subject:** Notice for failure to hand over possession of [flat number] in the project "Prestige Vista" (TG-RERA Registration No. TG RERA P02200009876), and demand under the Real Estate (Regulation and Development) Act, 2016
+**Subject:** Notice for failure to hand over possession of [flat number] in the project "Prestige Vista" (TG-RERA Registration No. P02200009876), and demand under the Real Estate (Regulation and Development) Act, 2016
 
 Sir/Madam,
 
 **Facts**
 
 1. I booked [flat number] in the project "Prestige Vista" at Narsingi and entered into an agreement for sale with you dated [date of agreement].
-2. The project is registered with TG-RERA under registration number TG RERA P02200009876.
+2. The project is registered with TG-RERA under registration number P02200009876.
 3. In all, I have paid you Rs 55,00,000 so far.
 4. Under the agreement, you were to hand over possession of the flat by 30 September 2022.
 5. As on date, you have not handed over possession of the flat to me.
@@ -106,7 +105,7 @@ Yours faithfully,
  "builder_name": "Vista Realty LLP",
  "project_name": "Prestige Vista",
  "flat_details": null,
- "rera_number": "TG RERA P02200009876",
+ "rera_number": "P02200009876",
  "rera_registered": true,
  "permission_before_2017": null,
  "categories": [
@@ -155,13 +154,13 @@ Yours faithfully,
 - Cautions: ['force_majeure']
 - Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-6-FM': 'index', 'TS-R15': 'index', 'TS-R34-1': 'case', 'FAQ-8': 'case', 'TS-R35-1': 'linked'}]
 - Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 7, 'unsupported': 0, 'error': None}
-  - [supported] Builder must pay interest for every month of delay until handing over possession if allottee does not withdraw. (RERA-18-1)
-  - [supported] Force majeure means war, flood, drought, fire, cyclone, earthquake, or natural calamity affecting development. (RERA-6-FM)
-  - [supported] Interest rate is highest SBI MCLR plus 2% per year in Telangana. (TS-R15)
-  - [supported] TG-RERA FAQ says delay interest should be paid automatically, and buyer may file a complaint if they fail to comply. (FAQ-8)
-  - [supported] Allottee can withdraw and get money back with interest and compensation. (RERA-18-1)
-  - [supported] Check the TG-RERA portal to see if the project has an official extension. (FAQ-3)
-  - [supported] File a complaint using Form M for the Authority or Form N for the adjudicating officer. (TS-R34-1)
+  - [supported] If you stay in the project, you shall be paid interest for every month of delay. (RERA-18-1)
+  - [supported] Force majeure means war, flood, drought, fire, cyclone, earthquake or any other calamity caused by nature. (RERA-6-FM)
+  - [supported] Interest rate is the highest SBI MCLR plus 2% per year. (TS-R15)
+  - [supported] Check the project's page on the TG-RERA portal to verify its registration. (FAQ-3)
+  - [supported] If the builder fails to comply, file a complaint. (FAQ-8)
+  - [supported] Refund and delay-interest claims are decided by the Authority in Form 'M'. (TS-R34-1)
+  - [supported] Compensation claims go to the adjudicating officer in Form 'N'. (TS-R35-1)
 - Other log: [{'type': 'index_tags_added', 'ids': ['FAQ-3']}]
 ## ✅ Checks
 - PASS no_false_escalation

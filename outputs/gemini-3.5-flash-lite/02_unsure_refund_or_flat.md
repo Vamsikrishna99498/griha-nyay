@@ -1,5 +1,5 @@
 # 02_unsure_refund_or_flat — Unsure whether to take refund or wait
-Commit `not a git checkout` · run 2026-11-18 02:49 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 6 model calls · 28373 input tokens (cached not reported) · 2424 output tokens · 183s
+Commit `not a git checkout` · run 2026-11-18 15:22 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 6 model calls · 28242 input tokens (cached not reported) · 1380 output tokens · 57s
 
 
 ## 🧑 User
@@ -7,34 +7,31 @@ Builder Greenvale Homes, project Greenvale Meadows in Tellapur. Possession was d
 
 ## 🤖 Griha Nyay
 **Your case in short**
-For your flat in Greenvale Meadows by Greenvale Homes in Tellapur, possession was due by 30 June 2024. Based on the dates you gave, the delay is 868 days (~28.5 months).
+Your possession is delayed by 868 days (~28.5 months) past the promised date.
 
 **Where you stand**
-The law protects you when a builder fails to give possession on time [RERA-18-1] "in accordance with the terms of the agreement for sale or, as the case may be, duly completed by the date specified therein". In Telangana, any interest owed to you is calculated using the highest SBI Marginal Cost of Lending Rate plus 2% [TS-R15] "highest Marginal Cost of Lending Rate of State Bank of India plus two per cent".
+The law protects you when a builder misses the handover date. Under [RERA-18-1], "If the promoter fails to complete or is unable to give possession of an apartment, plot or building,-" you have clear rights to remedy.
 
 **Your two choices**
-(a) Withdraw from the project and get your money back with interest and compensation [RERA-18-1]. By my calculation, refund interest so far is unknown because you have not provided the exact payment dates, and the total refund so far is unknown. 
-(b) Stay in the project and get interest for every month of delay until handover [RERA-18-1] "interest for every month of delay, till the handing over of the possession". By my calculation, based on your Rs 35,00,000 paid, the monthly interest is Rs 31,937 and the interest accrued so far is Rs 9,11,400. 
-Since you are unsure and rent is hard on you, ask yourself: do you still need this flat for your family, or do you trust the builder to finish it soon?
+(a) Withdraw and take a refund of your amount paid of Rs 35,00,000 with interest and compensation; the refund interest so far is unknown because payment dates are missing. (b) Stay in the project and get interest for every month of delay. By my calculation, your monthly interest is Rs 31,937, and the interest accrued so far is Rs 9,11,400. Since you are unsure, ask yourself: do you trust this builder to finish soon, or do you need to exit and find a ready home?
 
 **What to do next**
-1. Collect your payment receipts and agreement copy.
-2. Check if the project is registered on the TG-RERA portal.
-3. Send a legal notice to the builder (I can help draft it).
-4. File a complaint. Rule texts send interest claims to the adjudicating officer in Form 'N' with a Rs 1,000 fee [TS-R35-1], but since a Supreme Court ruling, refund and delay-interest complaints go to the Authority in Form 'M' [TS-R34-1], with a Rs 1,000 fee [TS-R34-1]. A lawyer or the TG-RERA portal can confirm the correct route [TS-R34-1] [TS-R35-1].
+1. Gather your payment receipts and agreement for sale.
+2. Check the project's registration on the TG-RERA portal.
+3. Send a dated written notice to the builder and keep delivery proof.
+4. File a complaint. Rule Practice notes explain that refund and delay-interest complaints are filed with the Authority in Form 'M', and compensation claims go to the adjudicating officer in Form 'N', with a fee of Rs 1,000 [TS-R34-1] [TS-R35-1].
 
 **What I'm not sure about**
-I assumed that only the month was given for the promised possession date, so the delay is counted from the last day of that month (30 June 2024). I also assumed your payments were made before the promised date, and I do not know your exact payment dates or agreement date. The final rate, period, and compensation will be decided by the authority.
+I assumed the delay starts from 30 June 2024 because only the month was given for the promised date. I also do not know your exact payment dates, and TG-RERA decides the final interest rate, period, and compensation.
 
 **When to get a real lawyer**
-Consult a lawyer or your local legal services authority (DLSA) if you need help drafting notices, confirming your complaint route, or handling court and tribunal procedures.
+Consult a lawyer or your local legal services authority before filing paperwork, or if the builder disputes your payments.
 
 ---
 **Sources used** (official text, checked):
 - **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
-- **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
-- **[TS-R35-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 35(1) - _Claim to the adjudicating officer (Form N)_ (PDF p. 23; https://rera.telangana.gov.in)
 - **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
+- **[TS-R35-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 35(1) - _Claim to the adjudicating officer (Form N)_ (PDF p. 23; https://rera.telangana.gov.in)
 
 ## 🧑 User
 It's registered under TG RERA I think. Agreement signed August 2021.
@@ -42,33 +39,15 @@ It's registered under TG RERA I think. Agreement signed August 2021.
 ## 🤖 Griha Nyay
 📝 **Updated your case file:** RERA registered: — → True; Agreement date: — → 2021-08-01
 
-**Your updated position**
-You mentioned the agreement was signed in August 2021 and the project is registered under TG-RERA. Having a registered project is important because builders cannot sell without registration [RERA-3-1] "without registering the real estate project with the Real Estate Regulatory Authority". 
+Since rent is high and your family urgently needs a home, consider whether Greenvale Meadows is actually close to finishing. If work has stalled, staying means waiting indefinitely while your rent adds up, even though you accrue monthly delay interest [RERA-18-1]. Alternatively, withdrawing allows you to take your Rs 35,00,000 back along with interest and compensation [RERA-19-4], but you will need to arrange alternative housing right away.
 
-**Your choices**
-With possession due on 30 June 2024, the delay stands at 868 days (~28.5 months). You still have two options under the law [RERA-18-1]:
-1. Withdraw from the project and claim a refund of your amount paid with interest and compensation [RERA-18-1]. 
-2. Stay in the project and claim "interest for every month of delay, till the handing over of the possession" [RERA-18-1]. 
-
-By my calculation, based on your Rs 35,00,000 paid, your monthly interest is Rs 31,937 and the interest accrued so far is Rs 9,11,400 (assuming payments were made before the promised date). In Telangana, this interest is calculated using the highest SBI Marginal Cost of Lending Rate plus 2% [TS-R15] "highest Marginal Cost of Lending Rate of State Bank of India plus two per cent". Exact refund amounts and dates need your specific payment receipts.
-
-**What to do next**
-1. Gather your August 2021 agreement copy and all payment receipts.
-2. Confirm the project registration on the TG-RERA website.
-3. File a complaint. Rule texts send interest claims to the adjudicating officer in Form 'N' with a Rs 1,000 fee [TS-R35-1], but since a Supreme Court ruling, refund and delay-interest complaints go to the Authority in Form 'M' [TS-R34-1], with a Rs 1,000 fee [TS-R34-1]. A lawyer or the portal can confirm the exact route [TS-R34-1] [TS-R35-1].
-
-**What I'm not sure about**
-I assumed the agreement date was 1 August 2021 since only the month and year were provided. The final rate, period, and compensation will be decided by the authority.
-
-**When to get a real lawyer**
-Consult a lawyer or your local legal services authority (DLSA) if you need help drafting your complaint or handling tribunal procedures.
+To confirm your project's status, check the official portal to ensure it is registered and view its details [FAQ-3]. Once you decide whether to stay or exit, you can initiate a formal complaint through the portal or by filing Form 'M' [TS-R34-1]. Make sure to send a dated written notice to the builder first and keep all delivery proofs and payment receipts safe.
 
 ---
 **Sources used** (official text, checked):
-- **[RERA-3-1]** Real Estate (Regulation and Development) Act, 2016, Section 3(1) - _Projects must be registered with RERA_ (PDF p. 7; https://rera.telangana.gov.in)
 - **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
-- **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
-- **[TS-R35-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 35(1) - _Claim to the adjudicating officer (Form N)_ (PDF p. 23; https://rera.telangana.gov.in)
+- **[RERA-19-4]** Real Estate (Regulation and Development) Act, 2016, Section 19(4) - _Buyer's right to refund with interest and compensation_ (PDF p. 17; https://rera.telangana.gov.in)
+- **[FAQ-3]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 3 (guidance, not law) - _How to check if a project is registered_ (PDF p. 2; https://rera.telangana.gov.in)
 - **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
 
 ## 📄 Legal notice not generated
@@ -104,7 +83,7 @@ The buyer has not said whether they want a refund or the flat; the Drafts tab as
  "timeline": [],
  "assumptions": [
   "Only the month was given for the promised possession date, so the delay is counted from the last day of that month (30 June 2024).",
-  "Only the month and year were given for the agreement date, so the 1st of that month is assumed."
+  "Only the month and year were given for the agreement date, so it is taken as the 1st of that month (2021-08-01)."
  ]
 }
 ```
@@ -130,22 +109,16 @@ The buyer has not said whether they want a refund or the flat; the Drafts tab as
 ## 🛡️ Guardrail log
 - Escalations: none
 - Cautions: none
-- Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'case', 'TS-R34-1': 'case', 'TS-R35-1': 'linked'}, {'RERA-18-1': 'case', 'TS-R15': 'case', 'TS-R34-1': 'case', 'RERA-19-4': 'case', 'RERA-3-1': 'keyword', 'RERA-11-4A': 'keyword'}]
-- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 6, 'unsupported': 0, 'error': None}
-  - [supported] The law protects you when a builder fails to give possession on time (RERA-18-1)
-  - [supported] In Telangana, any interest owed to you is calculated using the highest SBI Marginal Cost of Lending Rate plus 2% (TS-R15)
-  - [supported] Withdraw from the project and get your money back with interest and compensation (RERA-18-1)
-  - [supported] Stay in the project and get interest for every month of delay until handover (RERA-18-1)
-  - [supported] Rule texts send interest claims to the adjudicating officer in Form 'N' with a Rs 1,000 fee (TS-R35-1)
-  - [supported] refund and delay-interest complaints go to the Authority in Form 'M', with a Rs 1,000 fee (TS-R34-1)
-- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 6, 'unsupported': 0, 'error': None}
-  - [supported] Builders cannot sell without registering the project with RERA. (RERA-3-1)
-  - [supported] Buyers can withdraw from the project and claim a refund with interest and compensation. (RERA-18-1)
-  - [supported] Buyers can stay in the project and claim interest for every month of delay until handover. (RERA-18-1)
-  - [supported] In Telangana, interest is calculated using the highest SBI Marginal Cost of Lending Rate plus 2%. (TS-R15)
-  - [supported] Interest claims go to the adjudicating officer in Form 'N' with a Rs 1,000 fee. (TS-R35-1)
-  - [supported] Refund and delay-interest complaints go to the Authority in Form 'M' with a Rs 1,000 fee. (TS-R34-1)
-- Other log: [{'type': 'case_updated', 'fields': ['rera_registered', 'agreement_date']}, {'type': 'index_tags_added', 'ids': ['TS-R35-1']}]
+- Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'index', 'TS-R34-1': 'case', 'TS-R35-1': 'linked'}, {'RERA-3-1': 'index', 'FAQ-3': 'index', 'RERA-18-1': 'case', 'TS-R15': 'case', 'TS-R34-1': 'case', 'RERA-19-4': 'case'}]
+- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 2, 'unsupported': 0, 'error': None}
+  - [supported] Under Section 18(1), if the promoter fails to give possession, you have rights to remedy. (RERA-18-1)
+  - [supported] Refund and delay-interest complaints are filed with the Authority in Form 'M', and compensation claims go to the adjudicating officer in Form 'N', with a fee of Rs 1,000. (TS-R34-1)
+- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 4, 'unsupported': 0, 'error': None}
+  - [supported] Staying in the project means waiting indefinitely while accruing monthly delay interest. (RERA-18-1)
+  - [supported] Withdrawing allows you to take your money back along with interest and compensation. (RERA-19-4)
+  - [supported] Check the official portal to ensure the project is registered and view its details. (FAQ-3)
+  - [supported] You can initiate a formal complaint through the portal or by filing Form 'M'. (TS-R34-1)
+- Other log: [{'type': 'case_updated', 'fields': ['rera_registered', 'agreement_date']}]
 ## ✅ Checks
 - PASS no_false_escalation
 - PASS reached_advice

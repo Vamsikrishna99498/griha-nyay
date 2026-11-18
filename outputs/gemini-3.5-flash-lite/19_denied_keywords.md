@@ -1,5 +1,5 @@
 # 19_denied_keywords — Buyer says there is NO court case, FIR or insolvency
-Commit `not a git checkout` · run 2026-11-18 03:06 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 14196 input tokens (cached not reported) · 1196 output tokens · 155s
+Commit `not a git checkout` · run 2026-11-18 15:39 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 14159 input tokens (cached not reported) · 1037 output tokens · 159s
 
 
 ## 🧑 User
@@ -7,34 +7,35 @@ Flat in Miyapur, Hyderabad, project Silver Oak by Trident Homes, RERA registered
 
 ## 🤖 Griha Nyay
 **Your case in short**
-You are waiting for possession of your flat in the Silver Oak project by Trident Homes in Miyapur, Hyderabad. The promised possession date was 31 March 2024, and the delay is currently 959 days (~31.5 months).
+Your possession is delayed by 959 days (~31.5 months).
 
 **Where you stand**
-The law supports your right to claim delay interest because the builder has not handed over possession by the date in the agreement [RERA-18-1] "If the promoter fails to complete or is unable to give possession of an apartment". In Telangana, the interest rate is set as [TS-R15] "highest Marginal Cost of Lending Rate of State Bank of India plus two per cent." TG-RERA's FAQ says [FAQ-8] "The interest payment is in accordance with the agreement and hence should be automatically paid."
+The law supports you when a builder misses the promised handover date. Under [RERA-18-1] "interest for every month of delay", if you stay in the project, you are entitled to monthly interest until handover. TG-RERA's FAQ says [FAQ-8] "The interest payment is in accordance with the agreement and hence should be automatically paid."
 
 **Your two choices**
-Since your goal is to stay and take possession while getting delay interest, your best fit is to stay in the project. For this choice, based on the Rs 44,00,000 you paid, the monthly interest comes to Rs 40,150, with an estimated interest accrued so far of Rs 12,65,880. If you instead chose to withdraw, the refund amount with interest is unknown because payment dates were not provided. 
+Since your goal is to get the flat, staying fits your situation best. Your two choices under [RERA-18-1] are:
+(a) Withdraw from the project and get your money back with interest and compensation [RERA-18-1], though the exact refund interest is unknown because payment dates are missing.
+(b) Stay in the project and get interest for every month of delay [RERA-18-1]. By my calculation, on an amount paid of Rs 44,00,000 at an interest rate of 10.95% per year (highest SBI Marginal Cost of Lending Rate (MCLR) + 2% per year [TS-R15]), your monthly interest is Rs 40,150 and the interest accrued so far is Rs 12,65,880.
 
 **What to do next**
-1. Collect your receipts and agreement documents as proof.
-2. Check the project's registration on the TG-RERA website [FAQ-3].
-3. File a complaint if the builder fails to pay [FAQ-8]. Complaints to the Authority are made in Form 'M' with a fee of Rs 1,000 [TS-R34-1], while interest and compensation claims go to the adjudicating officer in Form 'N' with a fee of Rs 1,000 [TS-R35-1].
+1. Collect your payment receipts and agreement for sale.
+2. Check the project's registration on the TG-RERA portal [FAQ-3].
+3. Send a dated written notice to the builder demanding your delay interest and keep proof of delivery.
+4. If the builder refuses, file a complaint with TG-RERA in Form 'M' [TS-R34-1] with a fee of Rs 1,000.
 
 **What I'm not sure about**
-I calculate simply on your actual facts and assume all payments were made before the promised date. The exact final interest rate, period, and any compensation are decided solely by the authority.
+I calculate based only on the facts you gave. I do not have your exact payment dates, your total flat price, or copies of your documents. The final interest period, rate, and any compensation are decided by the authority.
 
 **When to get a real lawyer**
-Consult a lawyer or DLSA for free legal advice [LSA-12] if you need help drafting notices or handling tribunal hearings.
+Consult a lawyer or your local District Legal Services Authority before filing your formal complaint or if the builder disputes your payments.
 
 ---
 **Sources used** (official text, checked):
 - **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
-- **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
 - **[FAQ-8]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 8(ii) (guidance, not law) - _Delay interest should be paid automatically_ (PDF p. 2; https://rera.telangana.gov.in)
+- **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
 - **[FAQ-3]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 3 (guidance, not law) - _How to check if a project is registered_ (PDF p. 2; https://rera.telangana.gov.in)
 - **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
-- **[TS-R35-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 35(1) - _Claim to the adjudicating officer (Form N)_ (PDF p. 23; https://rera.telangana.gov.in)
-- **[LSA-12]** Legal Services Authorities Act, 1987, Section 12 - _Who gets free legal services_ (PDF p. 11, 12; https://www.jhalsa.org/pdfs/LSA_1987.pdf)
 
 ## 📄 Generated legal notice (code-built)
 > **DRAFT - prepared by an AI assistant, not a lawyer.**
@@ -56,13 +57,13 @@ Trident Homes
 [Test address]
 [Your phone / email]
 
-**Subject:** Notice for failure to hand over possession of Flat in Miyapur in the project "Silver Oak", and demand under the Real Estate (Regulation and Development) Act, 2016
+**Subject:** Notice for failure to hand over possession of Miyapur in the project "Silver Oak", and demand under the Real Estate (Regulation and Development) Act, 2016
 
 Sir/Madam,
 
 **Facts**
 
-1. I booked Flat in Miyapur in the project "Silver Oak" at Hyderabad and entered into an agreement for sale with you dated [date of agreement].
+1. I booked Miyapur in the project "Silver Oak" at Hyderabad and entered into an agreement for sale with you dated [date of agreement].
 2. In all, I have paid you Rs 44,00,000 so far.
 3. Under the agreement, you were to hand over possession of the flat by 31 March 2024.
 4. As on date, you have not handed over possession of the flat to me.
@@ -101,7 +102,7 @@ Yours faithfully,
  "city": "Hyderabad",
  "builder_name": "Trident Homes",
  "project_name": "Silver Oak",
- "flat_details": "Flat in Miyapur",
+ "flat_details": "Miyapur",
  "rera_number": null,
  "rera_registered": true,
  "permission_before_2017": null,
@@ -146,17 +147,16 @@ Yours faithfully,
 ## 🛡️ Guardrail log
 - Escalations: none
 - Cautions: none
-- Retrieval (id: why): [{'RERA-18-1': 'index', 'TS-R15': 'index', 'TS-R34-1': 'case', 'FAQ-8': 'case', 'RERA-3-1': 'keyword', 'TS-R35-1': 'linked'}]
-- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 8, 'unsupported': 0, 'error': None}
-  - [] The law supports the right to claim delay interest if the builder fails to give possession by the agreed date. (RERA-18-1)
-  - [] In Telangana, the interest rate is SBI's highest Marginal Cost of Lending Rate plus two percent. (TS-R15)
-  - [] TG-RERA's FAQ states that interest payment should be automatically made in accordance with the agreement. (FAQ-8)
-  - [] Check the project's registration on the TG-RERA website. (FAQ-3)
-  - [] File a complaint if the builder fails to pay. (FAQ-8)
-  - [] Complaints to the Authority are made in Form 'M' with a fee of Rs 1,000. (TS-R34-1)
-  - [] Interest and compensation claims go to the adjudicating officer in Form 'N' with a fee of Rs 1,000. (TS-R35-1)
-  - [] Consult a lawyer or DLSA for free legal advice. (LSA-12)
-- Other log: [{'type': 'index_tags_added', 'ids': ['FAQ-3', 'LSA-12']}]
+- Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'index', 'TS-R34-1': 'case', 'FAQ-8': 'case', 'RERA-3-1': 'keyword'}]
+- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 7, 'unsupported': 0, 'error': None}
+  - [supported] If you stay in the project, you are entitled to monthly interest until handover. (RERA-18-1)
+  - [supported] delay interest should be paid automatically (FAQ-8)
+  - [supported] Withdraw from the project and get your money back with interest and compensation (RERA-18-1)
+  - [supported] Stay in the project and get interest for every month of delay (RERA-18-1)
+  - [supported] highest SBI Marginal Cost of Lending Rate (MCLR) + 2% per year (TS-R15)
+  - [supported] Check the project's registration on the TG-RERA portal (FAQ-3)
+  - [supported] file a complaint with TG-RERA in Form 'M' with a fee of Rs 1,000 (TS-R34-1)
+- Other log: [{'type': 'index_tags_added', 'ids': ['FAQ-3']}]
 ## ✅ Checks
 - PASS no_false_escalation
 - PASS reached_advice

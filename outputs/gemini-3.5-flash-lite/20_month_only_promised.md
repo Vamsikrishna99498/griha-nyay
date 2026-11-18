@@ -1,5 +1,5 @@
 # 20_month_only_promised — Promised date given as a month only
-Commit `not a git checkout` · run 2026-11-18 03:06 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 13660 input tokens (cached not reported) · 1315 output tokens · 27s
+Commit `not a git checkout` · run 2026-11-18 15:43 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 14127 input tokens (4067 from cache) · 1036 output tokens · 38s
 
 
 ## 🧑 User
@@ -7,27 +7,27 @@ Flat in Kondapur, Hyderabad, project Maple Court by Arka Developers, RERA regist
 
 ## 🤖 Griha Nyay
 **Your case in short**
-You booked a flat in the Maple Court project by Arka Developers in Kondapur and paid Rs 40,00,000. The promised possession date was December 2024, and the delay is currently 684 days (~22.5 months). Since you want your money back, you are seeking a refund.
+Your possession is delayed by 684 days (~22.5 months) past the promised date of 31 December 2024.
 
 **Where you stand**
-The law supports your right to seek a remedy for delayed possession. Under [RERA-18-1], if the builder fails to deliver on time, you can demand to return the amount received by him in respect of that apartment (⚠ not exact law text). Additionally, [RERA-19-4] states that you are "entitled to claim the refund of amount paid along with interest at such rate as may be prescribed".
+The law supports you when a builder fails to deliver on time. Under [RERA-18-1], if the builder cannot give possession as agreed, you have the right to return the amount received by him in respect of that apartment... with interest. Furthermore, [RERA-19-4] states you are "entitled to claim the refund of amount paid along with interest". In Telangana, this interest is determined by the highest SBI Marginal Cost of Lending Rate plus two percent [TS-R15].
 
 **Your two choices**
-Since your goal is a refund, choice (a) fits what you want:
-(a) Withdraw from the project and get your money back (Rs 40,00,000 paid) with interest and compensation. The refund interest so far and total refund are unknown because exact payment dates are missing.
-(b) Stay in the project and get interest for every month of delay until handover. The monthly interest is Rs 36,500, and interest accrued so far is Rs 8,20,800 at 10.95% per year ([TS-R15]).
+Since your goal is a refund, choice (a) fits best. 
+(a) Withdraw and refund: You get your Rs 40,00,000 back with interest and compensation. The exact refund interest is unknown because payment dates are missing. 
+(b) Stay in the project: You get interest for every month of delay. By my calculation, on your amount of Rs 40,00,000, the monthly interest is Rs 36,500, and the interest accrued so far is Rs 8,20,800.
 
 **What to do next**
-1. Collect your payment receipts, bank statements, and agreement for sale.
-2. Check the project's registration on the TG-RERA portal.
-3. Send a formal legal notice to the builder (I can draft it for you).
-4. File a complaint. Refund and delay-interest complaints are decided by the Authority using Form 'M' with a fee of Rs 1,000 [TS-R34-1], while compensation claims go to the adjudicating officer using Form 'N'.
+1. Collect your payment receipts and any agreement papers.
+2. Look up the builder's registered details on the official TG-RERA portal.
+3. Send a dated written notice to the builder demanding your refund and keep proof of delivery.
+4. File a complaint. Refund and delay-interest complaints are decided by the Authority in Form 'M' with a fee of Rs 1,000 [TS-R34-1], and compensation claims are made to the adjudicating officer in Form 'N' [TS-R34-1 practice note].
 
 **What I'm not sure about**
-I assumed that since only the month was given for the promised possession date, the delay is counted from the last day of that month (31 December 2024). I do not have your exact payment dates, so the refund interest and total refund amount could not be calculated. The final rate, period, and compensation are decided by the authority.
+I calculate using the assumption that only the month was given for the promised possession date, so the delay is counted from the last day of that month (31 December 2024). I do not have your exact payment dates, total price, or agreement copy. The final interest rate, period, and compensation are decided by the authority.
 
 **When to get a real lawyer**
-Consult a lawyer before filing your formal complaint or if the builder disputes your payment records or agreement terms.
+Consult a lawyer or free legal aid before filing your complaint to ensure your notices and documents are correctly prepared.
 
 ---
 **Sources used** (official text, checked):
@@ -149,14 +149,12 @@ Yours faithfully,
 - Escalations: none
 - Cautions: none
 - Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'case', 'TS-R34-1': 'case', 'RERA-3-1': 'keyword', 'RERA-79': 'keyword'}]
-- Answer check: citations removed none; quotes not exact: 1; amounts unverified: 0; grounding: {'claims': 7, 'unsupported': 0, 'error': None}
-  - [supported] Under Section 18(1), if the builder fails to deliver on time, you can demand to return the amount received. (RERA-18-1)
-  - [supported] Section 19(4) states you are entitled to claim refund of amount paid along with prescribed interest. (RERA-19-4)
-  - [supported] You can withdraw from the project and get your money back with interest and compensation. (RERA-18-1)
-  - [supported] You can stay in the project and get interest for every month of delay until handover. (RERA-18-1)
-  - [supported] Interest rate in Telangana is SBI highest MCLR plus 2%. (TS-R15)
-  - [supported] Refund and delay-interest complaints are decided by the Authority using Form 'M' with a fee of Rs 1,000. (TS-R34-1)
-  - [supported] Compensation claims go to the adjudicating officer using Form 'N'. (TS-R34-1)
+- Answer check: citations removed none; quotes not exact: 1; amounts unverified: 0; grounding: {'claims': 5, 'unsupported': 0, 'error': None}
+  - [supported] If the builder cannot give possession as agreed, you have the right to return the amount received by him in respect of that apartment... with interest. (RERA-18-1)
+  - [supported] You are entitled to claim the refund of amount paid along with interest. (RERA-19-4)
+  - [supported] In Telangana, this interest is determined by the highest SBI Marginal Cost of Lending Rate plus two percent. (TS-R15)
+  - [supported] Refund and delay-interest complaints are decided by the Authority in Form 'M' with a fee of Rs 1,000 (TS-R34-1)
+  - [supported] compensation claims are made to the adjudicating officer in Form 'N' (TS-R34-1)
 - Other log: none
 ## ✅ Checks
 - PASS no_false_escalation

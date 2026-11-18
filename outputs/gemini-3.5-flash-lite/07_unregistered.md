@@ -1,5 +1,5 @@
 # 07_unregistered — Project not registered with RERA
-Commit `not a git checkout` · run 2026-11-18 02:53 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 1 model calls · 5455 input tokens (cached not reported) · 171 output tokens · 6s
+Commit `not a git checkout` · run 2026-11-18 15:29 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 1 model calls · 5647 input tokens (cached not reported) · 167 output tokens · 11s
 
 
 ## 🧑 User
@@ -17,7 +17,7 @@ I booked a villa in a gated project near Shamshabad by a small developer, Om Sai
 **Take this case summary with you:**
 - **Problem:** delay
 - **Builder:** Om Sai Builders
-- **Project:** gated project near Shamshabad
+- **Project:** gated project
 - **Flat:** villa
 - **City / State:** Shamshabad, Telangana
 - **RERA no.:** —
@@ -42,7 +42,7 @@ I booked a villa in a gated project near Shamshabad by a small developer, Om Sai
  "state": "Telangana",
  "city": "Shamshabad",
  "builder_name": "Om Sai Builders",
- "project_name": "gated project near Shamshabad",
+ "project_name": "gated project",
  "flat_details": "villa",
  "rera_number": null,
  "rera_registered": false,

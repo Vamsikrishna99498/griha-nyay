@@ -1,5 +1,5 @@
 # 21_promised_date_not_passed — Promised date is still in the future
-Commit `not a git checkout` · run 2026-11-18 03:09 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 14072 input tokens (cached not reported) · 935 output tokens · 165s
+Commit `not a git checkout` · run 2026-11-18 15:40 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 3 model calls · 14147 input tokens (cached not reported) · 726 output tokens · 25s
 
 
 ## 🧑 User
@@ -7,31 +7,29 @@ Flat in Narsingi, Hyderabad, project Cedar Park by Lotus Infra, RERA registered.
 
 ## 🤖 Griha Nyay
 **Your case in short**
-You have paid Rs 30,00,000 for a flat in Cedar Park by Lotus Infra in Hyderabad. The promised possession date is 30 June 2027, so there is no delay to claim today as that date has not passed yet.
+The delay is 0 days (~0.0 months) as the promised date is in the future.
 
 **Where you stand**
-The law requires the builder to give possession by the agreed date. If there is a delay, you have protections under the law [RERA-18-1] "interest for every month of delay". TG-RERA's FAQ says that delay interest should be paid automatically under your agreement [FAQ-8].
+Under [RERA-18-1] "interest for every month of delay, till the handing over of the possession", if a builder fails to give possession by the agreed date, an allottee who stays in the project is owed interest for every month of delay. However, your promised date has not arrived yet.
 
 **Your two choices**
-Because your promised date has not passed yet, neither choice applies right now. If a delay happens later, your choices under [RERA-18-1] are: (a) withdraw from the project and get your money back with interest and compensation, or (b) stay in the project and get monthly interest until handover. Your goal is to keep the flat, which fits choice (b) if a delay occurs in the future.
+(a) Withdraw from the project and get your money back with interest (refund interest and total amounts are currently unknown because payment dates are missing). (b) Stay in the project and get interest for every month of delay until handover, calculated on Rs 30,00,000 at an estimated monthly interest of Rs 27,375. Since you want to keep the flat, staying fits your goal.
 
 **What to do next**
-1. Keep your agreement for sale, payment receipts, and any written updates from the builder safe.
-2. Check the project registration status on the TG-RERA website [FAQ-3].
-3. Wait and watch the construction progress. You can return if the promised date passes without possession.
+1. Keep your agreement for sale, payment receipts, and any written updates from the builder safely ready.
+2. Check the project's registration on the TG-RERA portal [FAQ-3].
+3. You can come back if the promised date passes without possession.
 
 **What I'm not sure about**
-I am not sure about individual payment dates, the exact total price, or when your agreement was signed, as those details are missing. The authority decides the final interest rate, period, and compensation.
+I do not know the exact payment dates, which are needed for precise refund calculations. The final interest rate, period, and compensation are decided by the authority.
 
 **When to get a real lawyer**
-Consult a lawyer or reach out to the District Legal Services Authority (DLSA) under [LSA-12] if you need formal legal advice or if disputes arise later.
+Consult a lawyer or free legal aid if disputes arise or if the builder fails to deliver by the promised date.
 
 ---
 **Sources used** (official text, checked):
 - **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
-- **[FAQ-8]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 8(ii) (guidance, not law) - _Delay interest should be paid automatically_ (PDF p. 2; https://rera.telangana.gov.in)
 - **[FAQ-3]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 3 (guidance, not law) - _How to check if a project is registered_ (PDF p. 2; https://rera.telangana.gov.in)
-- **[LSA-12]** Legal Services Authorities Act, 1987, Section 12 - _Who gets free legal services_ (PDF p. 11, 12; https://www.jhalsa.org/pdfs/LSA_1987.pdf)
 
 ## 📄 Legal notice not generated
 There is no delay to claim: the promised date has not passed, or possession was given by then.
@@ -62,9 +60,7 @@ There is no delay to claim: the promised date has not passed, or possession was 
  "defect_reported_date": null,
  "builder_response": null,
  "evidence": [],
- "builder_excuses": [
-  "Construction looks very slow"
- ],
+ "builder_excuses": [],
  "timeline": [],
  "assumptions": []
 }
@@ -93,13 +89,11 @@ There is no delay to claim: the promised date has not passed, or possession was 
 - Escalations: none
 - Cautions: none
 - Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'case', 'TS-R34-1': 'case', 'FAQ-8': 'case', 'RERA-3-1': 'keyword'}]
-- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 5, 'unsupported': 0, 'error': None}
-  - [supported] If there is a delay, you have protections under the law for interest for every month of delay. (RERA-18-1)
-  - [supported] TG-RERA's FAQ says that delay interest should be paid automatically under your agreement. (FAQ-8)
-  - [supported] Your choices under RERA are to withdraw and get money back or stay and get monthly interest. (RERA-18-1)
-  - [supported] Check the project registration status on the TG-RERA website. (FAQ-3)
-  - [supported] Reach out to the District Legal Services Authority (DLSA) under the Legal Services Authorities Act. (LSA-12)
-- Other log: [{'type': 'index_tags_added', 'ids': ['FAQ-3', 'LSA-12']}]
+- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 3, 'unsupported': 0, 'error': None}
+  - [supported] An allottee who stays in the project is owed interest for every month of delay if the builder fails to give possession by the agreed date. (RERA-18-1)
+  - [supported] Check the project's registration on the TG-RERA portal. (FAQ-3)
+  - [user_fact] Amount paid is Rs 30,00,000. (no tag)
+- Other log: [{'type': 'index_tags_added', 'ids': ['FAQ-3']}]
 ## ✅ Checks
 - PASS no_false_escalation
 - PASS reached_advice

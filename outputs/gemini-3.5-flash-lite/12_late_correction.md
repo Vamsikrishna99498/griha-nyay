@@ -1,5 +1,5 @@
 # 12_late_correction — User corrects amount after first advice
-Commit `not a git checkout` · run 2026-11-18 03:01 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 6 model calls · 27620 input tokens (cached not reported) · 2054 output tokens · 48s
+Commit `not a git checkout` · run 2026-11-18 15:34 · as_of 2026-11-15 · answered by: `gemini:gemini-3.5-flash-lite` · 6 model calls · 28001 input tokens (cached not reported) · 1373 output tokens · 49s
 
 
 ## 🧑 User
@@ -7,36 +7,33 @@ Flat in Gachibowli, Hyderabad, builder Orion Developers, project Orion Crest, RE
 
 ## 🤖 Griha Nyay
 **Your case in short**
-You bought a flat in Orion Crest by Orion Developers in Gachibowli, Hyderabad. Possession was promised by 31 March 2024 and is now delayed by 959 days (~31.5 months).
+Your possession is delayed by 959 days (~31.5 months) past the promised date of 31 March 2024.
 
 **Where you stand**
-The law protects your right to receive interest when possession is delayed. [RERA-18-1] "interest for every month of delay, till the handing over of the possession". In Telangana, this interest is calculated using the highest SBI Marginal Cost of Lending Rate plus 2% [TS-R15]. TG-RERA's FAQ says that delay interest should be paid automatically under your agreement [FAQ-8].
+The law protects you when a builder fails to deliver on time. Under [RERA-18-1] "interest for every month of delay", if you choose to stay in the project, you are owed monthly interest until handover. TG-RERA's FAQ says [FAQ-8] "The interest payment is in accordance with the agreement and hence should be automatically paid."
 
 **Your two choices**
-(a) Withdraw from the project to get a refund with interest and compensation [RERA-18-1]. The refund interest so far is unknown because we need the date of each payment. 
-(b) Stay in the project and get interest for every month of delay until handover [RERA-18-1]. By my calculation, this comes to Rs 43,800 per month, with interest accrued so far at Rs 13,80,960 on your paid amount of Rs 48,00,000. 
-Since your goal is to get the flat, choice (b) fits your plan.
+(a) Withdraw from the project and take a refund with interest and compensation. The exact refund amount and interest so far are unknown because your individual payment dates are missing. 
+(b) Stay in the project and get interest for every month of delay. Based on Rs 48,00,000 paid, your estimated monthly interest is Rs 43,800, and interest accrued so far is Rs 13,80,960. Since your goal is to get the flat, staying fits your goal.
 
 **What to do next**
-1. Collect proof, including your payment receipts and agreement for sale.
-2. Check the project's registration on the TG-RERA portal [FAQ-3].
-3. Send a formal notice to the builder demanding your delay interest.
-4. If the builder does not pay, you can file a complaint with TG-RERA using Form 'M', with a fee of Rs 1,000 [TS-R34-1]. Note that while the rules send interest claims to the adjudicating officer in Form 'N' [TS-R35-1], a practice note highlights that the portal and recent rulings guide delay-interest complaints to the Authority (Form 'M'), and a lawyer or the portal can confirm the exact route.
+1. Collect your payment receipts and agreement copy.
+2. Check the project's registration on the official TG-RERA website [FAQ-3].
+3. Send a dated written notice to Orion Developers asking for your delayed possession interest, and keep proof of delivery.
+4. If they do not pay, file a complaint with the Authority using Form 'M' with a fee of Rs 1,000 [TS-R34-1].
 
 **What I'm not sure about**
-I am not sure about exact payment dates, which are needed to calculate refund interest. The final interest rate, exact period, and any compensation are decided by the authority. I am not your lawyer.
+My calculations assume all payments were made by the promised date and use a simple interest estimate. Exact figures depend on your actual payment dates. The final rate, period, and compensation are decided by the authority.
 
 **When to get a real lawyer**
-Consult a lawyer or free legal aid (DLSA) if you need help drafting notices, navigating the tribunal, or handling complex disputes.
+Consult a lawyer or free legal aid to review your notice and help file your complaint if the builder ignores you.
 
 ---
 **Sources used** (official text, checked):
 - **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
-- **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
 - **[FAQ-8]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 8(ii) (guidance, not law) - _Delay interest should be paid automatically_ (PDF p. 2; https://rera.telangana.gov.in)
 - **[FAQ-3]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 3 (guidance, not law) - _How to check if a project is registered_ (PDF p. 2; https://rera.telangana.gov.in)
 - **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
-- **[TS-R35-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 35(1) - _Claim to the adjudicating officer (Form N)_ (PDF p. 23; https://rera.telangana.gov.in)
 
 ## 🧑 User
 Sorry, I made a mistake: I have actually paid 55 lakh, not 48.
@@ -44,37 +41,19 @@ Sorry, I made a mistake: I have actually paid 55 lakh, not 48.
 ## 🤖 Griha Nyay
 📝 **Updated your case file:** Amount paid: Rs 48,00,000 → Rs 55,00,000
 
-**Your updated calculation**
+Thank you for the correction. With Rs 55,00,000 paid, the numbers for staying in the project update under [RERA-18-1] and [TS-R15]. 
 
-Based on your corrected amount paid of Rs 55,00,000 and a delay of 959 days (~31.5 months) from the promised possession date of 31 March 2024:
-- Monthly delay interest: Rs 50,187.
-- Total interest accrued so far: Rs 15,82,350.
+For the 959 days (~31.5 months) of delay past your promised date, your estimated monthly interest is now Rs 50,187. The total interest accrued so far comes to an estimated Rs 15,82,350. 
 
-**Where you stand**
+This is a simple interest estimate. The exact figure can vary if your payments were made on different dates, and the final rate and period are decided by the authority. 
 
-Since you want to stay in the project, you can claim "interest for every month of delay, till the handing over of the possession" [RERA-18-1]. In Telangana, this interest rate is the highest SBI Marginal Cost of Lending Rate plus 2% a year [TS-R15]. TG-RERA's FAQ says that delay interest should be paid automatically under the agreement [FAQ-8].
-
-**What to do next**
-
-1. Gather your agreement for sale, payment receipts showing the Rs 55,00,000 total, and any communication with Orion Developers.
-2. Send a formal notice to the builder demanding your accrued delay interest.
-3. If the builder fails to pay, you can file a complaint. A complaint to the Authority is made in Form 'M' with a fee of Rs 1,000 [TS-R34-1], while interest claims can also be made to the adjudicating officer in Form 'N' with a fee of Rs 1,000 [TS-R35-1]. A lawyer or the TG-RERA complaint portal can confirm the exact filing route for your situation.
-
-**What I'm not sure about**
-
-I am not sure about exact individual payment dates, which are required if you ever choose to calculate a refund. The final interest rate, exact period, and compensation amount are decided by the authority on the facts of your case. I am not your lawyer.
-
-**When to get a real lawyer**
-
-Consult a lawyer or free legal aid (DLSA) if you need help drafting notices or navigating the complaint process before TG-RERA.
+You can continue with the practical steps from before: send a dated written notice to Orion Developers keeping proof of delivery, and if they do not pay, file a complaint using Form 'M' on the TG-RERA portal with a fee of Rs 1,000 [TS-R34-1].
 
 ---
 **Sources used** (official text, checked):
 - **[RERA-18-1]** Real Estate (Regulation and Development) Act, 2016, Section 18(1) - _Delay in possession: refund with interest, or interest for every month of delay_ (PDF p. 16; https://rera.telangana.gov.in)
 - **[TS-R15]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 15 - _Interest rate in Telangana: highest SBI MCLR + 2%_ (PDF p. 13; https://rera.telangana.gov.in)
-- **[FAQ-8]** TG-RERA Frequently Asked Questions (07.07.2023), FAQ 8(ii) (guidance, not law) - _Delay interest should be paid automatically_ (PDF p. 2; https://rera.telangana.gov.in)
 - **[TS-R34-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 34(1) - _Complaint to TG-RERA (Form M)_ (PDF p. 22; https://rera.telangana.gov.in)
-- **[TS-R35-1]** Telangana State Real Estate (Regulation and Development) Rules, 2017, Rule 35(1) - _Claim to the adjudicating officer (Form N)_ (PDF p. 23; https://rera.telangana.gov.in)
 
 ## 📄 Generated legal notice (code-built)
 > **DRAFT - prepared by an AI assistant, not a lawyer.**
@@ -186,22 +165,15 @@ Yours faithfully,
 ## 🛡️ Guardrail log
 - Escalations: none
 - Cautions: none
-- Retrieval (id: why): [{'RERA-18-1': 'index', 'TS-R15': 'index', 'TS-R34-1': 'case', 'FAQ-8': 'case', 'RERA-3-1': 'keyword', 'TS-R35-1': 'linked'}, {'RERA-18-1': 'case', 'TS-R15': 'case', 'TS-R34-1': 'case', 'FAQ-8': 'case', 'TS-R35-1': 'linked'}]
-- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 8, 'unsupported': 0, 'error': None}
-  - [supported] The law protects your right to receive interest when possession is delayed. (RERA-18-1)
-  - [supported] In Telangana, interest is calculated using the highest SBI Marginal Cost of Lending Rate plus 2%. (TS-R15)
-  - [supported] TG-RERA's FAQ states delay interest should be paid automatically under your agreement. (FAQ-8)
-  - [supported] Withdraw from the project to get a refund with interest and compensation. (RERA-18-1)
-  - [supported] Stay in the project and get interest for every month of delay until handover. (RERA-18-1)
-  - [supported] Check the project's registration on the TG-RERA portal. (FAQ-3)
-  - [supported] File a complaint with TG-RERA using Form 'M', with a fee of Rs 1,000. (TS-R34-1)
-  - [supported] Rules send interest claims to the adjudicating officer in Form 'N'. (TS-R35-1)
+- Retrieval (id: why): [{'RERA-18-1': 'index', 'RERA-19-4': 'index', 'TS-R15': 'case', 'TS-R34-1': 'case', 'FAQ-8': 'case', 'RERA-3-1': 'keyword'}, {'RERA-18-1': 'case', 'TS-R15': 'case', 'TS-R34-1': 'case', 'FAQ-8': 'case', 'TS-R35-1': 'linked'}]
 - Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 5, 'unsupported': 0, 'error': None}
-  - [supported] You can claim interest for every month of delay till handing over possession if you do not withdraw. (RERA-18-1)
-  - [supported] In Telangana, this interest rate is highest SBI MCLR plus 2% a year. (TS-R15)
-  - [supported] TG-RERA's FAQ says delay interest should be paid automatically under the agreement. (FAQ-8)
-  - [supported] A complaint to the Authority is made in Form 'M' with a fee of Rs 1,000. (TS-R34-1)
-  - [supported] Interest claims can also be made to the adjudicating officer in Form 'N' with a fee of Rs 1,000. (TS-R35-1)
+  - [supported] Under Section 18(1), if you stay in the project, you are owed monthly interest until handover. (RERA-18-1)
+  - [supported] TG-RERA's FAQ states that delay interest should be paid automatically in accordance with the agreement. (FAQ-8)
+  - [supported] Buyers can check if a project is registered on the TG-RERA website. (FAQ-3)
+  - [supported] A complaint to the Authority is made using Form 'M' with a fee of Rs 1,000. (TS-R34-1)
+  - [user_fact] Your possession is delayed by 959 days past the promised date of 31 March 2024. (no tag)
+- Answer check: citations removed none; quotes not exact: 0; amounts unverified: 0; grounding: {'claims': 1, 'unsupported': 0, 'error': None}
+  - [supported] You can file a complaint using Form 'M' on the TG-RERA portal with a fee of Rs 1,000. (TS-R34-1)
 - Other log: [{'type': 'index_tags_added', 'ids': ['FAQ-3']}, {'type': 'case_updated', 'fields': ['amount_paid_rupees']}]
 ## ✅ Checks
 - PASS no_false_escalation
